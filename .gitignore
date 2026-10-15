@@ -1,0 +1,10 @@
+# Vídeos pesados de gravações de reunião (não devem ir para o GitHub)
+*.mp4
+*.mov
+*.avi
+*.wmv
+
+# Temporários
+sync_note.txt
+__pycache__/
+*.tmp

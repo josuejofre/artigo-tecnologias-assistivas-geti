@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Estratégica da Inovação Assistiva Corporativa | Grupo A - PPGPIT UNIFESP</title>
+  
+  <!-- Fontes Google Modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-surface: #0f172a;
+      --bg-card: rgba(15, 23, 42, 0.92);
+      --bg-card-alt: #1e293b;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.28);
+      --accent: #818cf8;
+      --accent-glow: rgba(129, 140, 248, 0.25);
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+      --purple: #c084fc;
+      --text-main: #f8fafc;
+      --text-body: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.22);
+      --border-highlight: rgba(56, 189, 248, 0.45);
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.10) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.85) 0px, transparent 100%);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER SUPERIOR FIXO */
+    header {
+      position: sticky;
+      top: 0;
+      padding: 12px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(9, 13, 22, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-tag {
+      background: linear-gradient(135deg, #0284c7, #4f46e5);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-toggle-view {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-view:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .slide-counter {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 5px 12px;
+      border-radius: 8px;
+    }
+
+    .btn-icon {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .progress-bar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 10%;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--success));
+      transition: width 0.35s ease;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    }
+
+    /* CONTAINER PRINCIPAL */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* MODO SLIDES */
+    body.mode-slides .slide-container {
+      display: none;
+      padding: 36px 48px 100px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      animation: fadeIn 0.35s ease-in-out;
+    }
+
+    body.mode-slides .slide-container.active {
+      display: block;
+    }
+
+    /* MODO ROLO CONTÍNUO */
+    body.mode-scroll .slide-container {
+      display: block !important;
+      padding: 40px 48px;
+      max-width: 1400px;
+      margin: 0 auto 36px;
+      width: 100%;
+      border-bottom: 2px dashed rgba(148, 163, 184, 0.25);
+    }
+
+    body.mode-scroll .slide-counter,
+    body.mode-scroll .slide-nav-btn {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* TIPOGRAFIA & LAYOUT */
+    .slide-header {
+      margin-bottom: 26px;
+    }
+
+    .slide-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .slide-title {
+      font-family: var(--font-display);
+      font-size: 2.15rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      max-width: 1100px;
+      line-height: 1.5;
+    }
+
+    /* GRIDS E CARDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .card.primary { border-top: 4px solid var(--primary); }
+    .card.accent { border-top: 4px solid var(--accent); }
+    .card.success { border-top: 4px solid var(--success); }
+    .card.warning { border-top: 4px solid var(--warning); }
+    .card.danger { border-top: 4px solid var(--danger); }
+    .card.purple { border-top: 4px solid var(--purple); }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .card-desc p {
+      margin-bottom: 12px;
+    }
+
+    .card-desc p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-desc ul, .card-desc ol {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card-desc li {
+      margin-bottom: 8px;
+    }
+
+    .card-desc strong {
+      color: #ffffff;
+    }
+
+    /* BOXES ESPECIAIS */
+    .verbatim-box {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 12px 0;
+      font-size: 0.93rem;
+      color: #f1f5f9;
+      line-height: 1.65;
+    }
+
+    .verbatim-box.danger {
+      border-color: rgba(248, 113, 113, 0.3);
+      border-left-color: var(--danger);
+    }
+
+    .verbatim-box.warning {
+      border-color: rgba(251, 191, 36, 0.3);
+      border-left-color: var(--warning);
+    }
+
+    .verbatim-box.success {
+      border-color: rgba(52, 211, 153, 0.3);
+      border-left-color: var(--success);
+    }
+
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .callout.warning {
+      background: rgba(251, 191, 36, 0.08);
+      border-color: rgba(251, 191, 36, 0.35);
+    }
+
+    .callout.success {
+      background: rgba(52, 211, 153, 0.08);
+      border-color: rgba(52, 211, 153, 0.35);
+    }
+
+    .callout-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .callout-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .callout-text {
+      font-size: 0.93rem;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+
+    /* PÍLULAS E TAGS */
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .tag-primary { background: rgba(56, 189, 248, 0.18); color: var(--primary); border: 1px solid rgba(56, 189, 248, 0.35); }
+    .tag-accent { background: rgba(129, 140, 248, 0.18); color: var(--accent); border: 1px solid rgba(129, 140, 248, 0.35); }
+    .tag-success { background: rgba(52, 211, 153, 0.18); color: var(--success); border: 1px solid rgba(52, 211, 153, 0.35); }
+    .tag-warning { background: rgba(251, 191, 36, 0.18); color: var(--warning); border: 1px solid rgba(251, 191, 36, 0.35); }
+    .tag-danger { background: rgba(248, 113, 113, 0.18); color: var(--danger); border: 1px solid rgba(248, 113, 113, 0.35); }
+
+    /* TABELAS */
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+
+    th {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 12px 16px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      background: rgba(15, 23, 42, 0.6);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(56, 189, 248, 0.05);
+    }
+
+    /* BOTTOM BAR */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 14px 28px;
+      background: rgba(9, 13, 22, 0.95);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 90;
+    }
+
+    body.mode-scroll .bottom-nav {
+      display: none;
+    }
+
+    .key-hints {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    .key-hint {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    kbd {
+      background: #1e293b;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--primary);
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 1024px) {
+      .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+      }
+      body.mode-slides .slide-container {
+        padding: 24px 20px 80px;
+      }
+      .slide-title {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body class="mode-slides">
+
+  <!-- Header Superior -->
+  <header>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <div class="brand">
+      <span class="badge-tag">GETI 2026 / PPGPIT UNIFESP</span>
+      <div>
+        <div class="brand-title">Gestão Estratégica da Inovação Assistiva Corporativa</div>
+        <div class="brand-sub">Grupo A (Turma Quarta-feira) • Apresentação Oficial Versão 3.0 para Tutoria Docente</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-toggle-view" id="btnToggleMode" title="Alternar entre modo apresentação e modo rolo contínuo">
+        <span id="toggleModeIcon">📄</span> <span id="toggleModeText">Modo Rolo Contínuo</span>
+      </button>
+      <span class="slide-counter" id="slideCounter">Slide 1 de 10</span>
+      <button class="btn-icon slide-nav-btn" id="prevBtn" title="Slide Anterior (←)">❮</button>
+      <button class="btn-icon slide-nav-btn" id="nextBtn" title="Próximo Slide (→ / Espaço)">❯</button>
+      <button class="btn-icon" id="fullscreenBtn" title="Tela Cheia (F)">⛶</button>
+    </div>
+  </header>
+
+  <!-- ÁREA DE SLIDES -->
+  <main>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 1: CAPA & CONTEXTUALIZAÇÃO DO GRUPO -->
+    <!-- ========================================== -->
+    <section class="slide-container active" id="slide-1">
+      <div class="slide-header">
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
+          <span class="slide-pill">🎯 Tutoria Oficial com os Docentes</span>
+          <span style="background: rgba(251, 191, 36, 0.18); border: 1px solid rgba(251, 191, 36, 0.4); color: var(--warning); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 6px;">
+            📌 Tema Oficial Central #65
+          </span>
+          <span class="tag tag-success">Versão 3.0 Consolidada</span>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(79, 70, 229, 0.18)); border: 1.5px solid var(--primary); border-radius: 14px; padding: 20px 26px; margin-bottom: 22px; box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
+            <div>
+              <span style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); background: rgba(56, 189, 248, 0.2); padding: 4px 10px; border-radius: 4px; display: inline-block;">
+                Tema de Pesquisa Atribuído pela Coordenação PPGPIT
+              </span>
+              <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-top: 8px; line-height: 1.3;">
+                "65 - Tecnologias assistivas e inclusão social: impactos no mercado de trabalho?"
+              </div>
+              <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--primary); margin-top: 6px;">
+                Título Refinado (V3): Gestão Estratégica da Implementação de Tecnologias Assistivas no Ambiente Corporativo: Uma Abordagem Multinível Ancorada em Frameworks de Adoção e nos ODS 8 e 10
+              </div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 10px; padding: 10px 16px; text-align: right; font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary); min-width: 170px;">
+              <div>EIXO TEMÁTICO: <strong>#65</strong></div>
+              <div style="color: var(--text-muted); font-size: 0.76rem; margin-top: 2px;">TURMA QUARTA-FEIRA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card primary">
+          <div class="card-title">👥 Equipe de Discentes (Grupo A)</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Josué Jofre Tomaz de Almeida</strong></li>
+              <li><strong>Alexandre Pedroso Fernandes</strong></li>
+              <li><strong>Diana Cortez</strong></li>
+              <li><strong>Emilie Modolo</strong></li>
+              <li><strong>Manuela Souza Lima</strong></li>
+              <li><strong>Renata Andrea de Oliveira</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">🎓 Docentes Orientadores Vinculados</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Profª Drª Maria Elizete Kunkel</strong> (Orientadora / LabBiAT - ICT/UNIFESP)</li>
+              <li><strong>Profª Drª Míriam Raquel Diniz Zanetti</strong> (Orientadora - ICT/UNIFESP)</li>
+              <li><strong>Prof. Dr. Carlos Marcelo Gurjão de Godoy</strong> (Orientador - ICT/UNIFESP)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card purple">
+          <div class="card-title">🏛️ Docentes da Disciplina (GETI 2026)</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Prof. Dr. Antônio Yukio Ueta</strong> (Docente Responsável)</li>
+              <li><strong>Profª Drª Iraci de Souza João</strong> (Docente Avaliadora)</li>
+              <li><strong>Prof. Dr. Fábio Luís Falchi de Magalhães</strong> (Docente Colaborador)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 2: INCORPORAÇÃO DO FEEDBACK DOCENTE -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-2">
+      <div class="slide-header">
+        <span class="slide-pill">📈 Evolução Epistemológica do Trabalho</span>
+        <h1 class="slide-title">Atendimento Integral à Devolutiva da Banca (V1 ➔ V2 ➔ V3)</h1>
+        <p class="slide-subtitle">Como as orientações da Professora Iraci de Souza João e do Professor Yukio Ueta foram rigorosamente incorporadas para blindar o artigo na Gestão Estratégica da Inovação.</p>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 28%;">Apontamento da Docente Avaliadora</th>
+              <th style="width: 32%;">Diagnóstico na Versão Inicial (V1)</th>
+              <th style="width: 40%;">Solução Consolidada na Versão 3.0 (V3)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Retirada dos 1º, 3º e 4º Objetivos Específicos</strong></td>
+              <td>Objetivos dispersos em taxonomia de TAs, dados demográficos da RAIS e retenção genérica.</td>
+              <td><span class="tag tag-success">Resolvido:</span> 3 novos OEs gerenciais focados em RSL de estratégias, pesquisa de campo e Framework de Gestão.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Delimitação do ciclo de Tidd & Bessant (2015)</strong></td>
+              <td>Uso genérico de Tidd & Bessant para avaliar implementação na microdinâmica interna.</td>
+              <td><span class="tag tag-success">Resolvido:</span> Tidd & Bessant atua como macro-rotinas organizacionais, complementado pelos modelos de <strong>TOE, Klein & Sorra e Leonard-Barton</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Foco em Gestão da Inovação vs. Diagnóstico Sociológico</strong></td>
+              <td>Ênfase em desigualdades sociais, legislação trabalhista e mercado de trabalho macro.</td>
+              <td><span class="tag tag-success">Resolvido:</span> Foco estrito no nível <strong>meso/organizacional (a firma)</strong>: capacidades, governança interfuncional e mútua adaptação.</td>
+            </tr>
+            <tr>
+              <td><strong>4. Substituição de dados do IBGE por pesquisa empírica</strong></td>
+              <td>Dependência de dados demográficos secundários (Censo, PNAD e RAIS).</td>
+              <td><span class="tag tag-success">Resolvido:</span> Metodologia mista primária: <strong>Survey estruturado nacional</strong> + <strong>Entrevistas em profundidade</strong> com gestores de P&D, D&I, TI e RH.</td>
+            </tr>
+            <tr>
+              <td><strong>5. Aplicação de Frameworks de Adoção de Produtos</strong></td>
+              <td>Ausência de modelos consolidados para analisar assimilação e adaptação da tecnologia.</td>
+              <td><span class="tag tag-success">Resolvido:</span> Adoção do <strong>Modelo TOE</strong> (Tornatzky & Fleischer), <strong>Clima de Implementação</strong> (Klein & Sorra) e <strong>Mútua Adaptação</strong> (Leonard-Barton).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 3: CLARIFICAÇÃO CONCEITUAL: TA VS ACESSIBILIDADE -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-3">
+      <div class="slide-header">
+        <span class="slide-pill">💡 Insight Decisivo da Reunião de 15/10</span>
+        <h1 class="slide-title">Fronteira Conceitual: Tecnologia Assistiva vs. Acessibilidade Sistêmica</h1>
+        <p class="slide-subtitle">A contribuição da equipe que elucida a causa raiz do abandono tecnológico corporativo (ancorado na Lei Brasileira de Inclusão nº 13.146/2015).</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card primary">
+          <div class="card-title">♿ 1. Tecnologia Assistiva (TA)</div>
+          <div class="card-desc">
+            <p><strong>Definição Legal e Técnica:</strong> Produto, equipamento, dispositivo, recurso ou metodologia centrado no indivíduo com deficiência, destinado a promover autonomia, independência e participação social (LBI, art. 3º, III).</p>
+            <ul>
+              <li><strong>Exemplos:</strong> Leitor de tela (NVDA, JAWS), cadeira de rodas, prótese de membro, comunicador alternativo, teclado ergonômico adaptado.</li>
+              <li><strong>Papel na Firma:</strong> É o recurso que potencializa a capacidade funcional do colaborador.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">🏢 2. Acessibilidade Sistêmica Corporativa</div>
+          <div class="card-desc">
+            <p><strong>Definição Legal e Técnica:</strong> Condição para utilização, com segurança e autonomia, dos espaços, mobiliários, edificações, transportes, sistemas de informação e comunicação por todas as pessoas (LBI, art. 3º, I).</p>
+            <ul>
+              <li><strong>Exemplos:</strong> Código-fonte acessível em <strong>ERPs corporativos (SAP, TOTVS, Oracle)</strong>, portais de ponto/holerite, rotas sem barreiras, audiodescrição.</li>
+              <li><strong>Papel na Firma:</strong> É a infraestrutura organizacional que viabiliza o uso pleno da tecnologia assistiva.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout warning" style="margin-top: 22px;">
+        <div class="callout-icon">⚡</div>
+        <div>
+          <div class="callout-title">O Diagnóstico da Falha na Gestão da Inovação: O Hiato de Mútua Adaptação</div>
+          <div class="callout-text">
+            O insucesso e o abandono de TAs no ambiente de trabalho brasileiro <strong>não decorrem de limitações do usuário ou do dispositivo</strong>, mas sim da falha gerencial da firma: as empresas compram a TA de forma reativa, mas mantêm seus softwares e sistemas de gestão internos inacessíveis e incompatíveis. O framework integrador do nosso artigo endereça exatamente essa interface crítica!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 4: PERGUNTA, OBJETIVOS & ODS 8 E 10 -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-4">
+      <div class="slide-header">
+        <span class="slide-pill">🎯 Coerência Interna e Alinhamento Global</span>
+        <h1 class="slide-title">Pergunta de Pesquisa, Objetivos e Conexão aos ODS 8 e 10</h1>
+        <p class="slide-subtitle">Harmonização da pergunta e objetivos sob a ótica estrita de Gestão da Inovação e Inovação Responsável (ESG).</p>
+      </div>
+
+      <div class="verbatim-box">
+        <strong>❓ Pergunta de Pesquisa Principal:</strong><br/>
+        <em>"Como as empresas estruturam e conduzem a fase de implementação de tecnologias assistivas sob a ótica da gestão da inovação, e de que forma determinantes tecnológicos, organizacionais e de governança interfuncional condicionam a eficácia da adoção e a inclusão sociolaboral sustentável (ODS 8 e 10)?"</em>
+      </div>
+
+      <div class="verbatim-box success">
+        <strong>🎯 Objetivo Geral:</strong><br/>
+        <em>"Analisar os determinantes, práticas gerenciais e barreiras na fase de implementação corporativa de tecnologias assistivas, articulando frameworks seminais de adoção tecnológica ao ciclo de inovação para propor um Framework Integrador de Gestão da Inovação Assistiva alinhado aos ODS 8 e 10."</em>
+      </div>
+
+      <div class="grid-3" style="margin-top: 18px;">
+        <div class="card primary">
+          <div class="card-title">OE1: Literatura & Estratégias</div>
+          <div class="card-desc">
+            Mapear sistematicamente na literatura científica nacional e internacional (RSL 2015–2026) as estratégias de inovação, barreiras e modelos de implementação de TAs nas organizações, à luz do ciclo de Tidd & Bessant e das metas dos ODS 8 e 10.
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">OE2: Diagnóstico Empírico de Campo</div>
+          <div class="card-desc">
+            Diagnosticar as práticas corporativas, a governança interfuncional (P&D, D&I, TI, RH), a compatibilidade de ERPs legados (TA vs. Acessibilidade) e o clima de implementação nas empresas brasileiras via survey estruturado e entrevistas.
+          </div>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">OE3: Framework Integrador Propositivo</div>
+          <div class="card-desc">
+            Desenvolver e propor um Framework de Gestão da Inovação Assistiva Corporativa, estruturando diretrizes acionáveis de mútua adaptação tecnologia-organização, SLA de sustentação e métricas de efetividade gerencial.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 5: QUADRO TEÓRICO MULTINÍVEL -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-5">
+      <div class="slide-header">
+        <span class="slide-pill">📚 Fundamentação Teórica Robusta</span>
+        <h1 class="slide-title">Articulação Teórica Multinível de Gestão da Inovação</h1>
+        <p class="slide-subtitle">Como os modelos clássicos de inovação e adoção tecnológica conversam organicamente para sustentar a pesquisa.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card primary">
+          <div class="card-title">Tidd & Bessant (2015)</div>
+          <div class="card-desc">
+            <span class="tag tag-primary">Macro-Processo</span>
+            <p><strong>Rotinas Organizacionais:</strong> Busca (Search), Seleção (Select), Implementação (Implement) e Captura de Valor (Capture).</p>
+            <p>Fornece o mapa do ciclo de inovação corporativo da firma.</p>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">Klein & Sorra (1996)</div>
+          <div class="card-desc">
+            <span class="tag tag-accent">Eficácia de Implementação</span>
+            <p><strong>Clima de Implementação:</strong> Políticas e suporte que incentivam o uso efetivo da inovação.</p>
+            <p><strong>Values Fit:</strong> Alinhamento entre a tecnologia e os valores e cultura da equipe.</p>
+          </div>
+        </div>
+
+        <div class="card purple">
+          <div class="card-title">Leonard-Barton (1988)</div>
+          <div class="card-desc">
+            <span class="tag tag-purple">Mútua Adaptação</span>
+            <p><strong>Adaptação Recíproca:</strong> A tecnologia é customizada para o contexto do posto de trabalho, e a organização transforma seus processos para viabilizá-la.</p>
+          </div>
+        </div>
+
+        <div class="card warning">
+          <div class="card-title">Framework TOE (1990)</div>
+          <div class="card-desc">
+            <span class="tag tag-warning">Determinantes de Adoção</span>
+            <p><strong>Tecnologia:</strong> Usabilidade e ERPs.</p>
+            <p><strong>Organização:</strong> Governança e recursos.</p>
+            <p><strong>Ambiente:</strong> Legislação e fornecedores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 6: METODOLOGIA MISTA TRIANGULADA -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-6">
+      <div class="slide-header">
+        <span class="slide-pill">🔬 Rigor Metodológico Empírico</span>
+        <h1 class="slide-title">Abordagem Metodológica Mista Triangulada (MMR)</h1>
+        <p class="slide-subtitle">Superação total de dados genéricos do IBGE através de três frentes investigativas convergentes.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card primary">
+          <div class="card-title">1. RSL (Protocolo PRISMA)</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Bases:</strong> Scopus, Web of Science, SciELO e Google Scholar.</li>
+              <li><strong>Período:</strong> 2015–2026 (década pós-LBI).</li>
+              <li><strong>Objetivo:</strong> Identificar barreiras globais, determinantes de abandono e estratégias de inovação organizacional em TA.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">2. Survey Corporativo Nacional</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Instrumento:</strong> Questionário estruturado em 5 blocos (15 a 18 itens Likert).</li>
+              <li><strong>Respondentes:</strong> Gestores de P&D/Inovação, D&I, TI e RH em empresas brasileiras.</li>
+              <li><strong>Objetivo:</strong> Mapear prontidão, compatibilidade de ERPs e governança de inovação.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">3. Entrevistas em Profundidade</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Participantes:</strong> 6 a 8 lideranças-chave de casos corporativos de destaque.</li>
+              <li><strong>Foco:</strong> Aprofundar episódios críticos de mútua adaptação e integração a sistemas legados.</li>
+              <li><strong>Análise:</strong> Análise de Conteúdo Categorial (Bardin, 2016).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 7: O SURVEY & ESTRATÉGIA DE ENVIO -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-7">
+      <div class="slide-header">
+        <span class="slide-pill">📊 Coleta de Dados Primários</span>
+        <h1 class="slide-title">O Questionário (Survey) & Estratégia de Engajamento Corporativo</h1>
+        <p class="slide-subtitle">Como o grupo estruturou a coleta rápida e o plano de atração para garantir alta taxa de resposta de executivos.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card primary">
+          <div class="card-title">📋 5 Blocos do Instrumento (5 a 7 min)</div>
+          <div class="card-desc">
+            <ol>
+              <li><strong>Perfil da Empresa e Respondente:</strong> Setor, porte e área do gestor (P&D, D&I, TI, RH);</li>
+              <li><strong>Governança e Processo Decisório:</strong> Compra isolada por cotas vs. Comitê multidisciplinar e orçamento dedicado;</li>
+              <li><strong>Contexto Tecnológico e Acessibilidade Sistêmica:</strong> Compatibilidade de ERPs legados e práticas de co-design no posto de trabalho;</li>
+              <li><strong>Clima de Implementação e Gestão de Mudança:</strong> Capacitação continuada de equipe/líderes e combate a atritos de uso;</li>
+              <li><strong>Sustentação do Ciclo de Vida e KPIs:</strong> SLA de suporte/manutenção, indicadores de retenção e alinhamento aos ODS 8 e 10.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">🚀 Estratégia de Disseminação e Valor Agregado</div>
+          <div class="card-desc">
+            <ul>
+              <li><strong>Gatilho de Reciprocidade (Benchmarking Gratuito):</strong> Oferecimento do <em>"Relatório Executivo de Benchmarking em Gestão de Inovação Assistiva Corporativa (UNIFESP 2026)"</em> para todos os respondentes;</li>
+              <li><strong>LinkedIn Outreach Direcionado:</strong> Abordagem direta e personalizada com gerentes de Diversidade, Inovação e TI;</li>
+              <li><strong>Contatos Corporativos Âncoras do Grupo:</strong> Empresas parceiras e ecossistemas (Embraer, Sistema S/Senac, IBM, redes hospitalares);</li>
+              <li><strong>Comunidades Temáticas:</strong> Fóruns de D&I (REIS, ABRH e rede de pós-graduação PPGPIT).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 8: FRAMEWORK INTEGRADOR PROPOSITIVO -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-8">
+      <div class="slide-header">
+        <span class="slide-pill">🛠️ O Entregável do Artigo</span>
+        <h1 class="slide-title">Framework de Gestão da Inovação Assistiva Corporativa</h1>
+        <p class="slide-subtitle">Modelo prescritivo em 4 fases para orientar a governança, implementação e sustentação de TAs na firma.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card primary">
+          <div class="card-title">1. Prospecção & Co-Design</div>
+          <div class="card-desc">
+            <span class="tag tag-primary">Busca & Seleção</span>
+            <ul>
+              <li>Mapeamento funcional com o usuário (CIF);</li>
+              <li>Homologação preliminar de TI (compatibilidade ERP);</li>
+              <li>Open Innovation com startups e universidades.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card purple">
+          <div class="card-title">2. Mútua Adaptação</div>
+          <div class="card-desc">
+            <span class="tag tag-purple">Implementação Técnica</span>
+            <ul>
+              <li>Customização no posto real de trabalho;</li>
+              <li>Adequação da acessibilidade dos sistemas legados;</li>
+              <li>Ciclos curtos de teste e homologação contínua.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card warning">
+          <div class="card-title">3. Clima de Implementação</div>
+          <div class="card-desc">
+            <span class="tag tag-warning">Cultura & Treinamento</span>
+            <ul>
+              <li>Treinamento sistêmico (usuário, líder e equipe);</li>
+              <li>Patrocínio executivo da liderança C-Level;</li>
+              <li>Eliminação ativa de barreiras atitudinais.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">4. Sustentação & KPIs</div>
+          <div class="card-desc">
+            <span class="tag tag-success">Ciclo de Vida & ESG</span>
+            <ul>
+              <li>SLA ágil de manutenção e equipamento reserva;</li>
+              <li>Plano de atualização tecnológica preventiva;</li>
+              <li>KPIs de produtividade, retenção e ODS 8/10.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 9: PLANO DE TRABALHO DA EQUIPE -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-9">
+      <div class="slide-header">
+        <span class="slide-pill">👥 Organização Operacional</span>
+        <h1 class="slide-title">Divisão de Tarefas da Equipe e Cronograma Rumo à Publicação</h1>
+        <p class="slide-subtitle">Distribuição equilibrada dos 6 mestrandos em frentes autônomas e articuladas.</p>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Integrante do Grupo</th>
+              <th>Frente Principal de Atuação</th>
+              <th>Orientador Vinculado</th>
+              <th>Entregável Imediato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Josué Jofre Tomaz de Almeida</strong></td>
+              <td>Coordenação geral, Metodologia Mista e Modelagem do Framework Integrador (Seção 5)</td>
+              <td>Profª Drª Maria Elizete Kunkel (LabBiAT)</td>
+              <td>Framework e Instrumentos de Coleta</td>
+            </tr>
+            <tr>
+              <td><strong>Alexandre Pedroso Fernandes</strong></td>
+              <td>Condução de entrevistas de TI/Sistemas e análise de compatibilidade de ERPs legados</td>
+              <td>Prof. Dr. Carlos M. Gurjão de Godoy</td>
+              <td>Coleta e análise de dados de TI corporativa</td>
+            </tr>
+            <tr>
+              <td><strong>Manuela Souza Lima</strong></td>
+              <td>Condução da RSL (PRISMA) e revisão dos frameworks de adoção (TOE, Klein & Sorra)</td>
+              <td>Prof. Dr. Carlos M. Gurjão de Godoy</td>
+              <td>Síntese da RSL e Seção Teórica</td>
+            </tr>
+            <tr>
+              <td><strong>Emilie Modolo</strong></td>
+              <td>Condução de entrevistas com líderes de D&I e governança interfuncional</td>
+              <td>Profª Drª Míriam Raquel Diniz Zanetti</td>
+              <td>Mapeamento de governança de D&I</td>
+            </tr>
+            <tr>
+              <td><strong>Renata Andrea de Oliveira</strong></td>
+              <td>Estruturação do Survey, análise do Clima de Implementação e Ergonomia/SST</td>
+              <td>Profª Drª Míriam Raquel Diniz Zanetti</td>
+              <td>Formulário online e análise de clima</td>
+            </tr>
+            <tr>
+              <td><strong>Diana Cortez</strong></td>
+              <td>Introdução em Gestão da Inovação, Sustentação de Ciclo de Vida e Considerações Finais</td>
+              <td>Profª Drª Míriam Raquel Diniz Zanetti</td>
+              <td>Consolidação editorial e referências</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 10: PAUTA PARA A TUTORIA DOCENTE -->
+    <!-- ========================================== -->
+    <section class="slide-container" id="slide-10">
+      <div class="slide-header">
+        <span class="slide-pill">🤝 Alinhamento com a Docência</span>
+        <h1 class="slide-title">Pauta Aberta para Direcionamento dos Professores</h1>
+        <p class="slide-subtitle">Pontos prioritários para validação com o Prof. Dr. Antônio Yukio Ueta e a Profª Drª Iraci de Souza João.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card primary">
+          <div class="card-title">1. Validação da Amostragem</div>
+          <div class="card-desc">
+            <p>O desenho metodológico prevê uma meta de <strong>25 a 40 respondentes corporativos</strong> no Survey, complementada por <strong>6 a 8 entrevistas em profundidade</strong>.</p>
+            <p><em>Os professores consideram essa triangulação adequada para o volume de um capítulo de livro da coletânea PPGPIT?</em></p>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">2. Equilíbrio Teórico</div>
+          <div class="card-desc">
+            <p>Articulação de <strong>Tidd & Bessant</strong> (macro-rotinas) + <strong>Klein & Sorra / TOE / Leonard-Barton</strong> (micro-implementação) + <strong>ODS 8 e 10</strong>.</p>
+            <p><em>A banca avalia que o enquadramento responde integralmente às expectativas da disciplina de Gestão Estratégica da Inovação?</em></p>
+          </div>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">3. Articulação Editorial</div>
+          <div class="card-desc">
+            <p>O capítulo está estruturado para até <strong>8.000 palavras</strong> no padrão da Editora Pimenta Cultural, com possibilidade de desdobramento em artigo de periódico Qualis A.</p>
+            <p><em>Recomendações adicionais sobre o formato das seções e cronograma de submissão?</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout success" style="margin-top: 24px;">
+        <div class="callout-icon">✨</div>
+        <div>
+          <div class="callout-title">Compromisso do Grupo A com a Excelência Acadêmica</div>
+          <div class="callout-text">
+            Agradecemos a valiosa tutoria e orientação contínua dos docentes! Estamos prontos para iniciar a coleta empírica e refinar as análises conforme suas diretrizes.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BARRA DE NAVEGAÇÃO INFERIOR -->
+  <footer class="bottom-nav">
+    <div class="key-hints">
+      <div class="key-hint"><kbd>←</kbd> <kbd>→</kbd> Navegar slides</div>
+      <div class="key-hint"><kbd>Espaço</kbd> Avançar</div>
+      <div class="key-hint"><kbd>F</kbd> Tela cheia</div>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn-toggle-view slide-nav-btn" id="prevBtnBottom">❮ Anterior</button>
+      <button class="btn-toggle-view slide-nav-btn" id="nextBtnBottom" style="background: rgba(56, 189, 248, 0.2); border-color: var(--primary); color: #fff;">Próximo ❯</button>
+    </div>
+  </footer>
+
+  <script>
+    // Gerenciador Interativo de Slides
+    const slides = document.querySelectorAll('.slide-container');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    const progressBar = document.getElementById('progressBar');
+    const slideCounter = document.getElementById('slideCounter');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtnBottom = document.getElementById('prevBtnBottom');
+    const nextBtnBottom = document.getElementById('nextBtnBottom');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const btnToggleMode = document.getElementById('btnToggleMode');
+    const toggleModeIcon = document.getElementById('toggleModeIcon');
+    const toggleModeText = document.getElementById('toggleModeText');
+
+    function updateSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalSlides) index = totalSlides - 1;
+      currentSlide = index;
+
+      slides.forEach((s, idx) => {
+        if (idx === currentSlide) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      const pct = ((currentSlide + 1) / totalSlides) * 100;
+      progressBar.style.width = pct + '%';
+      slideCounter.textContent = `Slide ${currentSlide + 1} de ${totalSlides}`;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', () => updateSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => updateSlide(currentSlide + 1));
+    prevBtnBottom.addEventListener('click', () => updateSlide(currentSlide - 1));
+    nextBtnBottom.addEventListener('click', () => updateSlide(currentSlide + 1));
+
+    // Teclado
+    document.addEventListener('keydown', (e) => {
+      if (document.body.classList.contains('mode-scroll')) return;
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        updateSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        updateSlide(currentSlide - 1);
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      }
+    });
+
+    // Tela Cheia
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.log(err));
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    // Alternador de Modo (Slides vs Rolo Contínuo)
+    btnToggleMode.addEventListener('click', () => {
+      if (document.body.classList.contains('mode-slides')) {
+        document.body.classList.remove('mode-slides');
+        document.body.classList.add('mode-scroll');
+        toggleModeIcon.textContent = '🖥️';
+        toggleModeText.textContent = 'Modo Apresentação';
+      } else {
+        document.body.classList.remove('mode-scroll');
+        document.body.classList.add('mode-slides');
+        toggleModeIcon.textContent = '📄';
+        toggleModeText.textContent = 'Modo Rolo Contínuo';
+        updateSlide(currentSlide);
+      }
+    });
+
+    // Inicialização
+    updateSlide(0);
+  </script>
+</body>
+</html>
