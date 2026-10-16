@@ -175,4 +175,29 @@ E
 2. **Risco de Sobrecarga Temporal da Equipe:** Conduzir RSL, Survey e Entrevistas simultaneamente em um período curto exige disciplina rigorosa de execução.  
    * *Ação de Mitigação:* Divisão estrita em 3 frentes paralelas conforme a matriz de atividades da Seção 3 deste plano, garantindo que o atraso de uma frente não paralise o avanço da redação.
 3. **Risco de Recaída no Viés Sociológico/Trabalhista:** Se a redação dos resultados se concentrar excessivamente nas dificuldades pessoais do colaborador com deficiência, a banca voltará a criticar a falta de foco em gestão da inovação.  
-   * *Ação de Mitigação:* Manter a unidade de análise focada nas **rotinas organizacionais, decisões gerenciais, processos de TI, custos de SLA e métricas de desempenho corporativo**.
+* *Ação de Mitigação:* Manter a unidade de análise focada nas **rotinas organizacionais, decisões gerenciais, processos de TI, custos de SLA e métricas de desempenho corporativo**.
+---
+## 🚀 7. VANGUARDA EM GESTÃO DA INOVAÇÃO: SERVITIZAÇÃO, MODELOS EMERGENTES (ATaaS) E BENCHMARKING DE MERCADO
+### 7.1 A Mudança de Paradigma: Da Compra Transacional (CAPEX) para a Servitização (OPEX / ATaaS)
+O modelo corporativo tradicional de aquisição de TAs tem sido marcado pela ineficiência: compras isoladas de equipamentos de prateleira que geram alto custo inicial de capital (**CAPEX**), desprovidas de suporte técnico continuado, gerando obsolescência e abandono quando o colaborador muda de função ou o equipamento apresenta defeito.
+Sob a perspectiva da **Gestão Estratégica da Inovação**, emerge uma transição para modelos baseados em **Servitização** (*Product-Service Systems - PSS*):
+* **ATaaS (*Assistive Technology as a Service*) / Assinatura & Locação:** A organização não adquire a propriedade do equipamento ou do software, mas contrata a *capacidade produtiva e a autonomia funcional* como serviço contínuo (*OPEX*).
+* **Garantia de SLA e Hot-Swap:** Contratos corporativos preveem substituição imediata em até 24 horas em caso de quebra ou necessidade de nova parametrização biomecânica, eliminando a principal causa de abandono tecnológico apontada pela literatura (Phillips & Zhao, 1993; Sugawara et al., 2018).
+* **Customização Ágil e Manufatura Aditiva:** Em vez de produtos estáticos de massa, soluções modulares e adaptadas via modelagem paramétrica e impressão 3D (elo direto com as pesquisas do LabBiAT/UNIFESP liderado pela orientadora Profª Drª Maria Elizete Kunkel).
+### 7.2 Empresas Brasileiras e Internacionais para Benchmarking e Estudos de Caso
+1. **Hand Talk (Brasil / Global):** Case seminal de inovação em modelo de negócio. Transicionou de um aplicativo gratuito para um robusto modelo corporativo B2B SaaS (*Hand Talk Plugin*). Grandes corporações (ex.: Magazine Luiza, Bradesco, Natura) contratam assinatura mensal para garantir acessibilidade contínua em Língua de Sinais em portais internos e externos.
+2. **EqualWeb Brasil & UserWay:** Soluções de *Accessibility-as-a-Service* (DaaS) baseadas em IA que injetam camadas adaptativas em intranets e softwares corporativos legados mediante assinatura mensal recorrente com suporte técnico.
+3. **TiX Tecnologia Assistiva (Brasil):** Startup pioneira de engenharia assistiva nacional. Desenvolveu o teclado inteligente TiX e o software Telepatix, atuando tanto na venda quanto em comodato, locação e licenciamento para empresas, órgãos públicos e clínicas.
+4. **German Bionic, Ottobock e Comau (MATE):** No campo de exoesqueletos ergonômicos e tecnologias assistivas para a manufatura industrial, operam sob o modelo **RaaS (*Robotics-as-a-Service*) / ATaaS**, no qual montadoras automotivas (ex.: Volkswagen, Toyota, BMW) e indústrias aeroespaciais (Embraer) alugam postos ativos com manutenção preventiva, calibragem e higienização inclusas.
+5. **Consultorias de "Inclusão como Serviço" / BPO Inclusivo (ex.: Mais Diversidade, Blend Edu, Integrare):** Modelos corporativos que assumem ponta a ponta a avaliação funcional, especificação técnica da TA, homologação com a TI corporativa e capacitação das lideranças.
+### 7.3 Referencial Teórico Especializado para Fundamentação
+* **BAINES, Tim S. et al.** The servitization of manufacturing: A review of literature and practice. **International Journal of Production Research**, v. 47, n. 19, p. 5471-5507, 2009. *(Artigo seminal sobre PSS e servitização de produtos tecnológicos)*.
+* **TUKKER, Arnold.** Eight types of product–service system: eight ways to sustainability? **Business Strategy and the Environment**, v. 13, n. 4, p. 246-260, 2004. *(Taxonomia clássica de modelos orientados ao produto, ao uso e ao resultado)*.
+* **TEECE, David J.** Business models, business strategy and innovation. **Long Range Planning**, v. 43, n. 2-3, p. 172-194, 2010. *(Como a inovação em modelos de negócio cria e captura valor corporativo)*.
+* **CHESBROUGH, Henry.** **Open innovation: the new imperative for creating and profiting from technology**. Boston: Harvard Business School Press, 2003. *(Articulação com ecossistemas de startups para terceirizar a complexidade de P&D assistivo)*.
+* **SCHERER, Marcia J.** Assessing the benefits of assistive technology for people with disabilities: The Matching Person & Technology model. **Technology and Disability**, v. 17, n. 4, p. 247-254, 2005. *(O imperativo da personalização contínua frente a soluções estáticas de prateleira)*.
+### 7.4 Reportagens e Mídia de Negócios / ESG Recomendadas
+* **Exame ESG:** *"Como startups de acessibilidade estão transformando as estratégias de inclusão e ESG nas grandes corporações brasileiras"*.
+* **Valor Econômico:** *"Avanço dos exoesqueletos e da tecnologia vestível como serviço nas linhas produtivas da indústria nacional"*.
+* **MIT Technology Review Brasil:** *"Inovação Inclusiva: Por que a personalização por IA e a servitização combatem o desperdício de investimentos em acessibilidade"*.
+

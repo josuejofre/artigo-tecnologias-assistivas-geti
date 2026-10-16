@@ -157,6 +157,11 @@ The corporate adoption of Assistive Technologies (AT) has historically been driv
 #### 2.4 Inovação Responsável e o Alinhamento aos ODS 8 e 10
 * A inovação como vetor de impacto social positivo: como a gestão corporativa de TAs materializa a meta 8.5 do ODS 8 (emprego pleno, produtivo e trabalho decente para todas as pessoas, incluindo pessoas com deficiência) e a meta 10.2 do ODS 10 (empoderamento e promoção da inclusão social, econômica e política).
 
+#### 2.5 Modelos Emergentes de Gestão: Servitização, ATaaS e a Transição de CAPEX para OPEX
+* **A Servitização da Tecnologia Assistiva (PSS - Product-Service Systems):** Transição da aquisição patrimonial transacional de hardware e software (CAPEX) para a contratação contínua de capacidade produtiva, acessibilidade e suporte funcional (*OPEX*) (Baines et al., 2009; Tukker, 2004).
+* **ATaaS (*Assistive Technology as a Service*) & Assinatura com SLA:** Modelos de locação, comodato e licenciamento corporativo que agregam assistência técnica continuada, atualização de versões e garantia de substituição emergencial (*hot-swap* em 24h), mitigando diretamente as causas estruturais do abandono tecnológico (Scherer, 2005; Sugawara et al., 2018).
+* **Inovação Aberta e Managed Services (BPO Inclusivo):** Parcerias estratégicas com startups de acessibilidade e laboratórios de fabricação digital/impressão 3D para customização ágil e sob demanda dos postos de trabalho (Chesbrough, 2003; Teece, 2010).
+
 ---
 
 ### SEÇÃO 3: METODOLOGIA E DESENHO DA PESQUISA (~1.200 palavras)
