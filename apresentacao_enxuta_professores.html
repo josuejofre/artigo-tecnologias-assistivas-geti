@@ -119,11 +119,13 @@
       padding: 6px 12px;
       border-radius: 6px;
       border: 1px solid var(--border);
+      transition: all 0.2s;
     }
 
     .btn-link:hover {
       color: #fff;
       border-color: #fff;
+      background: rgba(255, 255, 255, 0.05);
     }
 
     /* SLIDES CONTAINER */
@@ -133,7 +135,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 30px 48px 80px;
-      max-width: 1280px;
+      max-width: 1320px;
       margin: 0 auto;
       width: 100%;
     }
@@ -165,7 +167,7 @@
 
     h1.slide-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       font-weight: 800;
       line-height: 1.2;
       color: #fff;
@@ -173,9 +175,9 @@
     }
 
     .slide-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 26px;
       line-height: 1.5;
     }
 
@@ -202,7 +204,7 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 24px;
+      padding: 22px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
@@ -210,6 +212,7 @@
     .card.accent { border-top: 4px solid var(--accent); }
     .card.success { border-top: 4px solid var(--success); }
     .card.warning { border-top: 4px solid var(--warning); }
+    .card.purple { border-top: 4px solid #c084fc; }
 
     .card-title {
       font-family: 'Outfit', sans-serif;
@@ -223,7 +226,7 @@
     }
 
     .card p {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #cbd5e1;
       margin-bottom: 8px;
     }
@@ -232,7 +235,7 @@
 
     .card ul {
       padding-left: 20px;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: #cbd5e1;
     }
 
@@ -244,12 +247,37 @@
       border-left: 4px solid var(--primary);
       border-radius: 10px;
       padding: 16px 20px;
-      margin-top: 24px;
-      font-size: 0.95rem;
+      margin-top: 22px;
+      font-size: 0.93rem;
       line-height: 1.6;
     }
 
     .callout strong { color: #fff; }
+
+    .code-box {
+      background: #060911;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      line-height: 1.55;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .badge-soft {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      margin-right: 6px;
+    }
 
     /* FOOTER BAR */
     footer {
@@ -293,9 +321,9 @@
       <div class="brand-title">Gestão Estratégica da Inovação Assistiva Corporativa (GETI 2026)</div>
     </div>
     <div class="header-controls">
-      <a href="controle_artigos.html" target="_blank" class="btn-link">📊 Painel RSL (19 PDFs)</a>
-      <a href="index.html" target="_blank" class="btn-link">📑 Apresentação Completa</a>
-      <span class="slide-counter" id="counter">Slide 1 de 5</span>
+      <a href="controle_artigos.html" target="_blank" class="btn-link">📊 Painel RSL (19 PDFs no GitHub)</a>
+      <a href="index.html" target="_blank" class="btn-link">📑 Apresentação Completa V4</a>
+      <span class="slide-counter" id="counter">Slide 1 de 6</span>
       <button class="nav-btn" onclick="prevSlide()">❮ Anterior</button>
       <button class="nav-btn" onclick="nextSlide()" style="background: var(--primary); color: #000;">Próximo ❯</button>
     </div>
@@ -427,11 +455,46 @@
       </div>
     </section>
 
-    <!-- ==================== SLIDE 5 ==================== -->
+    <!-- ==================== SLIDE 5 (NOVO) ==================== -->
     <section class="slide" id="s5">
+      <span class="slide-tag">MÉTODO & PROTOCOLO RSL</span>
+      <h1 class="slide-title">Strings de Busca da Revisão Sistemática Simplificada</h1>
+      <p class="slide-subtitle">Estruturação booleana em 3 eixos conceituais para mapear a servitização e novos modelos de negócio em TA.</p>
+
+      <div class="grid-2">
+        <div class="card primary">
+          <div class="card-title">🌐 String em Inglês (Scopus, WoS, OpenAlex, Europe PMC)</div>
+          <p><span class="badge-soft">Eixo 1 (Servitização / Modelos)</span> AND <span class="badge-soft">Eixo 2 (TA / Acessibilidade)</span> AND <span class="badge-soft">Eixo 3 (Firma / Trabalho)</span></p>
+          <div class="code-box">( "servitization" OR "servitisation" OR "product-service system*" OR "PSS" OR "business model*" OR "as-a-service" OR "subscription" OR "leasing" OR "rental" )
+AND
+( "assistive technology" OR "assistive technologies" OR "assistive device*" OR "workplace accessibility" OR "digital accessibility" OR "inclusive technology" )
+AND
+( "workplace" OR "corporate" OR "organization*" OR "enterprise" OR "firm" OR "employment" OR "industry" )</div>
+          <p style="font-size: 0.8rem; color: var(--muted);">Filtros: Artigos revisados por pares • Período: 2015–2026 • Acesso Aberto (OA).</p>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">🇧🇷 String em Português (SciELO, Spell, CAPES, Google Scholar)</div>
+          <p><span class="badge-soft">Eixo 1 (Servitização / Modelos)</span> E <span class="badge-soft">Eixo 2 (TA / Acessibilidade)</span> E <span class="badge-soft">Eixo 3 (Firma / Trabalho)</span></p>
+          <div class="code-box">( "servitização" OR "sistema produto-serviço" OR "modelo de negócio" OR "como serviço" OR "locação" OR "aluguel" OR "assinatura" )
+E
+( "tecnologia assistiva" OR "tecnologias assistivas" OR "acessibilidade no trabalho" OR "acessibilidade digital" )
+E
+( "empresa" OR "corporativo" OR "ambiente de trabalho" OR "organização" OR "posto de trabalho" )</div>
+          <p style="font-size: 0.8rem; color: var(--muted);">Recorte: Legislação pós-LBI (Lei 13.146/2015) até o presente (2026).</p>
+        </div>
+      </div>
+
+      <div class="callout" style="background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.3); border-left-color: var(--primary); margin-top: 20px;">
+        <strong>Resultado da Execução Automatizada:</strong> <strong>54 obras mapeadas</strong> e <strong>19 artigos com texto integral em PDF baixados</strong> e armazenados no repositório. O time pode acessá-los e filtrá-los diretamente através do <a href="controle_artigos.html" target="_blank" style="color: var(--primary); font-weight: 700; text-decoration: underline;">Painel de Controle HTML</a>.
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 6 ==================== -->
+    <section class="slide" id="s6">
       <span class="slide-tag">EMBASAMENTO CIENTÍFICO</span>
       <h1 class="slide-title">Principais Referências e Evidências da RSL</h1>
-      <p class="slide-subtitle">Articulação entre a teoria seminal de Inovação/Servitização e os artigos contemporâneos mapeados no repositório.</p>
+      <p class="slide-subtitle">Articulação entre a teoria seminal de Inovação/Servitização e os artigos com PDFs disponíveis no repositório.</p>
 
       <div class="grid-2">
         <div class="card primary">
@@ -446,18 +509,19 @@
         </div>
 
         <div class="card success">
-          <div class="card-title">📑 Evidências da RSL Simplificada (Repositório)</div>
+          <div class="card-title">📑 Artigos da RSL Baixados no Repositório (PDFs)</div>
           <ul>
-            <li><strong>From Abandonment to Adoption (2026):</strong> Fatores determinantes na transição do abandono para a adoção sustentável de TAs.</li>
-            <li><strong>From Aid Dependency to Market Transformation (2026):</strong> Superação do assistencialismo em prol de ecossistemas de mercado.</li>
-            <li><strong>Business models for sustainable commercialisation of eHealth (2021):</strong> Viabilidade econômica de tecnologias de saúde e acessibilidade.</li>
-            <li><strong>Trends and best practices for digital accessibility in workplace (2025):</strong> Melhores práticas de acessibilidade corporativa.</li>
+            <li><strong>From Abandonment to Adoption (2026):</strong> <a href="artigos/2026_From_abandonment_to_adoption_advancing_assistive_technologies_for_blindness_and_.pdf" target="_blank" style="color: var(--success); font-weight: 600;">[PDF]</a> Fatores na transição para a adoção sustentável de TAs.</li>
+            <li><strong>From Aid Dependency to Market Transformation (2026):</strong> <a href="artigos/2026_From_aid_dependency_to_market_transformation_harnessing_international_trade_and_.pdf" target="_blank" style="color: var(--success); font-weight: 600;">[PDF]</a> Superação da caridade via modelos de mercado e negócios.</li>
+            <li><strong>Business models for sustainable commercialisation of eHealth (2021):</strong> <a href="artigos/2021_Business_models_for_sustainable_commercialisation_of_digital_healthcare_(eHealth.pdf" target="_blank" style="color: var(--success); font-weight: 600;">[PDF]</a> Viabilidade de tecnologias assistivas digitais.</li>
+            <li><strong>Trends & best practices for digital accessibility in workplace (2025):</strong> <a href="artigos/2025_Trends_and_best_practices_for_ensuring_digital_accessibility_in_the_workplace.pdf" target="_blank" style="color: var(--success); font-weight: 600;">[PDF]</a> Acessibilidade em softwares e intranets.</li>
+            <li><strong>The Economics of Innovation in Prosthetic and Orthotics (2021):</strong> <a href="artigos/2021_THE_ECONOMICS_OF_INNOVATION_IN_THE_PROSTHETIC_AND_ORTHOTICS_INDUSTRY.pdf" target="_blank" style="color: var(--success); font-weight: 600;">[PDF]</a> Dinâmica econômica e custos de customização.</li>
           </ul>
         </div>
       </div>
 
       <div class="callout" style="background: rgba(52, 211, 153, 0.08); border-color: rgba(52, 211, 153, 0.3); border-left-color: var(--success); margin-top: 20px;">
-        <strong>Repositório da RSL Ativo:</strong> 54 obras mapeadas e <strong>19 artigos com texto integral em PDF</strong> baixados na pasta local <code>artigos/</code> e gerenciáveis via <a href="controle_artigos.html" target="_blank" style="color: var(--success); font-weight: 700;">Painel de Controle HTML</a>.
+        <strong>Acesso Imediato para a Equipe:</strong> Todos os 19 PDFs estão hospedados no GitHub e abrem diretamente pelo navegador através dos links acima ou pelo <a href="controle_artigos.html" target="_blank" style="color: var(--success); font-weight: 700;">Painel de Controle de Artigos</a>.
       </div>
     </section>
 
@@ -465,7 +529,7 @@
 
   <!-- FOOTER CONTROLS -->
   <footer>
-    <div>Use <kbd>←</kbd> <kbd>→</kbd> ou <kbd>Espaço</kbd> para navegar entre os 5 slides</div>
+    <div>Use <kbd>←</kbd> <kbd>→</kbd> ou <kbd>Espaço</kbd> para navegar entre os 6 slides</div>
     <div>Grupo A • Pós-Graduação em Inovação Tecnológica (PPGPIT / UNIFESP)</div>
   </footer>
 
