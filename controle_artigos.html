@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Controle de Artigos & RSL Simplificada | PPGPIT UNIFESP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #0f172a;
+      --border: rgba(148, 163, 184, 0.2);
+      --primary: #38bdf8;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --accent: #818cf8;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 32px 40px;
+      line-height: 1.6;
+    }
+    header {
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+    .metric-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .metric-val.success { color: var(--success); }
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .filter-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .table-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    th {
+      background: #1e293b;
+      padding: 14px 18px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      vertical-align: top;
+    }
+    tr:hover td {
+      background: rgba(56, 189, 248, 0.04);
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .status-success {
+      background: rgba(52, 211, 153, 0.18);
+      color: var(--success);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+    }
+    .status-warning {
+      background: rgba(251, 191, 36, 0.18);
+      color: var(--warning);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+    }
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: all 0.2s;
+    }
+    .btn-pdf:hover {
+      background: var(--primary);
+      color: #000;
+    }
+    .btn-web {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(148, 163, 184, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .btn-web:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+    details summary {
+      cursor: pointer;
+      color: var(--primary);
+      font-size: 0.82rem;
+      margin-top: 6px;
+    }
+    details p {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      background: rgba(0,0,0,0.25);
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <span class="badge">PPGPIT UNIFESP • GETI 2026</span>
+      <h1>Painel de Controle de Artigos & RSL Simplificada</h1>
+      <p class="subtitle">Mapeamento e Download Automatizado: Servitização, Modelos de Negócio (ATaaS, PSS) e Gestão da Inovação Assistiva Corporativa</p>
+    </div>
+    <div style="text-align: right;">
+      <a href="index.html" class="btn-pdf" style="padding: 10px 18px; font-size: 0.9rem;">🖥️ Ver Apresentação de Slides</a>
+    </div>
+  </header>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-val">54</div>
+      <div class="metric-label">Artigos Mapeados na RSL</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val success">19</div>
+      <div class="metric-label">PDFs Integrais Baixados na Pasta</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val" style="color: var(--accent);">2015–2026</div>
+      <div class="metric-label">Recorte Temporal Analisado</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val" style="color: var(--warning);">5</div>
+      <div class="metric-label">Eixos Temáticos de Inovação</div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar por título, autor, periódico ou palavra-chave..." onkeyup="filterTable()">
+    <span style="font-size: 0.85rem; color: var(--muted);">Dica: Os PDFs baixados estão salvos fisicamente na pasta local <code>artigos/</code> e podem ser abertos diretamente com um clique.</span>
+  </div>
+
+  <div class="table-container">
+    <table id="artigosTable">
+      <thead>
+        <tr>
+          <th style="width: 5%;">Ano</th>
+          <th style="width: 38%;">Título do Artigo & Autores</th>
+          <th style="width: 22%;">Eixo Temático / Periódico</th>
+          <th style="width: 15%;">Status do Download</th>
+          <th style="width: 20%;">Acesso ao Artigo</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>IoT powered servitization of manufacturing – an exploratory case study</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Anna Rymaszewska, Petri Helo, Angappa Gunasekaran</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Production Economics</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://osuva.uwasa.fi/bitstreams/9ab73d87-86d8-4769-815b-ca79eb649f67/download" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>Structuring servitization-related research</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Rodrigo Rabetino, Willem Harmsen, Marko Kohtamäki, Jukka Sihvonen</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Purpose The purpose of this paper is to organize and connect past research from different servitization-related scholarly communities. Design/methodology/approach This study reviews more than 1,000 articles by combining author co-citation and qualitative content analyses. Findings The structure and boundaries of the field are mapped, and the characteristics of the three identified servitization-related communities are assessed qualitatively. These three communities are product-service systems, s...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Operations & Production Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://osuva.uwasa.fi/bitstreams/46cab092-bd67-4a4c-9089-893141517aad/download" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2016</strong></td>
+          <td>
+            <strong>Effective product-service systems: A value-based framework</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Bram Kuijken, Gerda Gemser, Nachoem M. Wijnberg</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Industrial Marketing Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://figshare.com/articles/journal_contribution/Effective_product-service_systems_A_value-based_framework/27489054" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>Digital Product-Service Systems: The Role of Data in the Transition to Servitization Business Models</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">David Langley</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>The Circular Economy, as a guiding model for business processes, is attracting interest due to its potential for aligning business and societal goals as it offers companies the opportunity to simultaneously focus on economic value creation and on the mitigation of environmental damage. It is becoming increasingly clear that digital technologies are an essential component of this model as they enable transparency and efficiency in closing material and energy cycles. Additionally, digitalization l...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Sustainability</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.mdpi.com/2071-1050/14/3/1303/pdf?version=1643102065" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2015</strong></td>
+          <td>
+            <strong>The value of Big Data in servitization</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">David Opresnik, Marco Taisch</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Production Economics</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://re.public.polimi.it/bitstream/11311/979227/4/The%20value%20of%20Big%20Data%20in%20servitization_11311-979227_Taisch.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2019</strong></td>
+          <td>
+            <strong>Servitization: A contemporary thematic review of four major research streams</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Chris Raddats, Christian Kowalkowski, Ornella Benedettini, Jamie Burton et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Servitization describes the addition of services to manufacturers' core product offerings to create additional customer value. This study aims to identify the key themes and research priorities in this body of literature over thirteen years from 2005 and 2017, based on four major research streams (general management, marketing, operations, and service management). Prior multi-theme literature reviews have focused on operations journals, overlooking important work in other streams, particularly m...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Industrial Marketing Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.1016/j.indmarman.2019.03.015" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>The Product Service System Lean Design Methodology (PSSLDM)</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Giuditta Pezzotta, Claudio Sassanelli, Fabiana Pirola, Roberto Sala et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Purpose Nowadays manufacturers companies are increasingly compelled to navigate towards servitization. Different methods and approaches were proposed in literature to support them to switch from traditional product-based business model to product service systems (PSSs). However, new knowledge, capabilities and skills were needed to consistently develop PSSs, since they need a joint focus on both customer’s perspective and company’s internal performance and at the same time a proper support for t...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Manufacturing Technology Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://re.public.polimi.it/bitstream/11311/1136623/4/11311-1136623%20Rossi.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2021</strong></td>
+          <td>
+            <strong>Capabilities of digital servitization: Evidence from the socio-technical systems theory</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Christopher Münch, Emanuel Marx, Lukas Alexander Benz, Evi Hartmann et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Driven by pressures for sustainable development and disruptions such as the COVID-19 pandemic, manufacturing companies in the 21st century are affected by two intertwined trends: Industry 4.0 and servitization. Digital servitization, which represents the transition from providing products to offering smart product-service systems, is currently seen as a black box by companies confronting them with major challenges. Current literature has not yet investigated which capabilities are required for t...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Technological Forecasting and Social Change</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0040162521007927/pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2016</strong></td>
+          <td>
+            <strong>Product biographies in servitization and the circular economy</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Martin Spring, Luís Araújo</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Industrial Marketing Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://research.manchester.ac.uk/en/publications/e09844d8-2317-40b5-8bd7-5e12f51444f7" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Knowledge sharing dynamics in service suppliers' involvement for servitization of manufacturing companies</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Néstor Fabián Ayala, Carolline Amaral Paslauski, Antonio Ghezzi, Alejandro Germán Frank</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Production Economics</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://re.public.polimi.it/bitstream/11311/1060974/2/11311-1060974_Ghezzi.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2019</strong></td>
+          <td>
+            <strong>Barriers for the digitalization of servitization</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Érico Marcon, Arthur Marcon, Marie‐Anne Le Dain, Néstor Fabián Ayala et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>The use of digital technologies can increase firms’ performance and competitiveness. In product-service system context, digital technologies can improve both the innovation process, by facilitating the orchestration and collaboration, and the outcome, since they can offer new functionalities and deliver value through a digital solution. Although the benefits and possibilities of digital technologies in the PSS have been previously addressed by research, several questions and gaps regarding the b...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Procedia CIRP</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.sciencedirect.com/science/article/pii/S2212827119304342/pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Cyber-Physical Product-Service Systems – Challenges for Requirements Engineering</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Stefan Wiesner, Eugenia Marilungo, Klaus‐Dieter Thoben</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>These days, manufacturers need to improve both their products and services, as well as their technological base to achieve a more sustainable value proposition, to become more efficient and effective in the market, and to satisfy user needs. Significant emerging technologies being discussed in various research studies include networked and smart-environments connected by Internet of Things (IoT), wearable technologies, tangible interfaces, human-robot collaboration, evolving tools, processes and...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização e PSS em Tecnologia Assistiva</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Automation Technology</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.20965/ijat.2017.p0017" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2016</strong></td>
+          <td>
+            <strong>Ambient Assisted Living - design recommendations for a case management and a respective business model</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Sabine Katzmaier</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Introduction : Ambient Assisted Living (AAL) applies to IT-based products and systems serving as assistance to elderly persons. The objective is to increase quality of life and to assist in dealing with daily life and routine. The added value of AAL lies in avoiding or delaying the transition into stationary facilities. Over the recent years development of AAL products has been researched. However, spread and implementation only shows slow success. Increasingly the implementation of age related ...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Integrated Care</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.5334/ijic.2917" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2024</strong></td>
+          <td>
+            <strong>"I see it as a wellspring for my positive and upward journey in life.": Understanding Current Practices of Assistive Technology's Customized Modification in China</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Kexin Yang, Junyi Wu, Haokun Xin, Jiangtao Gong</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Due to the significant differences in physical conditions and living environments of people with disabilities, standardized assistive technologies (ATs) often fail to meet their needs. Modified AT, especially DIY (Do It Yourself) ATs, are a popular solution in many high-income countries, but there is a lack of documentation for low- and middle-income areas, especially in China, where the culture of philanthropy is undeveloped. To understand the current situation in this paper, we conducted semi-...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Proceedings of the ACM on Human-Computer Interaction</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2024_I_see_it_as_a_wellspring_for_my_positive_and_upward_journey_in_life._Understandi.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (11.89 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2021</strong></td>
+          <td>
+            <strong>THE ECONOMICS OF INNOVATION IN THE PROSTHETIC AND ORTHOTICS INDUSTRY</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Jan Andrysek</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Innovation is an important part of the prosthetic and orthotics (P&O) industry. Innovation has the potential to improve health care services and outcomes, however, it can also be a burden to the system if misdirected. This paper explores the interaction of innovation and economics within the P&O industry, focusing on its current state and future opportunities. Technological advancement, industry competition and pursuit of better patient outcomes drive innovation, while challenges in ensuring bet...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Canadian Prosthetics & Orthotics Journal</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2021_THE_ECONOMICS_OF_INNOVATION_IN_THE_PROSTHETIC_AND_ORTHOTICS_INDUSTRY.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.31 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2026</strong></td>
+          <td>
+            <strong>From Research to Transfer in Assisted Environments: A scoping review of Intelligent Monitoring Systems and their pathway to valorization (Preprint)</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">José Luis López Ruiz, María Mercedes Párraga Vico, Ángeles Verdejo Espinosa, David Díaz-Jiménez et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>BACKGROUND The ageing population and the need to support older persons and other vulnerable people in their daily lives have motivated the development of intelligent monitoring systems for assisted environments. OBJECTIVE This study analyses the valorisation pathway of an intelligent monitoring system, addressing three research questions concerning: (1) the social and economic benefits of such technologies, (2) the technical factors enabling their deployment in real settings, and (3) the mechani...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Periódico / Anais</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.2196/preprints.98948" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>Possibilities of novel technologies application for purposes of tourism of people with special needs</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Mirosława Szark-Eckardt, Beata Augustyńska, Emilia Mikołajewska, Dariusz Mikołajewski et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>This article aims at investigating the extent to which the available opportunities are being exploited, including current and potential possibilities of novel technologies application for purposes of tourism of people with special needs. The research methods used were: logical-compartmental analysis and observation. Main results of analysis: Development of the knowledge-based economy, studies in it, and implementation of their results in practice, bring many untapped opportunities, including wid...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Economic and Environmental Studies</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.25167/ees.2018.46.25" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2016</strong></td>
+          <td>
+            <strong>Developing the assistive technology consumer market for people aged 50–70</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Gillian Ward, Simon Fielden, HELEN MUIR, Nikki Holliday et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>ABSTRACT Within the United Kingdom (UK), assisted living technologies are mostly provided through statutory health and social care services following assessment of individual need and application of eligibility criteria. This paper describes the first UK study to explore and develop business approaches and innovations required to make electronic assisted living technologies more accessible to consumers in their fifties and sixties. A robust mixed-method approach was used including a large sample...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Ageing and Society</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A348FDD7CDC4B3C68F4CD9C101CA0EE1/S0144686X16000106a.pdf/div-class-title-developing-the-assistive-technology-consumer-market-for-people-aged-50-70-div.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>Business Strategy for the Development and Marketing of an HTML 5-based Learning Application for Children with Dyslexia</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Meidy Aulia, Apriwati Br Barus</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Dyslexia is a reading and spelling disorder that affects children's learning ability. Technology-based learning applications have great potential to help dyslexic children overcome learning challenges. The development of HTML5-based learning apps for children with dyslexia has great potential to improve the quality of their learning. However, the success of this app depends not only on the technological aspects, but also on a well-thought-out business strategy. App development should consider th...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Economics and Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2022_Business_Strategy_for_the_Development_and_Marketing_of_an_HTML_5-based_Learning_.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.18 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Assistive Technologies to Address Capabilities of People with Dementia: From Research to Practice</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Paul-Ariel Kenigsberg, Jean‐Pierre Aquino, Alain Bérard, François Brémond et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Assistive technologies became pervasive and virtually present in all our life domains. They can be either an enabler or an obstacle leading to social exclusion. The Fondation Médéric Alzheimer gathered international experts of dementia care, with backgrounds in biomedical, human and social sciences, to analyze how assistive technologies can address the capabilities of people with dementia, on the basis of their needs. Discussion covered the unmet needs of people with dementia, the domains of dai...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Dementia</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://pure.amsterdamumc.nl/en/publications/e0ff91e4-770a-415b-9a1f-b751d02916ac" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2015</strong></td>
+          <td>
+            <strong>Technology transfer of brain-computer interfaces as assistive technology: Barriers and opportunities</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Femke Nijboer</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Annals of Physical and Rehabilitation Medicine</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1877065714018314/pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2026</strong></td>
+          <td>
+            <strong>From aid dependency to market transformation: harnessing international trade and innovative business models to revitalize the assistive technology ecosystem in Africa</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Mendemwelabou Pakouyowou</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Africa faces a widening and largely unaddressed gap in access to assistive technology (AT). More than 240 million people on the continent require at least one assistive product, yet fewer than 3% of those in sub-Saharan Africa currently have access. The principal causes are four interlocking structural market failures: restrictive trade policies that inflate import costs, chronically underdeveloped local manufacturing capacity, inadequate national health financing for rehabilitation, and the abs...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Frontiers in Rehabilitation Sciences</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2026_From_aid_dependency_to_market_transformation_harnessing_international_trade_and_.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.31 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2021</strong></td>
+          <td>
+            <strong>Business models for sustainable commercialisation of digital healthcare (eHealth) innovations for an increasingly ageing population</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Festus Oluseyi Oderanti, Feng Li, Marija Čubrić, Xiaohui Shi</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Technological Forecasting and Social Change</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2021_Business_models_for_sustainable_commercialisation_of_digital_healthcare_(eHealth.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.67 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2019</strong></td>
+          <td>
+            <strong>Assessment of need and practice for assistive technology and telecare for people with dementia—The ATTILA (Assistive Technology and Telecare to maintain Independent Living At home for people with dementia) trial</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Kirsty Forsyth, Catherine Henderson, Lucy Davis, Anusua Singh Roy et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Abstract Introduction The objective of this study was to define current assistive technology and telecare (ATT) practice for people with dementia living at home. Methods This is a randomized controlled trial (N = 495) of ATT assessment and ATT installation intervention, compared with control (restricted ATT package). ATT assessment and installation data were collected. Qualitative work identified value networks delivering ATT, established an ATT assessment standard. Results ATT was delivered by ...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Modelos de Negócio e Adoção Corporativa de TA</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Alzheimer s & Dementia Translational Research & Clinical Interventions</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1016/j.trci.2019.07.010" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Assistive Technology in Occupational Therapy</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Gökçen Akyürek, Sinem Kars, Zeynep Çelik, Ceren Koc et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>In this chapter, occupational therapists from leading specialists exploring ways they can collaborate with assistive technology (AT) users to help them get the most out of these devices. By gratefully acknowledging the advances in technology of the last century, people with disabilities can live independent lives, contribute to their communities, attend regular schools, and work in a career. This technological development means medically switching to a social model of technology presentation, wh...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">InTech eBooks</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2017_Assistive_Technology_in_Occupational_Therapy.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (5.55 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2026</strong></td>
+          <td>
+            <strong>From abandonment to adoption: advancing assistive technologies for blindness and low vision in the AI era</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Roni Barak Ventura, Giles Hamilton-Fletcher, John‐Ross Rizzo</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Assistive technologies can enhance safety, independence, and quality of life for people with blindness and low vision. Despite their benefits, abandonment of these technologies remains widespread, and recent research on this issue is limited. In this Perspective article, we draw on both professional experiences and relevant scientific literature to examine adoption and abandonment in the context of new artificial intelligence-powered applications. We highlight risks arising from misaligned desig...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Frontiers in Digital Health</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2026_From_abandonment_to_adoption_advancing_assistive_technologies_for_blindness_and_.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.46 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2015</strong></td>
+          <td>
+            <strong>The everyday use of assistive technology by people with dementia and their family carers: a qualitative study</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Grant Gibson, Claire Dickinson, Katie Brittain, Louise A. Robinson</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>BACKGROUND: Assistive Technology (AT) has been suggested as a means by which people with dementia can be helped to live independently, while also leading to greater efficiencies in care. However little is known about how AT is being used by people with dementia and their carers in their daily routines. This paper reports on a qualitative study exploring the everyday use of AT by people with dementia and their families. METHODS: The research employed a qualitative methodology. Semi structured int...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">BMC Geriatrics</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://bmcgeriatr.biomedcentral.com/track/pdf/10.1186/s12877-015-0091-3" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2020</strong></td>
+          <td>
+            <strong>Lack of time and dependence on significant others: Occupational therapists´ experiences of prescribing time assistive technology for persons with dementia</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Ann‐Christine Persson, Inga-Lill Boman, Lena Dahlberg, Gunnel Kristina Janeslätt et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Background: There is lack of knowledge on how occupational therapists (OTs) assess daily time management (DTM) for persons with dementia (PwDs) and on which aspects affect prescription of time assistive technology (AT).Aim: To explore OTs’ experiences of assessing the need for and prescribing time AT for PwDs.Material and methods: Focus group interviews with OTs that prescribe time AT for PwDs analyzed via qualitative content analysis.Results: A main category and four categories were identified....</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Scandinavian Journal of Occupational Therapy</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.tandfonline.com/doi/pdf/10.1080/11038128.2020.1751875?needAccess=true" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Comprehensive assessment as part of the assistive technology service delivery process</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Rina Juel Kaptain, Michelle Riisager, Christina Juul, Morten Rye Olsen et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>BACKGROUND: The assistive technology (AT) service delivery process is complex and includes a comprehensive assessment of the citizen's situation to inform decision making. This assessment is required by Danish law to ensure that citizens receive solutions matched to their needs, including other services than the AT. AIM: To investigate how Danish occupational therapists, involved in the AT service delivery process, perform the comprehensive assessment. MATERIAL AND METHODS: The study is a cross-...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Scandinavian Journal of Occupational Therapy</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.1080/11038128.2025.2451287" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>Assistive technology, information asymmetry and the role of brokerage services: a scoping review</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Nathan Martin D'Cunha, Stephen T. Isbel, John R. Goss, Lynne Pezzullo et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>OBJECTIVES: Access to assistive technologies (ATs) is a human right for people with disabilities, but there are a range of barriers, including lack of adequate information. This review aimed to explore the implications of information asymmetry on the delivery of AT and to investigate if there are effective and equitable ways of providing AT brokerage services to people needing AT. DESIGN: Scoping review. DATA SOURCES: EBSCO Medline, EBSCO Cinahl, Academic Search Ultimate, Business Source Ultimat...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">BMJ Open</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://bmjopen.bmj.com/content/bmjopen/12/12/e063938.full.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Currency and Competence of Occupational Therapists and Consumers with Rapidly Changing Technology</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Emily Steel, Ricky Buchanan, Natasha Ann Layton, Erin Wilson</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Assistive technology was once a specialised field of practice, involving products designed for populations with specific impairments or functional goals. In Australia, occupational therapists have, at times, functioned as gatekeepers to public funding, prescribing products from a predefined list. An expanding range of accessible mainstream products available via international and online markets has changed the meaning and application of assistive technology for many people with disability. In th...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Occupational Therapy International</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="http://downloads.hindawi.com/journals/oti/2017/5612843.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2023</strong></td>
+          <td>
+            <strong>Actions in assistive technology with hospitalized women</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Allan dos Santos Cipriano, Juliana Fonsêca de Queiroz Marcelino, Luciana Silva do Nascimento, Aline Mendes Lacerda et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Abstract Introduction Hospitalization can render women’s health more fragile for a variety of reasons, potentially impacting their autonomy and independence. Within this scenario, interventions using assistive technology can enhance women’s occupational performance. Objective To discern the assistive technology actions undertaken by occupational therapists for women in hospital settings. Method This descriptive, retrospective, and exploratory study with a quantitative approach was conducted from...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Cadernos Brasileiros de Terapia Ocupacional </span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2023_Actions_in_assistive_technology_with_hospitalized_women.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.32 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2023</strong></td>
+          <td>
+            <strong>SAKLAY: A Guide to an Assistive Technology Service Delivery Process in the Philippines</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Kristel S Yamat, Jennifer Anne Bondoc, Gemiele Elaine Delasas, Margarita Anne R Lacson et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Occupational Therapy (OT) can help enhance human performance and well-being through assistive technology (AT).This entails guiding clients through the AT selection and acquisition process down to helping them integrate these tools' use as supports to their day-to-day living.Unfortunately, the AT prescription and acquisition process can be tedious, costly, complicated, and uncoordinated in some countries such as the Philippines.AT service delivery is an undeveloped area of practice among Filipino...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Periódico / Anais</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2023_SAKLAY_A_Guide_to_an_Assistive_Technology_Service_Delivery_Process_in_the_Philip.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.34 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>Access to assistive technology for people with intellectual disabilities: a systematic review to identify barriers and facilitators</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Fleur Heleen Boot, John Owuor, John Gerard Dinsmore, Malcolm MacLachlan</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>BACKGROUND: The World Health Organisation has launched a programme to promote Global Cooperation on Assistive Technology. Its aim is to increase access to high-quality affordable assistive products (AP) for everybody in need. People with intellectual disabilities (ID) are a specific group that could benefit from AP, but use less AP compared to their non-intellectual disabled peers. METHOD: A systematic literature search was carried out to identify barriers and potential facilitators for access t...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Intellectual Disability Research</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2018_Access_to_assistive_technology_for_people_with_intellectual_disabilities_a_syste.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.50 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Impact of Assistive Technology Lending Banks: A Systematic Review</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Cristina Martínez-Silva, Ana Maseda, Thais Pousada, Jessica Garabal-Barbeira</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Access to assistive technology (AT) remains a major global challenge, with only 10% of people in need having access to essential devices. Free loan banks of assistive products have emerged as a strategy to promote equitable access, reduce costs, and improve autonomy and quality of life. This systematic review aimed to synthesize the available evidence on the impact of free loaner assistive device programs. A comprehensive search, following PRISMA guidelines, was conducted in Medline, Web of Scie...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Applied Sciences</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.mdpi.com/2076-3417/15/16/8809/pdf?version=1754732801" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Developing assistive technology to support reminiscence therapy: a user-centered study</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Soraia M. Alarcão, André Santana, Bruna Vieites, Pedro Pinto Neves et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Caregivers are one of the main pillars in adopting digital technologies for reminiscence therapy, as they are responsible for its administration. Despite their comprehensive understanding of the needs and difficulties associated with the therapy, their perspective has not been fully considered in existing technological solutions. To mitigate this gap, we followed a user-centered design approach, using a sequential process that included worldwide web-based surveys, follow-up interviews, and focus...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Abandono Tecnológico, Suporte e SLA no Trabalho</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Frontiers in Medicine</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2025_Developing_assistive_technology_to_support_reminiscence_therapy_a_user-centered_.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (7.13 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2023</strong></td>
+          <td>
+            <strong>Finding new purpose for vacancies in rural areas: a taxonomy of coworking space business models</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Nina Thornton, Martin Engert, Andreas Hein, Helmut Krcmar</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Abstract As a result of the rural exodus over the last decades, unused vacancies in rural areas are at risk of falling into disrepair. Given the current trends of flexible workplaces and people returning to rural areas, their repurposing as coworking spaces (CWSs) by entrepreneurs poses a potential for sustainable future-oriented workplace solutions. However, there is little to no guidance on the structural configuration and business models of CWSs in rural areas available for these entrepreneur...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Entrepreneurship and Management Journal</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://link.springer.com/content/pdf/10.1007/s11365-023-00867-0.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Trends and best practices for ensuring digital accessibility in the workplace</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Radka Valerieva Nacheva</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Digital accessibility in the workplace is essential for creating an inclusive environment where all employees can fully participate. Trends include AI-powered accessibility solutions, voice user interfaces (VUI), mobile accessibility, inclusive design practices, and adhering to global accessibility standards like the Web Content Accessibility Guidelines (WCAG). Inclusive design goes beyond accessibility compliance, considering diverse user needs from the start of the design process. Global acces...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Process Management New Technologies</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2025_Trends_and_best_practices_for_ensuring_digital_accessibility_in_the_workplace.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.60 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2024</strong></td>
+          <td>
+            <strong>Editorial: Advancing digital accessibility in academic and workplace education</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Andy Coverdale, Sarah Lewthwaite, Yasmine N. Elglaly, Scott Hollier et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>With society's increasing reliance on technology, it is vital to build and sustain the capacity to create 13 inclusive digital experiences for all. There is a growing demand for graduates and professionals with 14 the knowledge and skills to produce digital resources that can be used by people who have 15 accessibility needs, including disabled and older people. However, professionals often do not 16 encounter digital accessibility in academic study and professional development. Requirements for...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Frontiers in Computer Science</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2024_Editorial_Advancing_digital_accessibility_in_academic_and_workplace_education.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.07 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2023</strong></td>
+          <td>
+            <strong>Workplace approaches to teaching digital accessibility: establishing a common foundation of awareness and understanding</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Sarah Lewthwaite, Sarah Horton, Andy Coverdale</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Accessibility in the digital world is a shared responsibility, requiring a common foundation of awareness and understanding. However, little is known about how digital accessibility can be effectively taught, and research on workplace teaching and training in accessibility is highly scarce, despite its crucial role in building accessibility capacity in the workforce. This paper considers workplace accessibility pedagogy to focus on aspects of foundational education, characterized as a pedagogica...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Frontiers in Computer Science</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2023_Workplace_approaches_to_teaching_digital_accessibility_establishing_a_common_fou.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.25 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2023</strong></td>
+          <td>
+            <strong>The Interplay of Learning Organization and Digital Accessibility in Promoting Inclusion and Equity for Persons with Disabilities</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Achraf Othman, Amnah Al Mutawaa</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>With the increasing reliance on emerging technologies in the context of digital transformation, businesses aim to enhance service quality and adapt to changing customer needs. However, persons with disabilities still face barriers to employment due to negative attitudes, lack of accessibility, and discrimination. Therefore, there is a need to explore the challenges and opportunities associated with learning organization, digital accessibility, and disability in digital transformation, specifical...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Chinese Human Resource Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2023_The_Interplay_of_Learning_Organization_and_Digital_Accessibility_in_Promoting_In.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.46 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Digital literacy, digital accessibility, human capital, and entrepreneurial resilience: a case for dynamic business ecosystems</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Khodor Shatila, Alba Yela Aránega, Lebene Richmond Soga, Ana Beatriz Hernández‐Lara</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>This study examines the role of digital literacy, digital accessibility, and human capital in fostering entrepreneurial resilience among entrepreneurs in Qatar and the United Arab Emirates (UAE). These countries serve as exemplary models in digital transformation, particularly in navigating crises such as the COVID-19 pandemic. Grounded in the resource-based view and the theory of dynamic capabilities, this research investigates how these factors contribute to entrepreneurial resilience. This st...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Innovation & Knowledge</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://doi.org/10.1016/j.jik.2025.100709" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2020</strong></td>
+          <td>
+            <strong>Accessible at last?: what do new European digital accessibility laws mean for disabled people in the UK?</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Sarah Lewthwaite, Abi James</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Recent changes to the regulation of digital services could represent a step-change in the accessibility of public sector websites and applications in the UK and across Europe. Accessibility will be centrally monitored meaning the onus is no longer exclusively on disabled people to issue legal challenges to digital exclusion. How will these changes affect disabled people in the UK, in light of Brexit and the complex relationship between standards and disability?</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Disability & Society</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://eprints.soton.ac.uk/438017/1/Lewthwaite_and_James_2020_pre_print.pdf" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2017</strong></td>
+          <td>
+            <strong>Inclusive Access: An Inclusive Design Approach to Digital Accessibility Skills Training</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Godin, Keshia</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>While working as an accessibility consultant on digital accessibility and AODA compliance, I evaluated current practices in workplace accessibility training for overall effectiveness, cost, and inclusive approach to instruction. My ethnographic review led to a new design approach for accessibility training that aims to reduce barriers to access, while increasing retention and understanding. Using adult learning theory and a constructivist model for skill building, I proposed a training design th...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">OCAD University Open Research Repository (OCAD University)</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2017_Inclusive_Access_An_Inclusive_Design_Approach_to_Digital_Accessibility_Skills_Tr.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.79 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2024</strong></td>
+          <td>
+            <strong>Digital Accessibility as an Essential Element of an Inclusive Organization</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Ewa Krok</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Purpose: The article aims to validate the importance of enhancing digital accessibility in organizations from both business and social perspectives.Initially, it sets the context by discussing the legal aspects of digital accessibility.Design/Methodology/Approach: Following this, it reviews previous research to analyze the current state of digital accessibility in organizations.This analysis identifies the problems, difficulties, and challenges that companies face in this area, and formulates a ...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">EUROPEAN RESEARCH STUDIES JOURNAL</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2024_Digital_Accessibility_as_an_Essential_Element_of_an_Inclusive_Organization.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.38 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2024</strong></td>
+          <td>
+            <strong>Teaching Digital Accessibility in Computing Education: Views of Educators in India</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">P D Parthasarathy, Swaroop Joshi</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>In recent years, there has been rising interest from both governments and private industry in developing software that is accessible to all, including people with disabilities. However, the computer science (CS) courses that ought to prepare future professionals to develop such accessible software hardly cover topics related to accessibility. While there is growing literature on incorporating accessibility topics in computing education in the West, there is little work on this in the Global Sout...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">ACM Conference on International Computing Education Research (ICER)</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2024_Teaching_Digital_Accessibility_in_Computing_Education_Views_of_Educators_in_Indi.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.94 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2025</strong></td>
+          <td>
+            <strong>Analysis of AI Mobile Applications for Ensuring Digital Accessibility in Higher Education for People with Disabilities</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Radka Valerieva Nacheva</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Abstract Introduction: Over 1 billion people worldwide have disabilities, necessitating their inclusion in health systems and workplaces. Artificial intelligence (AI) is revolutionizing accessibility and digital inclusion for these individuals, improving everyday tasks and enabling autonomous mobility. AI can be applied to visually impaired, reduced mobility, and cognitive disabilities, supporting their inclusion in learning and work environments, and promoting social and digital inclusion. Meth...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Acta Educationis Generalis</span>
+          </td>
+          <td>
+            <span class="status-badge status-success">Baixado com Sucesso</span>
+          </td>
+          <td>
+            <a href="artigos/2025_Analysis_of_AI_Mobile_Applications_for_Ensuring_Digital_Accessibility_in_Higher_.pdf" target="_blank" class="btn-pdf">📄 Abrir PDF (0.32 MB)</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>Using MOOCs to Promote Digital Accessibility and Universal Design, the MOOCAP Experience</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Gilligan John, Chen Weiqin, Jenny Darzentas</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>The recently completed Massive Open Online Course for Accessibility Partnership project (MOOCAP), had the twin aims of establishing a strategic partnership around the promotion of Universal Design and Accessibility for ICT professionals and of developing a suite of Open Educational resources (OERs) in this domain. MOOCAP's eight university partners from Germany, Norway, Greece, Ireland, the UK and Austria have a significant history in developing and providing courses in the domains of Universal ...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Acessibilidade Digital como Serviço e SaaS Corporativo</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Studies in health technology and informatics</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://arrow.dit.ie/scschcomart/66" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>A systematic design approach for service innovation of smart product-service systems</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Pai Zheng, Tzu-Jui Lin, Chun‐Hsien Chen, Xun William Xu</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Journal of Cleaner Production</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0959652618324430-fx1_lrg.jpg" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>Servitization and product-service systems: literature review</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Fabrizio Césaroni, Tindara Abbate, Mariapia Cutugno, Antonio Crupi</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">International Journal of Services Sciences</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="http://dx.doi.org/10.1504/ijssci.2022.10054852" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2018</strong></td>
+          <td>
+            <strong>Conceptual Framework for Product Service Systems</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Amir Pirayesh, Guy Doumeingts, Marco Seregni, Sergio Gusmeroli et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>To remain competitive in the current market, an enterprise must differentiate itself based on higher value propositions. For this purpose, since improving the product or service performance can reach some limits, one potential solution is to move towards new combinations of products and services. This evolution, called servitization, leads to the generation of Product-Service Systems (PSS). Servitization requires not only a clear understanding of enterprise core business but also a clear vision ...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Systems</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.mdpi.com/2079-8954/6/2/20/pdf?version=1528080637" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2020</strong></td>
+          <td>
+            <strong>Digital servitization: Crossing the perspectives of digitization and servitization</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Heiko Gebauer, MARCO UGO PAIOLA, Nicola Saccani, Mario Rapaccini</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Industrial Marketing Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0019850120304855" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>The Role of Servitization and Smart Product-Service Systems in the Industry</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Zakarya Mohsen Al-Hodiany, Al-Harath Ateik, Abdoulrahman Aljounaidi</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>In the current decade of digitalisation, industries are focusing on product customers and its services to please customers with better performance and security and fulfilling their commitment to make the market smart as well as its customers. In that case, this study has aimed to investigate the servitization and smart product-service systems influence in the industries by using information and communication technologies (ICT), Cyber-Physical System (CPS), smart connected product (SCP) and Inter...</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Malaysian Journal of Social Sciences and Humanities (MJSSH)</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.msocialsciences.com/index.php/mjssh/article/download/1410/1041" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><strong style="color: var(--primary);">2022</strong></td>
+          <td>
+            <strong>From servitization to digital servitization: How digitalization transforms companies' transition towards services</strong><br/>
+            <span style="font-size: 0.82rem; color: var(--muted);">Camila Favoretto, Glauco Henrique de Sousa Mendes, Maicon Gouvêa de Oliveira, Paulo Augusto Cauchick-Miguel et al.</span>
+            <details>
+              <summary>Ver Resumo / Abstract</summary>
+              <p>Resumo detalhado disponível no texto integral do artigo.</p>
+            </details>
+          </td>
+          <td>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--accent);">Servitização em Reabilitação, Ergonomia e Exoesqueletos</span><br/>
+            <span style="font-size: 0.8rem; color: var(--muted); font-style: italic;">Industrial Marketing Management</span>
+          </td>
+          <td>
+            <span class="status-badge status-warning">Acesso Aberto Web (Link Direto)</span>
+          </td>
+          <td>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0019850122000037" target="_blank" class="btn-web">🌐 Link Artigo Web</a>
+          </td>
+        </tr>
+    
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function filterTable() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById('artigosTable');
+      const tr = table.getElementsByTagName('tr');
+
+      for (let i = 1; i < tr.length; i++) {
+        const text = tr[i].textContent || tr[i].innerText;
+        if (text.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = '';
+        } else {
+          tr[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação Enxuta para Tutoria Docente | PPGPIT UNIFESP</title>
+  
+  <!-- Fontes Google Modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #0f172a;
+      --card-alt: #1e293b;
+      --primary: #38bdf8;
+      --accent: #818cf8;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.10) 0px, transparent 50%);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      padding: 16px 36px;
+      background: rgba(9, 13, 22, 0.95);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pill {
+      background: linear-gradient(135deg, #0284c7, #4f46e5);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-counter {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+    }
+
+    .btn-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-link:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    /* SLIDES CONTAINER */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 48px 80px;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* TIPOGRAFIA */
+    .slide-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    h1.slide-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .slide-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    /* CARDS & GRIDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .card.primary { border-top: 4px solid var(--primary); }
+    .card.accent { border-top: 4px solid var(--accent); }
+    .card.success { border-top: 4px solid var(--success); }
+    .card.warning { border-top: 4px solid var(--warning); }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul {
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+
+    .card li { margin-bottom: 6px; }
+
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .callout strong { color: #fff; }
+
+    /* FOOTER BAR */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 36px;
+      background: rgba(9, 13, 22, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      z-index: 90;
+    }
+
+    kbd {
+      background: #1e293b;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+      color: var(--primary);
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      h1.slide-title { font-size: 1.7rem; }
+      main { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <span class="pill">TUTORIA DOCENTE</span>
+      <div class="brand-title">Gestão Estratégica da Inovação Assistiva Corporativa (GETI 2026)</div>
+    </div>
+    <div class="header-controls">
+      <a href="controle_artigos.html" target="_blank" class="btn-link">📊 Painel RSL (19 PDFs)</a>
+      <a href="index.html" target="_blank" class="btn-link">📑 Apresentação Completa</a>
+      <span class="slide-counter" id="counter">Slide 1 de 5</span>
+      <button class="nav-btn" onclick="prevSlide()">❮ Anterior</button>
+      <button class="nav-btn" onclick="nextSlide()" style="background: var(--primary); color: #000;">Próximo ❯</button>
+    </div>
+  </header>
+
+  <!-- SLIDES -->
+  <main>
+
+    <!-- ==================== SLIDE 1 ==================== -->
+    <section class="slide active" id="s1">
+      <span class="slide-tag">EIXO OFICIAL #65 PPGPIT / UNIFESP • VERSÃO 4.0</span>
+      <h1 class="slide-title">Inovação em Modelos de Negócio e Servitização na Gestão de Tecnologias Assistivas Corporativas</h1>
+      <p class="slide-subtitle">Uma abordagem baseada em ATaaS (Assistive Technology as a Service), Frameworks de Adoção Tecnológica e nos ODS 8 e 10.</p>
+
+      <div class="grid-3">
+        <div class="card primary">
+          <div class="card-title">👥 Equipe do Grupo A</div>
+          <p>• <strong>Josué Jofre Tomaz de Almeida</strong></p>
+          <p>• Alexandre Pedroso Fernandes</p>
+          <p>• Diana Cortez</p>
+          <p>• Emilie Modolo</p>
+          <p>• Manuela Souza Lima</p>
+          <p>• Renata Andrea de Oliveira</p>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">🎓 Orientadores Vinculados</div>
+          <p>• <strong>Profª. Drª. Maria Elizete Kunkel</strong> (LabBiAT / UNIFESP)</p>
+          <p>• <strong>Profª. Drª. Míriam Raquel D. Zanetti</strong> (UNIFESP)</p>
+          <p>• <strong>Prof. Dr. Carlos Marcelo G. de Godoy</strong> (UNIFESP)</p>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">🏛️ Docentes da Disciplina</div>
+          <p>• <strong>Prof. Dr. Antônio Yukio Ueta</strong></p>
+          <p>• <strong>Profª. Drª. Iraci de Souza João</strong></p>
+          <p>• <strong>Prof. Dr. Fábio Luís F. de Magalhães</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2 ==================== -->
+    <section class="slide" id="s2">
+      <span class="slide-tag">RESUMO EXECUTIVO DO TRABALHO</span>
+      <h1 class="slide-title">A Falência da Compra Rígida e a Oportunidade em Gestão da Inovação</h1>
+      <p class="slide-subtitle">Por que o modelo tradicional falha e como a gestão da firma pode transformar a inclusão em capacidade sustentável.</p>
+
+      <div class="grid-2">
+        <div class="card warning">
+          <div class="card-title">⚠ O Gargalo Histórico da Prática Corporativa</div>
+          <p>• <strong>Visão Cartorial:</strong> A introdução de TAs ocorre para cumprir a cota da Lei nº 8.213/91, mediante compras isoladas de equipamentos de prateleira (<strong>CAPEX</strong>).</p>
+          <p>• <strong>Abandono Tecnológico Crônico:</strong> Estudos seminais apontam taxas de abandono entre <strong>30% e 50%</strong> quando o colaborador muda de função ou o equipamento apresenta defeito.</p>
+          <p>• <strong>Incompatibilidade de TI:</strong> A empresa fornece a TA individual, mas mantém seus sistemas ERPs (SAP, TOTVS) inacessíveis.</p>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">💡 A Solução Proposta pela Gestão da Inovação</div>
+          <p>• <strong>Transição Paradigmática:</strong> Migrar da compra transacional de produtos para a <strong>contratação contínua de capacidade e serviço (OPEX)</strong>.</p>
+          <p>• <strong>Mitigação do Risco:</strong> O modelo <em>As a Service</em> transfere o atrito de manutenção, calibragem e obsolescência para parceiros especializados com SLA garantido.</p>
+          <p>• <strong>Valor Compartilhado (ESG):</strong> Alinhamento direto com o <strong>ODS 8 (Trabalho Decente)</strong> e o <strong>ODS 10 (Redução das Desigualdades)</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3 ==================== -->
+    <section class="slide" id="s3">
+      <span class="slide-tag">NOSSA ESTRATÉGIA DE INOVAÇÃO</span>
+      <h1 class="slide-title">Servitização e Novos Modelos de Negócio em Tecnologia Assistiva</h1>
+      <p class="slide-subtitle">Como as empresas pioneiras no Brasil e no mundo estão inovando na forma de gerenciar TAs no ambiente de trabalho.</p>
+
+      <div class="grid-4">
+        <div class="card primary">
+          <div class="card-title">1. ATaaS (As a Service)</div>
+          <p><strong>Assinatura & Locação:</strong> A empresa contrata a autonomia do colaborador com SLA contratual.</p>
+          <p><strong>Hot-Swap em 24h:</strong> Substituição emergencial imediata em caso de defeito.</p>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">2. BPO Inclusivo</div>
+          <p><strong>Managed Services:</strong> Parceiro externo cuida da avaliação funcional (CIF), homologação com TI e treino da liderança.</p>
+          <p>Desonera o RH e a TI interna.</p>
+        </div>
+
+        <div class="card warning">
+          <div class="card-title">3. Customização Ágil</div>
+          <p><strong>Manufatura Aditiva:</strong> TAs modulares produzidas sob medida via modelagem paramétrica e impressão 3D.</p>
+          <p>Elo com pesquisas do <strong>LabBiAT/UNIFESP</strong>.</p>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">4. Casos Reais</div>
+          <p>• <strong>Hand Talk:</strong> SaaS corporativo de Libras;</p>
+          <p>• <strong>EqualWeb:</strong> Acessibilidade via IA em ERPs;</p>
+          <p>• <strong>German Bionic:</strong> Exoesqueletos via RaaS.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Diferenciação Conceitual Chave (Renata Oliveira / LBI nº 13.146/15):</strong> A <em>Tecnologia Assistiva</em> é o recurso individual centrado na pessoa; a <em>Acessibilidade Sistêmica</em> é a condição da infraestrutura da firma (ERPs e processos). A servitização é o elo que harmoniza ambos!
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4 ==================== -->
+    <section class="slide" id="s4">
+      <span class="slide-tag">OBJETO DE PESQUISA & COERÊNCIA</span>
+      <h1 class="slide-title">Pergunta de Pesquisa e Objetivos Específicos</h1>
+      <p class="slide-subtitle">Estruturação alinhada ao feedback da banca, centrada na firma e em metodologia mista triangulada.</p>
+
+      <div class="callout" style="margin-top: 0; margin-bottom: 24px; border-left-color: var(--primary);">
+        <strong style="color: var(--primary);">❓ Pergunta de Pesquisa Principal:</strong><br/>
+        <em>"Como as empresas corporativas estruturam rotinas de gestão da inovação para migrar de compras transacionais (CAPEX) para modelos de servitização e parcerias em tecnologia assistiva (ATaaS/OPEX), e quais determinantes organizacionais e tecnológicos condicionam a redução do abandono tecnológico e a inclusão produtiva sustentável (ODS 8 e 10)?"</em>
+      </div>
+
+      <div class="grid-3">
+        <div class="card primary">
+          <div class="card-title">OE1: RSL Automatizada</div>
+          <p>Mapear na literatura científica nacional e internacional os modelos de negócio emergentes, estratégias de servitização (PSS/ATaaS) e determinantes de abandono de TAs corporativas.</p>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">OE2: Campo (Survey & Casos)</div>
+          <p>Diagnosticar as práticas corporativas no Brasil quanto à viabilidade de migração de compras patrimoniais para modelos de serviço com SLA, acessibilidade de ERPs e clima de implementação.</p>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">OE3: Framework Prescritivo</div>
+          <p>Desenvolver e propor um Framework de Gestão da Inovação Assistiva Corporativa baseado em ATaaS, mútua adaptação e governança ágil de ciclo de vida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5 ==================== -->
+    <section class="slide" id="s5">
+      <span class="slide-tag">EMBASAMENTO CIENTÍFICO</span>
+      <h1 class="slide-title">Principais Referências e Evidências da RSL</h1>
+      <p class="slide-subtitle">Articulação entre a teoria seminal de Inovação/Servitização e os artigos contemporâneos mapeados no repositório.</p>
+
+      <div class="grid-2">
+        <div class="card primary">
+          <div class="card-title">📚 Literatura Seminal em Gestão da Inovação</div>
+          <ul>
+            <li><strong>Baines et al. (2009):</strong> <em>The servitization of manufacturing</em> (Transição de produto físico para solução e serviço contínuo).</li>
+            <li><strong>Tukker (2004):</strong> <em>Eight types of Product-Service System (PSS)</em> (Modelos orientados ao uso e ao resultado).</li>
+            <li><strong>Teece (2010):</strong> <em>Business models, business strategy and innovation</em> (Criação e captura de valor).</li>
+            <li><strong>Leonard-Barton (1988):</strong> <em>Implementation as mutual adaptation of technology and organization</em>.</li>
+            <li><strong>Klein & Sorra (1996):</strong> <em>The challenge of innovation implementation: Implementation Climate & Values Fit</em>.</li>
+          </ul>
+        </div>
+
+        <div class="card success">
+          <div class="card-title">📑 Evidências da RSL Simplificada (Repositório)</div>
+          <ul>
+            <li><strong>From Abandonment to Adoption (2026):</strong> Fatores determinantes na transição do abandono para a adoção sustentável de TAs.</li>
+            <li><strong>From Aid Dependency to Market Transformation (2026):</strong> Superação do assistencialismo em prol de ecossistemas de mercado.</li>
+            <li><strong>Business models for sustainable commercialisation of eHealth (2021):</strong> Viabilidade econômica de tecnologias de saúde e acessibilidade.</li>
+            <li><strong>Trends and best practices for digital accessibility in workplace (2025):</strong> Melhores práticas de acessibilidade corporativa.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="background: rgba(52, 211, 153, 0.08); border-color: rgba(52, 211, 153, 0.3); border-left-color: var(--success); margin-top: 20px;">
+        <strong>Repositório da RSL Ativo:</strong> 54 obras mapeadas e <strong>19 artigos com texto integral em PDF</strong> baixados na pasta local <code>artigos/</code> e gerenciáveis via <a href="controle_artigos.html" target="_blank" style="color: var(--success); font-weight: 700;">Painel de Controle HTML</a>.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER CONTROLS -->
+  <footer>
+    <div>Use <kbd>←</kbd> <kbd>→</kbd> ou <kbd>Espaço</kbd> para navegar entre os 5 slides</div>
+    <div>Grupo A • Pós-Graduação em Inovação Tecnológica (PPGPIT / UNIFESP)</div>
+  </footer>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+    const counter = document.getElementById('counter');
+
+    function update() {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === current);
+      });
+      counter.textContent = `Slide ${current + 1} de ${total}`;
+    }
+
+    function nextSlide() {
+      if (current < total - 1) {
+        current++;
+        update();
+      }
+    }
+
+    function prevSlide() {
+      if (current > 0) {
+        current--;
+        update();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      }
+    });
+
+    update();
+  </script>
+</body>
+</html>

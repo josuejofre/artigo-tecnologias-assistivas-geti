@@ -1,17 +1,18 @@
-# ♿ Gestão Estratégica da Inovação Assistiva Corporativa
+# ♿ Inovação em Modelos de Negócio e Servitização na Gestão de Tecnologias Assistivas Corporativas
 ### Artigo & Capítulo de Livro — Coletânea Oficial PPGPIT / UNIFESP (2026)
 
-> **Coletânea:** *Práticas de Gestão da Inovação Tecnológica* (Série PPGPIT / Editora Pimenta Cultural & Editora Unitau)  
+> **Coletânea Oficial:** *Práticas de Gestão da Inovação Tecnológica* (Série PPGPIT / Editora Pimenta Cultural & Editora Unitau)  
 > **Disciplina:** Gestão Estratégica da Inovação (GETI 2026)  
 > **Programa:** Programa de Pós-Graduação em Inovação Tecnológica (PPGPIT) – UNIFESP (Instituto de Ciência e Tecnologia)  
 > **Tema Oficial #65:** *Tecnologias Assistivas e Inclusão Social: Impactos no Mercado de Trabalho?*  
 
 ---
 
-## 🌐 Apresentação Interativa em HTML
+## 🌐 Acesso Rápido às Apresentações e ao Painel RSL (GitHub Pages)
 
-Acesse a apresentação de slides online (hospedada no GitHub Pages):  
-👉 **[Apresentação Oficial para a Tutoria Docente](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/)**
+* 👉 **[Apresentação Enxuta para Conversa com Professores (5 Slides Objetivos)](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/apresentacao_enxuta_professores.html)**
+* 👉 **[Painel Interativo de Controle da RSL & Download dos 19 Artigos](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/controle_artigos.html)**
+* 👉 **[Apresentação Completa e Detalhada da Versão 3.0/4.0](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/)**
 
 ---
 
@@ -36,7 +37,9 @@ Acesse a apresentação de slides online (hospedada no GitHub Pages):
 
 ## 📑 Principais Documentos no Repositório
 
-* `index.html`: Apresentação interativa em HTML (modo slides e modo rolo contínuo) para a tutoria docente.
-* `proposta_capitulo_livro_tecnologias_assistivas.md`: Minuta completa da proposta de capítulo (Versão 3.0 consolidada).
-* `planejamento_estrategico_artigo_v3_rsl_survey.md`: Plano de ação, protocolo de RSL (PRISMA), questionário estruturado (Survey) e análise SWOT.
-* `Proposta_Capitulo_Livro_Tecnologias_Assistivas_V3.docx`: Documento oficial formatado em Word (.docx).
+* `apresentacao_enxuta_professores.html`: Apresentação em 5 slides objetivos (Título, Resumo, Nossa Estratégia de Servitização/ATaaS, Pergunta/Objetivos e Referências).
+* `controle_artigos.html`: Painel web interativo para gerenciar e abrir os artigos encontrados e baixados.
+* `artigos/`: Pasta com os **19 artigos científicos completos em PDF** baixados e organizados.
+* `artigos_metadados_rsl.json`: Metadados completos das 54 obras mapeadas na RSL automatizada.
+* `proposta_capitulo_livro_tecnologias_assistivas_v4.md`: Minuta completa da proposta de capítulo (Versão 4.0 consolidada com a nova estratégia de servitização e ATaaS).
+* `planejamento_estrategico_artigo_v3_rsl_survey.md`: Planejamento estratégico detalhado, protocolo PRISMA, survey de 5 blocos e benchmarking de mercado.
