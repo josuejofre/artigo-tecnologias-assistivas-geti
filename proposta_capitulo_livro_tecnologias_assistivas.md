@@ -23,9 +23,9 @@
 
 ## IDENTIFICAÇÃO DO TRABALHO E EQUIPE
 
-### Título Oficial do Capítulo (Versão 5.0)
-> **Da Aquisição Transacional à Servitização Contínua: Gestão Estratégica da Inovação, Novos Modelos de Negócio em Tecnologias Assistivas (ATaaS) e os ODS 8 e 10**  
-> *(From Transactional Procurement to Continuous Servitization: Strategic Innovation Management, Novel Assistive Technology Business Models (ATaaS), and SDGs 8 & 10)*
+### Título Oficial do Capítulo (Versão 5.0 Ajustada)
+> **Da Aquisição Transacional à Servitização Contínua: Gestão Estratégica da Inovação, Novos Modelos de Negócio em Tecnologias Assistivas (ATaaS) no Contexto Corporativo Brasileiro e os ODS 8 e 10**  
+> *(From Transactional Procurement to Continuous Servitization: Strategic Innovation Management, Novel Assistive Technology Business Models (ATaaS) in the Brazilian Corporate Context, and SDGs 8 & 10)*
 
 ### Equipe de Autores (Discentes e Docentes Orientadores)
 * **Discentes (Mestrandos PPGPIT / Turma Quarta-feira):**
@@ -33,7 +33,7 @@
   * Alexandre Pedroso Fernandes
   * Diana Cortez
   * Emilie Modolo
-  * Manuela Souza Lima
+  * Manuela Lima
   * Renata Andrea de Oliveira
 * **Docentes Orientadores Vinculados:**
   * Profª. Drª. Maria Elizete Kunkel (Orientadora / LabBiAT - UNIFESP)
@@ -42,19 +42,18 @@
 * **Docentes da Disciplina (Coordenação & Tutoria):**
   * Prof. Dr. Antônio Yukio Ueta
   * Profª. Drª. Iraci de Souza João
-  * Prof. Dr. Fábio Luís Falchi de Magalhães
 
 ---
 
 ## ELEMENTOS PRÉ-TEXTUAIS
 
-### RESUMO (VERSÃO 5.0 DEFINITIVA)
-Historicamente, a incorporação de Tecnologias Assistivas (TA) no ecossistema corporativo brasileiro tem se caracterizado por uma lógica de aquisição transacional e pontual balizada em despesas de capital (Capex), induzida predominantemente pela conformidade coercitiva à Lei de Cotas (Lei nº 8.213/1991). Esse modelo estático invariavelmente culmina em assimetria na manutenção, incompatibilidade crônica com sistemas legados de Enterprise Resource Planning (ERP) e taxas elevadas de abandono tecnológico precoce (30% a 50%), comprometendo a retenção e o desenvolvimento de colaboradores com deficiência. Sob a lente da Gestão Estratégica da Inovação e da Teoria dos Sistemas Produto-Serviço (PSS), este estudo analisa a transição paradigmática da posse patrimonial para modelos de **Servitização Contínua**, operacionalizados pelo constructo de **Tecnologia Assistiva como Serviço (*Assistive Technology as a Service* — ATaaS)**. O objetivo geral é investigar os determinantes organizacionais, operacionais e regulatórios que condicionam essa transição para despesas operacionais (Opex), desenvolvendo um framework prescritivo de gestão da inovação alinhado aos Objetivos de Desenvolvimento Sustentável (ODS 8 – Trabalho Decente e ODS 10 – Redução das Desigualdades). O arcabouço teórico articula a Lógica Dominante do Serviço (Vargo & Lusch, 2016), o Paradoxo da Servitização (Gebauer et al., 2005) e o modelo *Matching Person & Technology* (Scherer, 2005) aos frameworks seminais de implementação tecnológica: TOE (Tornatzky & Fleischer, 1990), Clima de Implementação (Klein & Sorra, 1996) e Teoria da Mútua Adaptação (Leonard-Barton, 1988), incorporando a distinção epistemológica entre TA individual e Acessibilidade Sistêmica (Lei nº 13.146/2015). Metodologicamente, emprega-se uma abordagem mista triangulada fundamentada em: (1) Revisão Sistemática da Literatura pautada nas diretrizes internacionais do protocolo PRISMA 2020 nas bases Scopus, Web of Science e PubMed/Europe PMC, resultando em 19 estudos seminais analisados em texto integral; (2) Levantamento quantitativo-descritivo de prontidão organizacional (*survey* estruturado); e (3) Entrevistas semiestruturadas com lideranças corporativas tratadas por análise de conteúdo categorial (Bardin). Os resultados revelam que a viabilidade econômica do ATaaS ancora-se na otimização do Custo Total de Uso (TCU) e em benefícios fiscais no Lucro Real, enquanto sua eficácia biopsicossocial depende da governança de dados (*Privacy by Design* sob a LGPD) e de acordos de nível de serviço com substituição emergencial (*hot-swap* em até 24 horas, Uptime ≥ 98,5%). Como contribuição primordial, entrega-se o *Framework de Gestão da Inovação Assistiva Corporativa Baseado em ATaaS*, articulando quatro fases integradas de governança, conformidade e coprodução de valor.
+### RESUMO (VERSÃO 5.0 AJUSTADA)
+Historicamente, a incorporação de Tecnologias Assistivas (TA) no ecossistema corporativo brasileiro tem se caracterizado por uma lógica de aquisição transacional e pontual balizada em despesas de capital (Capex), induzida predominantemente pela conformidade coercitiva à Lei de Cotas (Lei nº 8.213/1991). Esse modelo estático invariavelmente culmina em assimetria na manutenção, incompatibilidade crônica com sistemas legados de Enterprise Resource Planning (ERP) e taxas elevadas de abandono tecnológico precoce (30% a 50%), comprometendo a retenção e o desenvolvimento de colaboradores com deficiência (Scherer, 2005; Sugawara et al., 2018). Sob a lente da Gestão Estratégica da Inovação e da Teoria dos Sistemas Produto-Serviço (PSS), este estudo analisa a transição paradigmática da posse patrimonial para modelos de **Servitização Contínua**, operacionalizados pelo constructo de **Tecnologia Assistiva como Serviço (*Assistive Technology as a Service* — ATaaS)**. O objetivo geral é investigar os determinantes organizacionais, operacionais e regulatórios que condicionam essa transição para despesas operacionais (Opex) em empresas no Brasil, propondo diretrizes e recomendações gerenciais ancoradas na adaptação dos modelos seminais de PSS (Tukker, 2004; Baines et al., 2009) e MPT (Scherer, 2005), alinhadas aos Objetivos de Desenvolvimento Sustentável (ODS 8 – Trabalho Decente e ODS 10 – Redução das Desigualdades). O arcabouço teórico articula a Lógica Dominante do Serviço (Vargo & Lusch, 2016), o Paradoxo da Servitização (Gebauer et al., 2005) e o modelo *Matching Person & Technology* (Scherer, 2005) aos frameworks seminais de implementação tecnológica: TOE (Tornatzky & Fleischer, 1990), Clima de Implementação (Klein & Sorra, 1996) e Teoria da Mútua Adaptação (Leonard-Barton, 1988), incorporando a distinção epistemológica entre TA individual e Acessibilidade Sistêmica (Lei nº 13.146/2015). Metodologicamente, emprega-se uma abordagem mista triangulada fundamentada em: (1) Mapeamento do Estado da Arte e busca bibliográfica estruturada nas bases Scopus, Web of Science e PubMed/Europe PMC, resultando em 19 estudos seminais analisados em texto integral; (2) Levantamento quantitativo-descritivo de prontidão organizacional (*survey* estruturado com gestores corporativos brasileiros); e (3) Entrevistas semiestruturadas com lideranças corporativas tratadas por análise de conteúdo categorial (Bardin, 2016). Os resultados revelam que a viabilidade econômica do ATaaS ancora-se na otimização do Custo Total de Uso (TCU) e em benefícios fiscais no Lucro Real, enquanto sua eficácia biopsicossocial depende da governança de dados (*Privacy by Design* sob a LGPD) e de acordos de nível de serviço com substituição emergencial (*hot-swap* em até 24 horas, Uptime ≥ 98,5%). Como contribuição primordial, entregam-se diretrizes gerenciais acionáveis estruturadas em quatro fases integradas de governança, conformidade e coprodução de valor.
 
 **Palavras-chave:** Gestão da Inovação; Servitização; Sistemas Produto-Serviço (PSS); ATaaS; Tecnologia Assistiva; Custo Total de Uso; ODS 8 e ODS 10.
 
-### ABSTRACT (DEFINITIVE VERSION 5.0)
-Historically, the assimilation of Assistive Technologies (AT) within the Brazilian corporate landscape has been restricted to a transactional, capital expenditure (Capex) acquisition paradigm, primarily coerced by statutory employment quotas (Law No. 8,213/1991). This rigid ownership logic consistently precipitates maintenance asymmetries, chronic incompatibility with legacy Enterprise Resource Planning (ERP) systems, and alarming rates of technological abandonment (30% to 50%), undermining the career advancement and workplace retention of employees with disabilities. Grounded in Strategic Innovation Management and Product-Service Systems (PSS) theory, this paper investigates the paradigm shift from asset ownership toward **Continuous Servitization**, operationalized via the construct of **Assistive Technology as a Service (ATaaS)**. The primary objective is to examine the organizational, operational, and regulatory determinants conditioning this transition to operational expenditures (Opex), delivering a prescriptive innovation governance framework aligned with the United Nations Sustainable Development Goals (SDG 8 – Decent Work and SDG 10 – Reduced Inequalities). The theoretical framework harmonizes the Service-Dominant Logic (Vargo & Lusch, 2016), the Servitization Paradox (Gebauer et al., 2005), and the Matching Person & Technology model (Scherer, 2005) with seminal technology adoption theories: the TOE Framework (Tornatzky & Fleischer, 1990), Implementation Climate (Klein & Sorra, 1996), and Mutual Adaptation Theory (Leonard-Barton, 1988), while observing the epistemological boundary between personalized AT and systemic workplace accessibility (Brazilian Inclusion Law No. 13,146/2015). Methodologically, a triangulated mixed-methods research design is deployed, comprising: (1) a formal Systematic Literature Review adhering to the PRISMA 2020 protocol across Scopus, Web of Science, and PubMed/Europe PMC databases, analyzing 19 fully retrieved benchmark articles; (2) an exploratory cross-sectional readiness survey with corporate decision-makers; and (3) in-depth semi-structured stakeholder interviews subjected to categorical content analysis (Bardin). Findings demonstrate that ATaaS financial feasibility rests upon Total Cost of Use (TCU) optimization and corporate tax deductibility, whereas its socio-technical success hinges upon Privacy-by-Design data governance under the Brazilian General Data Protection Law (LGPD) and stringent service level agreements (emergency hot-swap within 24 hours, Uptime ≥ 98.5%). As its primary contribution, the paper puts forward the *ATaaS-Based Corporate Assistive Innovation Management Framework*, providing a multidimensional roadmap spanning strategic scouting, technical co-design, implementation climate, and life-cycle service governance.
+### ABSTRACT (ADJUSTED VERSION 5.0)
+Historically, the assimilation of Assistive Technologies (AT) within the Brazilian corporate landscape has been restricted to a transactional, capital expenditure (Capex) acquisition paradigm, primarily coerced by statutory employment quotas (Law No. 8,213/1991). This rigid ownership logic consistently precipitates maintenance asymmetries, chronic incompatibility with legacy Enterprise Resource Planning (ERP) systems, and alarming rates of technological abandonment (30% to 50%), undermining the career advancement and workplace retention of employees with disabilities (Scherer, 2005; Sugawara et al., 2018). Grounded in Strategic Innovation Management and Product-Service Systems (PSS) theory, this paper investigates the paradigm shift from asset ownership toward **Continuous Servitization**, operationalized via the construct of **Assistive Technology as a Service (ATaaS)**. The primary objective is to examine the organizational, operational, and regulatory determinants conditioning this transition to operational expenditures (Opex) within Brazilian companies, delivering managerial guidelines adapted from seminal PSS (Tukker, 2004; Baines et al., 2009) and MPT (Scherer, 2005) frameworks aligned with the United Nations Sustainable Development Goals (SDG 8 – Decent Work and SDG 10 – Reduced Inequalities). The theoretical framework harmonizes the Service-Dominant Logic (Vargo & Lusch, 2016), the Servitization Paradox (Gebauer et al., 2005), and the Matching Person & Technology model (Scherer, 2005) with seminal technology adoption theories: the TOE Framework (Tornatzky & Fleischer, 1990), Implementation Climate (Klein & Sorra, 1996), and Mutual Adaptation Theory (Leonard-Barton, 1988), while observing the epistemological boundary between personalized AT and systemic workplace accessibility (Brazilian Inclusion Law No. 13,146/2015). Methodologically, a triangulated mixed-methods research design is deployed, comprising: (1) a targeted state-of-the-art literature mapping across Scopus, Web of Science, and PubMed/Europe PMC databases, analyzing 19 fully retrieved benchmark articles; (2) an exploratory cross-sectional readiness survey with Brazilian corporate decision-makers; and (3) in-depth semi-structured stakeholder interviews subjected to categorical content analysis (Bardin). Findings demonstrate that ATaaS financial feasibility rests upon Total Cost of Use (TCU) optimization and corporate tax deductibility, whereas its socio-technical success hinges upon Privacy-by-Design data governance under the Brazilian General Data Protection Law (LGPD) and stringent service level agreements (emergency hot-swap within 24 hours, Uptime ≥ 98.5%). As its primary contribution, the paper delivers practical managerial recommendations for cross-functional governance and inclusive technology servitization.
 
 **Keywords:** Innovation Management; Servitization; Product-Service Systems (PSS); ATaaS; Assistive Technology; Total Cost of Use; SDG 8 and SDG 10.
 
@@ -63,12 +62,12 @@ Historically, the assimilation of Assistive Technologies (AT) within the Brazili
 ## ESTRUTURA DO ARTIGO E ROTEIRO DE LEITURA (*PAPER ROADMAP*)
 
 Para orientar a apreciação analítica do leitor, o presente manuscrito organiza-se em seis seções integradas:
-* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
+* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs no Brasil e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
 * **Seção 2 (Fundamentação Teórica Avançada):** Desenvolve as bases conceituais de PSS, S-D Logic, Modelo MPT, superação do Paradoxo da Servitização e os frameworks de implementação organizacional (TOE, Clima de Implementação e Mútua Adaptação);
-* **Seção 3 (Metodologia e Desenho da Pesquisa):** Formaliza o protocolo PRISMA 2020 para a RSL (19 artigos) e os instrumentos de coleta primária mista (survey de prontidão e entrevistas com análise de conteúdo);
+* **Seção 3 (Metodologia e Desenho da Pesquisa):** Formaliza a estratégia de busca bibliográfica (19 artigos seminais baixados) e os instrumentos de coleta primária mista no Brasil (survey de prontidão e entrevistas com análise de conteúdo);
 * **Seção 4 (Análise e Discussão dos Resultados):** Modela analiticamente o Custo Total de Uso ($TCU$), elucida as tensões entre escala e customização modular, debate a compatibilidade com ERPs legados e delineia salvaguardas de privacidade sob a LGPD;
-* **Seção 5 (Framework Integrador ATaaS):** Apresenta o modelo prescritivo em quatro fases operacionais com parâmetros de SLA, Uptime e governança interfuncional;
-* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional e deduz formalmente as hipóteses causais testáveis ($H_1$ e $H_2$).
+* **Seção 5 (Diretrizes Gerenciais Aplicadas Baseadas em PSS e MPT):** Apresenta o roteiro prescritivo em quatro fases operacionais com parâmetros de SLA, Uptime e governança interfuncional;
+* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional no Brasil e deduz formalmente as hipóteses causais testáveis ($H_1$ e $H_2$).
 
 ---
 
@@ -82,9 +81,9 @@ O abandono não decorre primariamente de deficiências intrínsecas ao hardware 
 
 Diante do colapso do modelo transacional de Capex, desponta na vanguarda da literatura de gestão a transição paradigmática para a **Servitização** e os **Sistemas Produto-Serviço (*Product-Service Systems* — PSS)** (Baines et al., 2009; Tukker, 2004; Kowalkowski et al., 2017). Ao migrar da compra do bem para a contratação contínua de capacidades como despesa operacional (*Operational Expenditure* — Opex), surge o constructo de **Tecnologia Assistiva como Serviço (*Assistive Technology as a Service* — ATaaS)**. Nesse modelo, a firma não imobiliza capital na propriedade de itens depreciáveis; em vez disso, contrata de parceiros especializados a garantia de autonomia funcional, suporte ergonômico contínuo, integração técnica a sistemas corporativos e acordos de nível de serviço com substituição emergencial (*hot-swap* em até 24 horas).
 
-Face a essa conjuntura, formula-se a seguinte **Questão Central de Pesquisa**: *Como as organizações corporativas podem estruturar rotinas de gestão estratégica da inovação para migrar da aquisição transacional (Capex) para modelos de servitização contínua em tecnologia assistiva (ATaaS/Opex), e de que forma determinantes tecnológicos, organizacionais e regulatórios condicionam a mitigação do abandono tecnológico e a sustentabilidade sociolaboral à luz dos ODS 8 e 10?*
+Face a essa conjuntura, formula-se a seguinte **Questão Central de Pesquisa (Contextualizada no Brasil)**: *Como as organizações corporativas no Brasil podem estruturar rotinas de gestão estratégica da inovação para migrar da aquisição transacional (Capex) para modelos de servitização contínua em tecnologia assistiva (ATaaS/Opex), e de que forma determinantes tecnológicos, organizacionais e regulatórios condicionam a mitigação do abandono tecnológico e a sustentabilidade sociolaboral à luz dos ODS 8 e 10?*
 
-Para responder a essa indagação, o **Objetivo Geral** deste estudo é analisar os determinantes gerenciais, as dinâmicas de mútua adaptação e as estruturas de governança na transição para modelos servitizados de tecnologias assistivas corporativas, propondo um *Framework Integrador de Gestão da Inovação Assistiva Baseado em ATaaS* fundamentado em evidências e apto a orientar a tomada de decisão executiva.
+Para responder a essa indagação, o **Objetivo Geral** deste estudo é analisar os determinantes gerenciais, as dinâmicas de mútua adaptação e as estruturas de governança na transição para modelos servitizados de tecnologias assistivas em empresas no Brasil, propondo diretrizes gerenciais e recomendações práticas baseadas na adaptação dos modelos conceituais consagrados de PSS (Tukker, 2004; Baines et al., 2009) e MPT (Scherer, 2005) aptas a orientar a tomada de decisão executiva.
 
 ---
 
@@ -131,23 +130,23 @@ A investigação emprega uma abordagem metodológica mista convergente (*Mixed M
 
 ```mermaid
 flowchart LR
-    subgraph ETAPA1["Fase 1: Revisão Sistemática"]
-        P1["Protocolo PRISMA 2020<br/>(Scopus, WoS, PubMed)<br/>54 identificados ➔ 19 incluídos"]
+    subgraph ETAPA1["Fase 1: Mapeamento da Literatura"]
+        P1["Estado da Arte da Literatura<br/>(Scopus, WoS, PubMed)<br/>54 identificados ➔ 19 incluídos em PDF"]
     end
-    subgraph ETAPA2["Fase 2: Levantamento Empírico"]
+    subgraph ETAPA2["Fase 2: Levantamento Empírico no Brasil"]
         P2["Survey Estruturado<br/>Prontidão Organizacional<br/>(Escala Likert 1 a 5)"]
         P3["Entrevistas Qualitativas<br/>Lideranças Corporativas<br/>(Análise de Conteúdo - Bardin)"]
     end
-    subgraph SINTESE["Fase 3: Triangulação & Entrega"]
-        OUT["Framework Integrador ATaaS<br/>Modelagem TCU & SLAs<br/>Capítulo Qualis A1"]
+    subgraph SINTESE["Fase 3: Diretrizes & Recomendações"]
+        OUT["Diretrizes Gerenciais ATaaS<br/>Adaptação PSS & MPT<br/>Capítulo PPGPIT"]
     end
     P1 --> OUT
     P2 --> OUT
     P3 --> OUT
 ```
 
-### 3.2 Protocolo da Revisão Sistemática da Literatura (PRISMA 2020)
-A síntese de literatura internacional foi conduzida em estrito alinhamento com as diretrizes do *Preferred Reporting Items for Systematic Reviews and Meta-Analyses* (PRISMA 2020 Statement — Page et al., 2021). A recuperação automatizada operou sobre três bases científicas de alto impacto indexadas: **Scopus (Elsevier)**, **Web of Science (Clarivate)** e **PubMed / Europe PMC (NCBI/EMBL)**.
+### 3.2 Estratégia de Busca e Mapeamento da Literatura
+A síntese da literatura internacional e nacional foi conduzida mediante recuperação automatizada em três bases científicas de alto impacto indexadas: **Scopus (Elsevier)**, **Web of Science (Clarivate)** e **PubMed / Europe PMC (NCBI/EMBL)**.
 
 A formulação booleana articulou três eixos ontológicos mandatórios:
 $$\text{Busca} = [\text{Eixo A: Tecnologia Assistiva}] \land [\text{Eixo B: Servitização/Modelos de Negócio}] \land [\text{Eixo C: Contexto Organizacional/Trabalho}]$$
@@ -167,7 +166,7 @@ TITLE-ABS-KEY (
 * *Inclusão:* Artigos publicados entre 2018 e 2026; revisados por pares; com texto integral disponível; abordando gestão, modelos de negócio, PSS ou implementação de acessibilidade no trabalho.
 * *Exclusão:* Estudos estritamente clínicos/médicos pediátricos sem interface de gestão; artigos sobre acessibilidade em ambiente escolar básico; notas técnicas ou resumos expandidos sem metodologia descrita.
 
-O fluxo de seleção resultou na catalogação e download de **19 artigos seminais em texto integral (PDF)**, depositados em repositório estruturado do projeto (`03 - Artigo e Capítulo de Livro/artigos/`) e monitorados em tempo real via painel interativo (`controle_artigos.html`).
+O fluxo de seleção resultou na catalogação e download de **19 artigos seminais em texto integral (PDF)**, depositados em repositório estruturado do projeto (`03 - Artigo e Capítulo de Livro/artigos/`) e monitorados em tempo real via repositório interativo (`controle_artigos.html`).
 
 ### 3.3 Coleta Primária e Procedimentos de Análise
 * **Survey Estruturado de Prontidão:** Instrumento descritivo com 18 assertivas métricas estruturadas nas dimensões TOE, governança Capex vs. Opex e compatibilidade de ERPs, direcionado a executivos de P&D, D&I, TI e Recursos Humanos.
@@ -232,13 +231,13 @@ Para prevenir a transformação da assistência em vigilância corporativa ou pe
 
 ---
 
-## SEÇÃO 5: FRAMEWORK DE GESTÃO DA INOVAÇÃO ASSISTIVA BASEADO EM ATaaS
+## SEÇÃO 5: DIRETRIZES E RECOMENDAÇÕES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA (ADAPTAÇÃO DOS MODELOS PSS E MPT)
 
-Apresenta-se o framework estruturante em quatro fases sequenciais e interdependentes, concebido para operacionalizar a implementação corporativa da inovação assistiva sob o paradigma de servitização:
+Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│      FRAMEWORK DE GESTÃO DA INOVAÇÃO ASSISTIVA CORPORATIVA BASEADO EM ATaaS (V5)       │
+│     DIRETRIZES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA NO BRASIL (ATaaS / PSS / MPT)     │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │ FASE 1: PROSPECÇÃO & AVALIAÇÃO ESTRATÉGICA (Scouting Biopsicossocial & Decisão TCU)    │
 │ • Diagnóstico centrado na pessoa (Modelo MPT de Scherer) em coprodução com o usuário  │
