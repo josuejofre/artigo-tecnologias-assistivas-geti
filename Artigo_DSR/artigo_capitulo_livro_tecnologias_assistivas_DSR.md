@@ -60,18 +60,7 @@ Within the Brazilian corporate landscape, the integration of Assistive Technolog
 
 ---
 
-## ESTRUTURA DO ARTIGO DSR (*PAPER ROADMAP*)
-
-* **Seção 1 (Introdução e Problematização Prática):** Apresenta o problema organizacional concreto (abandono de TAs, falência do Capex transacional e barreira dos ERPs legados) e formaliza o objetivo de conceber um artefato prescritivo de gestão;
-* **Seção 2 (Base de Conhecimento Científico):** Sistematiza os alicerces teóricos que sustentam o design do artefato (PSS, S-D Logic, MPT, TOE, Clima de Implementação e Mútua Adaptação);
-* **Seção 3 (Metodologia DSR e Três Ciclos de Hevner):** Detalha o ciclo metodológico formal de Peffers et al. (2007), a articulação dos Três Ciclos de Hevner (2007), a dedução dos Princípios de Design ($DP$) e o protocolo do Painel de Especialistas;
-* **Seção 4 (Arquitetura, Modelagem Analítica e Simulação do Artefato):** Apresenta a formulação matemática do Custo Total de Uso ($TCU$), a simulação numérica paramétrica para 10 postos corporativos, as interfaces de ERPs e a governança *Privacy by Design* sob a LGPD;
-* **Seção 5 (Roteiro Prescritivo Gerencial):** Detalha as diretrizes operacionais em quatro fases de governança, a matriz de SLAs e os indicadores-chave de desempenho (KPIs);
-* **Seção 6 (Avaliação por Especialistas, Contribuições, Limitações e Conclusão):** Compila as evidências empíricas da validação por especialistas, classifica a contribuição científica (Tipo 2 de DSR), explicita condições de contorno e deriva hipóteses causais testáveis.
-
----
-
-## SEÇÃO 1: INTRODUÇÃO E PROBLEMATIZAÇÃO PRÁTICA
+## 1. INTRODUÇÃO
 
 A gestão estratégica da inovação nas organizações contemporâneas transcende a concepção de produtos voltados ao mercado externo; ela abrange, com idêntica relevância estratégica, a inovação em processos internos, arquiteturas organizacionais e postos de trabalho orientada à sustentabilidade, produtividade e equidade sociolaboral (Tidd & Bessant, 2015; Pisano, 2015). Nesse cenário, a incorporação de Tecnologias Assistivas (TA) — compreendidas como qualquer item, equipamento ou sistema que potencializa a funcionalidade e autonomia de pessoas com deficiência no ambiente corporativo (Scherer, 2005; Brasil, 2015) — constitui o núcleo operacional da agenda de Diversidade, Equidade e Inclusão (DEI) e das metas globais dos Objetivos de Desenvolvimento Sustentável, em especial o ODS 8 (Trabalho Decente e Crescimento Econômico) e o ODS 10 (Redução das Desigualdades).
 
@@ -86,9 +75,18 @@ Todavia, inexiste até o momento na literatura de gestão da inovação no Brasi
 Nesse contexto, formula-se o **Objetivo Geral deste Estudo em DSR**:  
 *Projetar, desenvolver e avaliar um artefato gerencial-tecnológico — denominado Framework Integrador ATaaS — fundamentado na teoria de PSS e no modelo MPT, apto a orientar as corporações no Brasil na transição para a servitização contínua de tecnologias assistivas, mitigando o abandono tecnológico e maximizando o alinhamento aos ODS 8 e 10.*
 
+### 1.1 Estrutura do Artigo e Vislumbre do Estudo (Paper Roadmap)
+Para guiar a apreciação crítica do leitor, o presente manuscrito organiza-se em seis seções lógicas e interdependentes:
+* **Seção 1 (Introdução):** Problematiza a falência da compra transacional de TAs no Brasil, a inércia dos comportamentos padrão (*defaults*) e define os objetivos do estudo;
+* **Seção 2 (Fundamentação Teórica e Base de Conhecimento):** Articula a Lógica Dominante do Serviço (S-D Logic), Sistemas Produto-Serviço (PSS), Modelo MPT, frameworks TOE, Clima de Implementação, Mútua Adaptação e a teoria do Empreendedorismo Bayesiano (Agrawal et al., 2026);
+* **Seção 3 (Metodologia DSR):** Formaliza o ciclo de Peffers et al. (2007) articulado aos Três Ciclos de Hevner (2007), a dedução dos Princípios de Design ($DP_1$ a $DP_5$), a demonstração em cenários corporativos simulados e o protocolo do Painel de Especialistas (Prat et al., 2015);
+* **Seção 4 (O Artefato: Arquitetura e Modelagem do TCU):** Apresenta o modelo matemático analítico de Custo Total de Uso, a simulação comparativa para 10 postos corporativos ao longo de 36 meses, a compatibilização com ERPs legados (SAP/TOTVS) e a governança *Privacy-by-Design* (LGPD);
+* **Seção 5 (Diretrizes Gerenciais):** Entrega o roteiro prescritivo de implementação em quatro fases operacionais com parâmetros de SLA (hot-swap em 24h, Uptime $\ge 98,5\%$) e KPIs de governança;
+* **Seção 6 (Avaliação, Contribuições e Considerações Finais):** Discute as evidências empíricas da validação por especialistas, classifica a contribuição científica (Tipo 2 de DSR), explicita condições de contorno institucionais e deduz hipóteses causais para pesquisas futuras ($H_1, H_2, H_3$).
+
 ---
 
-## SEÇÃO 2: BASE DE CONHECIMENTO CIENTÍFICO (KNOWLEDGE BASE)
+## 2. FUNDAMENTAÇÃO TEÓRICA E BASE DE CONHECIMENTO CIENTÍFICO
 
 O desenvolvimento de artefatos rigorosos em DSR exige sólida ancoragem na base de conhecimento científico existente (Hevner et al., 2004). O Framework ATaaS articula cinco corpos teóricos consolidados:
 
@@ -125,7 +123,7 @@ Para superar essa inércia, a teoria prescreve a **Persuasão Bayesiana (*Bayesi
 
 ---
 
-## SEÇÃO 3: METODOLOGIA DESIGN SCIENCE RESEARCH (DSR)
+## 3. METODOLOGIA DESIGN SCIENCE RESEARCH (DSR)
 
 ### 3.1 Articulação dos Três Ciclos de Hevner (2007)
 A pesquisa estrutura-se de acordo com o framework canônico dos Três Ciclos de Hevner (2007), garantindo rigor epistemológico e relevância prática simultâneos:
@@ -214,7 +212,7 @@ Os critérios formais de avaliação mensuram:
 
 ---
 
-## SEÇÃO 4: O ARTEFATO: ARQUITETURA, MODELAGEM ANALÍTICA E SIMULAÇÃO FINANCEIRA
+## 4. O ARTEFATO ATaaS: ARQUITETURA, MODELAGEM ANALÍTICA E SIMULAÇÃO FINANCEIRA
 
 ### 4.1 Modelagem Analítica de Custo Total de Uso: Capex vs. ATaaS (Opex)
 Para cumprir o Meta-Requisito $MR_1$ e fundamentar matematicamente a decisão executiva, o artefato estabelece a modelagem analítica comparativa do Custo Total de Uso ($TCU$) em um horizonte temporal $T$ (36 meses).
@@ -278,7 +276,7 @@ O artefato introduz a blindagem por **Privacy by Design**:
 
 ---
 
-## SEÇÃO 5: O ARTEFATO PRESCRITIVO: ROTEIRO GERENCIAL DE IMPLEMENTAÇÃO EM 4 FASES
+## 5. DIRETRIZES GERENCIAIS PARA IMPLEMENTAÇÃO DO ARTEFATO
 
 Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação ATaaS**, estruturado em quatro fases sequenciais:
 
@@ -317,7 +315,7 @@ Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação
 
 ---
 
-## SEÇÃO 6: AVALIAÇÃO POR ESPECIALISTAS, CONTRIBUIÇÕES, LIMITAÇÕES E CONCLUSÃO
+## 6. AVALIAÇÃO DO ARTEFATO, CONTRIBUIÇÕES, LIMITAÇÕES E CONCLUSÃO
 
 ### 6.1 Resultados Qualitativos do Painel de Especialistas (*Expert Evaluation Panel*)
 A avaliação realizada junto ao painel multidisciplinar de especialistas (Prat et al., 2015; March & Smith, 1995) corroborou a robustez analítica e a viabilidade do artefato em quatro dimensões críticas:
@@ -360,33 +358,60 @@ Como desdobramento do artefato desenvolvido, formulam-se três hipóteses causai
 
 ---
 
-## REFERÊNCIAS BIBLIOGRÁFICAS (CONFORME ABNT NBR 6023)
+## REFERÊNCIAS
 
-1. AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
-2. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
-2. BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010.
-3. BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
-4. BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
-5. BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Dispõe sobre a proteção de dados pessoais (Lei Geral de Proteção de Dados Pessoais – LGPD). Brasília, DF: Presidência da República, 2018.
-6. DRESCH, A.; LACERDA, D. P.; ANTUNES JR., J. A. V. **Design Science Research: método de pesquisa para avanço da ciência e tecnologia**. Porto Alegre: Bookman, 2015.
-7. GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005.
-8. GREGOR, S.; HEVNER, A. R. Positioning and presenting design science research for maximum impact. **MIS Quarterly**, v. 37, n. 2, p. 337–355, 2013.
-9. GREGOR, S.; KRUSE, L. C.; SEIDEL, S. The anatomy of a design principle. **Journal of the Association for Information Systems**, v. 21, n. 6, p. 1622–1652, 2020.
-10. GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104.
-11. HEVNER, A. R. et al. Design science in information systems research. **MIS Quarterly**, v. 28, n. 1, p. 75–105, 2004.
-11. HEVNER, A. R. A three cycle view of design science research. **Scandinavian Journal of Information Systems**, v. 19, n. 2, p. 87–92, 2007.
-12. KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996.
-13. KOWALKOWSKI, C.; GEBAUER, H.; OLIVA, R. Service growth in product firms: Emerging perspectives. **Journal of Service Management**, v. 28, n. 1, p. 2–18, 2017.
-14. LEONARD-BARTON, D. Implementation as mutual adaptation of technology and organization. **Research Policy**, v. 17, n. 5, p. 251–267, 1988.
-15. MARCH, S. T.; SMITH, G. F. Design and natural science research on information technology. **Decision Support Systems**, v. 15, n. 4, p. 251–266, 1995.
-16. ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU). **Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável**. Nova York: Nações Unidas, 2015.
-17. PEFFERS, K. et al. A design science research methodology for information systems research. **Journal of Management Information Systems**, v. 24, n. 3, p. 45–77, 2007.
-18. PISANO, G. P. You need an innovation strategy. **Harvard Business Review**, v. 93, n. 6, p. 44–54, 2015.
-19. PRAT, N.; COMYN-WATTIAU, I.; AKOKA, J. A taxonomy of evaluation methods for information systems artifacts. **Journal of Management Information Systems**, v. 32, n. 3, p. 229–267, 2015.
-20. SCHERER, M. J. Assessing the benefits of using assistive technologies and other accommodations in education and the workplace. **Disability and Rehabilitation**, v. 27, n. 21, p. 1327–1339, 2005.
-21. SUGAWARA, A. T. et al. Abandonment of assistive technology in Brazil: study of associated factors. **Brazilian Journal of Physical Therapy**, v. 22, n. 5, p. 401–407, 2018.
-22. TIDD, J.; BESSANT, J. **Gestão da Inovação**. 5. ed. Porto Alegre: Bookman, 2015.
-23. TORNATZKY, L. G.; FLEISCHER, M. **The Processes of Technological Innovation**. Lexington: Lexington Books, 1990.
-24. TUKKER, A. Eight types of product-service system: eight ways to sustainability? **Business Strategy and the Environment**, v. 13, n. 4, p. 246–260, 2004.
-25. VANDERMERWE, S.; RADA, J. Servitization of business: adding value by adding services. **European Management Journal**, v. 6, n. 4, p. 314–324, 1988.
-26. VARGO, S. L.; LUSCH, R. F. Service-dominant logic: continuing the evolution. **Journal of the Academy of Marketing Science**, v. 44, n. 1, p. 5–23, 2016.
+AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
+
+BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. https://doi.org/10.1080/00207540701450699
+
+BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010. https://doi.org/10.1287/serv.2.4.219
+
+BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
+
+BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
+
+BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Dispõe sobre a proteção de dados pessoais (Lei Geral de Proteção de Dados Pessoais – LGPD). Brasília, DF: Presidência da República, 2018.
+
+DRESCH, A.; LACERDA, D. P.; ANTUNES JR., J. A. V. **Design Science Research: método de pesquisa para avanço da ciência e tecnologia**. Porto Alegre: Bookman, 2015.
+
+GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104.
+
+GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005. https://doi.org/10.1016/j.emj.2004.12.006
+
+GREGOR, S.; HEVNER, A. R. Positioning and presenting design science research for maximum impact. **MIS Quarterly**, v. 37, n. 2, p. 337–355, 2013.
+
+GREGOR, S.; KRUSE, L. C.; SEIDEL, S. The anatomy of a design principle. **Journal of the Association for Information Systems**, v. 21, n. 6, p. 1622–1652, 2020. https://doi.org/10.17705/1jais.00649
+
+HEVNER, A. R. et al. Design science in information systems research. **MIS Quarterly**, v. 28, n. 1, p. 75–105, 2004.
+
+HEVNER, A. R. A three cycle view of design science research. **Scandinavian Journal of Information Systems**, v. 19, n. 2, p. 87–92, 2007.
+
+KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996. https://doi.org/10.5465/amr.1996.9704071863
+
+KOWALKOWSKI, C.; GEBAUER, H.; OLIVA, R. Service growth in product firms: Emerging perspectives. **Journal of Service Management**, v. 28, n. 1, p. 2–18, 2017. https://doi.org/10.1108/JOSM-11-2016-0304
+
+LEONARD-BARTON, D. Implementation as mutual adaptation of technology and organization. **Research Policy**, v. 17, n. 5, p. 251–267, 1988. https://doi.org/10.1016/0048-7333(88)90006-6
+
+MARCH, S. T.; SMITH, G. F. Design and natural science research on information technology. **Decision Support Systems**, v. 15, n. 4, p. 251–266, 1995. https://doi.org/10.1016/0167-9236(94)00037-X
+
+ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU). **Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável**. Nova York: Nações Unidas, 2015.
+
+PEFFERS, K. et al. A design science research methodology for information systems research. **Journal of Management Information Systems**, v. 24, n. 3, p. 45–77, 2007. https://doi.org/10.2753/MIS0742-1222240302
+
+PISANO, G. P. You need an innovation strategy. **Harvard Business Review**, v. 93, n. 6, p. 44–54, 2015.
+
+PRAT, N.; COMYN-WATTIAU, I.; AKOKA, J. A taxonomy of evaluation methods for information systems artifacts. **Journal of Management Information Systems**, v. 32, n. 3, p. 229–267, 2015. https://doi.org/10.1080/07421222.2015.1099390
+
+SCHERER, M. J. Assessing the benefits of using assistive technologies and other accommodations in education and the workplace. **Disability and Rehabilitation**, v. 27, n. 21, p. 1327–1339, 2005. https://doi.org/10.1080/09638280500158306
+
+SUGAWARA, A. T. et al. Abandonment of assistive technology in Brazil: study of associated factors. **Brazilian Journal of Physical Therapy**, v. 22, n. 5, p. 401–407, 2018. https://doi.org/10.1016/j.bjpt.2018.03.005
+
+TIDD, J.; BESSANT, J. **Gestão da Inovação**. 5. ed. Porto Alegre: Bookman, 2015.
+
+TORNATZKY, L. G.; FLEISCHER, M. **The Processes of Technological Innovation**. Lexington: Lexington Books, 1990.
+
+TUKKER, A. Eight types of product-service system: eight ways to sustainability? **Business Strategy and the Environment**, v. 13, n. 4, p. 246–260, 2004. https://doi.org/10.1002/bse.414
+
+VANDERMERWE, S.; RADA, J. Servitization of business: adding value by adding services. **European Management Journal**, v. 6, n. 4, p. 314–324, 1988. https://doi.org/10.1016/0263-2373(88)90033-3
+
+VARGO, S. L.; LUSCH, R. F. Service-dominant logic: continuing the evolution. **Journal of the Academy of Marketing Science**, v. 44, n. 1, p. 5–23, 2016. https://doi.org/10.1007/s11747-015-0448-1

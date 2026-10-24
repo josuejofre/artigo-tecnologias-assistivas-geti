@@ -59,19 +59,7 @@ Historically, the assimilation of Assistive Technologies (AT) within the Brazili
 
 ---
 
-## ESTRUTURA DO ARTIGO E ROTEIRO DE LEITURA (*PAPER ROADMAP*)
-
-Para orientar a apreciação analítica do leitor, o presente manuscrito organiza-se em seis seções integradas:
-* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs no Brasil e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
-* **Seção 2 (Fundamentação Teórica Avançada):** Desenvolve as bases conceituais de PSS, S-D Logic, Modelo MPT, superação do Paradoxo da Servitização e os frameworks de implementação organizacional (TOE, Clima de Implementação e Mútua Adaptação);
-* **Seção 3 (Metodologia e Desenho da Pesquisa):** Formaliza a estratégia de busca bibliográfica (19 artigos seminais baixados) e os instrumentos de coleta primária mista no Brasil (survey de prontidão e entrevistas com análise de conteúdo);
-* **Seção 4 (Análise e Discussão dos Resultados):** Modela analiticamente o Custo Total de Uso ($TCU$), elucida as tensões entre escala e customização modular, debate a compatibilidade com ERPs legados e delineia salvaguardas de privacidade sob a LGPD;
-* **Seção 5 (Diretrizes Gerenciais Aplicadas Baseadas em PSS e MPT):** Apresenta o roteiro prescritivo em quatro fases operacionais com parâmetros de SLA, Uptime e governança interfuncional;
-* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional no Brasil e deduz formalmente as hipóteses causais testáveis ($H_1$ e $H_2$).
-
----
-
-## SEÇÃO 1: INTRODUÇÃO
+## 1. INTRODUÇÃO
 
 Nas economias contemporâneas, a gestão da inovação nas organizações corporativas não se restringe ao desenvolvimento de novos produtos voltados à comercialização externa; ela abrange, com idêntica relevância estratégica, a inovação interna em processos organizacionais e postos de trabalho voltada à ampliação da produtividade, da sustentabilidade e da equidade humana (Tidd & Bessant, 2015; Pisano, 2015). Nesse cenário, a incorporação de Tecnologias Assistivas (TA) — compreendidas como dispositivos, equipamentos, softwares e serviços concebidos para habilitar, reabilitar ou potencializar a autonomia e o desempenho de pessoas com deficiência (Scherer, 2005; Brasil, 2015) — emerge como elemento nodal da agenda corporativa de Diversidade, Equidade e Inclusão (DEI) e das metas globais dos Objetivos de Desenvolvimento Sustentável, em particular o ODS 8 (Trabalho Decente e Crescimento Econômico) e o ODS 10 (Redução das Desigualdades).
 
@@ -85,9 +73,18 @@ Face a essa conjuntura, formula-se a seguinte **Questão Central de Pesquisa (Co
 
 Para responder a essa indagação, o **Objetivo Geral** deste estudo é analisar os determinantes gerenciais, as dinâmicas de mútua adaptação e as estruturas de governança na transição para modelos servitizados de tecnologias assistivas em empresas no Brasil, propondo diretrizes gerenciais e recomendações práticas baseadas na adaptação dos modelos conceituais consagrados de PSS (Tukker, 2004; Baines et al., 2009) e MPT (Scherer, 2005) aptas a orientar a tomada de decisão executiva.
 
+### 1.1 Estrutura do Artigo e Vislumbre do Estudo (Paper Roadmap)
+Para orientar a apreciação analítica do leitor, o presente capítulo organiza-se em seis seções integradas:
+* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs no Brasil, a inércia dos comportamentos padrão (*defaults*) e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
+* **Seção 2 (Fundamentação Teórica):** Desenvolve as bases conceituais de PSS, S-D Logic, Modelo MPT, resolução do Paradoxo da Servitização, os frameworks de implementação (TOE, Clima de Implementação e Mútua Adaptação) e a perspectiva do Empreendedorismo Bayesiano (Agrawal et al., 2026);
+* **Seção 3 (Metodologia e Desenho da Pesquisa):** Formaliza a estratégia de busca bibliográfica (19 artigos seminais no padrão PRISMA 2020) e os instrumentos de coleta primária mista no Brasil (survey de prontidão e entrevistas semiestruturadas com análise de conteúdo de Bardin);
+* **Seção 4 (Análise e Discussão dos Resultados):** Modela analiticamente o Custo Total de Uso ($TCU$), elucida as tensões entre escala e customização modular, debate a compatibilidade com ERPs legados e delineia salvaguardas de privacidade sob a LGPD;
+* **Seção 5 (Diretrizes Gerenciais Aplicadas Baseadas em PSS e MPT):** Apresenta o roteiro prescritivo em quatro fases operacionais com parâmetros de SLA, Uptime e governança interfuncional;
+* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional no Brasil e deduz formalmente as hipóteses causais testáveis ($H_1, H_2, H_3$).
+
 ---
 
-## SEÇÃO 2: FUNDAMENTAÇÃO TEÓRICA AVANÇADA
+## 2. FUNDAMENTAÇÃO TEÓRICA
 
 ### 2.1 Servitização, Sistemas Produto-Serviço (PSS) e a Lógica Dominante do Serviço
 A teoria da Servitização postula a evolução estratégica de firmas que transcendem a manufatura ou comercialização isolada de produtos tangíveis para estruturar ofertas integradas de bens e serviços concebidos para suprir necessidades de uso específicas e contínuas (Vandermerwe & Rada, 1988; Baines et al., 2009). No modelo canônico de PSS categorizado por Tukker (2004), identificam-se três modalidades arquetípicas:
@@ -130,7 +127,7 @@ Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **c
 
 ---
 
-## SEÇÃO 3: METODOLOGIA E DESENHO DA PESQUISA
+## 3. METODOLOGIA E DESENHO DA PESQUISA
 
 ### 3.1 Desenho Metodológico Misto Triangulado (MMR)
 A investigação emprega uma abordagem metodológica mista convergente (*Mixed Methods Research* — Creswell & Plano Clark, 2018), fundamentada na complementaridade entre evidências bibliográficas secundárias de rigor internacional e dados empíricos primários obtidos no ecossistema corporativo brasileiro.
@@ -184,7 +181,7 @@ O fluxo de seleção resultou na catalogação e download de **19 artigos semina
 
 ---
 
-## SEÇÃO 4: ANÁLISE E DISCUSSÃO DOS RESULTADOS
+## 4. ANÁLISE E DISCUSSÃO DOS RESULTADOS
 
 ### 4.1 Modelagem Analítica de Custo Total de Uso: Capex vs. ATaaS (Opex)
 Para superar a retórica simplista de "economia imediata" e fundamentar matematicamente a decisão corporativa, estrutura-se a modelagem comparativa de Custo Total de Uso ($TCU$) em um horizonte temporal $T$ (tipicamente de 36 meses).
@@ -240,7 +237,7 @@ Para prevenir a transformação da assistência em vigilância corporativa ou pe
 
 ---
 
-## SEÇÃO 5: DIRETRIZES E RECOMENDAÇÕES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA (ADAPTAÇÃO DOS MODELOS PSS E MPT)
+## 5. DIRETRIZES E RECOMENDAÇÕES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA
 
 Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro:
 
@@ -281,7 +278,7 @@ Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro 
 
 ---
 
-## SEÇÃO 6: CONSIDERAÇÕES FINAIS, LIMITAÇÕES E AGENDA FUTURA
+## 6. CONSIDERAÇÕES FINAIS, LIMITAÇÕES E AGENDA FUTURA
 
 ### 6.1 Síntese das Contribuições Teóricas e Gerenciais
 Este estudo consolida uma contribuição seminal para a literatura de Gestão Estratégica da Inovação ao transpor os constructos de Sistemas Produto-Serviço (PSS) e Servitização para o domínio das Tecnologias Assistivas no ambiente corporativo. 
@@ -308,32 +305,58 @@ Com vistas a subsidiar investigações empíricas posteriores de caráter confir
 
 ---
 
-## REFERÊNCIAS BIBLIOGRÁFICAS (CONFORME ABNT NBR 6023)
+## REFERÊNCIAS
 
-1. AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
-2. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
-2. BARDIN, L. **Análise de conteúdo**. São Paulo: Edições 70, 2016.
-3. BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010.
-4. BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
-5. BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
-6. BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Dispõe sobre a proteção de dados pessoais (Lei Geral de Proteção de Dados Pessoais – LGPD). Brasília, DF: Presidência da República, 2018.
-7. CHESBROUGH, H. **Open Innovation**...
-8. GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104. **Open Innovation: The New Imperative for Creating and Profiting from Technology**. Boston: Harvard Business School Press, 2003.
-8. CRESWELL, J. W.; PLANO CLARK, V. L. **Designing and Conducting Mixed Methods Research**. 3. ed. Thousand Oaks: SAGE Publications, 2018.
-9. GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005.
-10. KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996.
-11. KOWALKOWSKI, C.; GEBAUER, H.; OLIVA, R. Service growth in product firms: Emerging perspectives. **Journal of Service Management**, v. 28, n. 1, p. 2–18, 2017.
-12. LEONARD-BARTON, D. Implementation as mutual adaptation of technology and organization. **Research Policy**, v. 17, n. 5, p. 251–267, 1988.
-13. ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU). **Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável**. Nova York: Nações Unidas, 2015.
-14. OSTERWALDER, A.; PIGNEUR, Y. **Business Model Generation: Inovação em Modelos de Negócios**. Rio de Janeiro: Alta Books, 2010.
-15. NOVELLI, E. A scientific approach to entrepreneurial decision-making as Bayesian learning. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 161–178.
-16. PAGE, M. J. et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. **BMJ**, v. 372, n. n71, 2021.
-16. PISANO, G. P. You need an innovation strategy. **Harvard Business Review**, v. 93, n. 6, p. 44–54, 2015.
-17. SCHERER, M. J. Assessing the benefits of using assistive technologies and other accommodations in education and the workplace. **Disability and Rehabilitation**, v. 27, n. 21, p. 1327–1339, 2005.
-18. SUGAWARA, A. T. et al. Abandonment of assistive technology in Brazil: study of associated factors. **Brazilian Journal of Physical Therapy**, v. 22, n. 5, p. 401–407, 2018.
-19. TEECE, D. J. Business models, business strategy and innovation. **Long Range Planning**, v. 43, n. 2–3, p. 172–194, 2010.
-20. TIDD, J.; BESSANT, J. **Gestão da Inovação**. 5. ed. Porto Alegre: Bookman, 2015.
-21. TORNATZKY, L. G.; FLEISCHER, M. **The Processes of Technological Innovation**. Lexington: Lexington Books, 1990.
-22. TUKKER, A. Eight types of product-service system: eight ways to sustainability? **Business Strategy and the Environment**, v. 13, n. 4, p. 246–260, 2004.
-23. VANDERMERWE, S.; RADA, J. Servitization of business: adding value by adding services. **European Management Journal**, v. 6, n. 4, p. 314–324, 1988.
-24. VARGO, S. L.; LUSCH, R. F. Service-dominant logic: continuing the evolution. **Journal of the Academy of Marketing Science**, v. 44, n. 1, p. 5–23, 2016.
+AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
+
+BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. https://doi.org/10.1080/00207540701450699
+
+BARDIN, L. **Análise de conteúdo**. São Paulo: Edições 70, 2016.
+
+BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010. https://doi.org/10.1287/serv.2.4.219
+
+BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
+
+BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
+
+BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Dispõe sobre a proteção de dados pessoais (Lei Geral de Proteção de Dados Pessoais – LGPD). Brasília, DF: Presidência da República, 2018.
+
+CHESBROUGH, H. **Open Innovation: The New Imperative for Creating and Profiting from Technology**. Boston: Harvard Business School Press, 2003.
+
+CRESWELL, J. W.; PLANO CLARK, V. L. **Designing and Conducting Mixed Methods Research**. 3. ed. Thousand Oaks: SAGE Publications, 2018.
+
+GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104.
+
+GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005. https://doi.org/10.1016/j.emj.2004.12.006
+
+KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996. https://doi.org/10.5465/amr.1996.9704071863
+
+KOWALKOWSKI, C.; GEBAUER, H.; OLIVA, R. Service growth in product firms: Emerging perspectives. **Journal of Service Management**, v. 28, n. 1, p. 2–18, 2017. https://doi.org/10.1108/JOSM-11-2016-0304
+
+LEONARD-BARTON, D. Implementation as mutual adaptation of technology and organization. **Research Policy**, v. 17, n. 5, p. 251–267, 1988. https://doi.org/10.1016/0048-7333(88)90006-6
+
+NOVELLI, E. A scientific approach to entrepreneurial decision-making as Bayesian learning. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 161–178.
+
+ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU). **Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável**. Nova York: Nações Unidas, 2015.
+
+OSTERWALDER, A.; PIGNEUR, Y. **Business Model Generation: Inovação em Modelos de Negócios**. Rio de Janeiro: Alta Books, 2010.
+
+PAGE, M. J. et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. **BMJ**, v. 372, n. n71, 2021. https://doi.org/10.1136/bmj.n71
+
+PISANO, G. P. You need an innovation strategy. **Harvard Business Review**, v. 93, n. 6, p. 44–54, 2015.
+
+SCHERER, M. J. Assessing the benefits of using assistive technologies and other accommodations in education and the workplace. **Disability and Rehabilitation**, v. 27, n. 21, p. 1327–1339, 2005. https://doi.org/10.1080/09638280500158306
+
+SUGAWARA, A. T. et al. Abandonment of assistive technology in Brazil: study of associated factors. **Brazilian Journal of Physical Therapy**, v. 22, n. 5, p. 401–407, 2018. https://doi.org/10.1016/j.bjpt.2018.03.005
+
+TEECE, D. J. Business models, business strategy and innovation. **Long Range Planning**, v. 43, n. 2–3, p. 172–194, 2010. https://doi.org/10.1016/j.lrp.2009.07.003
+
+TIDD, J.; BESSANT, J. **Gestão da Inovação**. 5. ed. Porto Alegre: Bookman, 2015.
+
+TORNATZKY, L. G.; FLEISCHER, M. **The Processes of Technological Innovation**. Lexington: Lexington Books, 1990.
+
+TUKKER, A. Eight types of product-service system: eight ways to sustainability? **Business Strategy and the Environment**, v. 13, n. 4, p. 246–260, 2004. https://doi.org/10.1002/bse.414
+
+VANDERMERWE, S.; RADA, J. Servitization of business: adding value by adding services. **European Management Journal**, v. 6, n. 4, p. 314–324, 1988. https://doi.org/10.1016/0263-2373(88)90033-3
+
+VARGO, S. L.; LUSCH, R. F. Service-dominant logic: continuing the evolution. **Journal of the Academy of Marketing Science**, v. 44, n. 1, p. 5–23, 2016. https://doi.org/10.1007/s11747-015-0448-1
