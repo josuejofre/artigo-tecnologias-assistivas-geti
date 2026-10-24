@@ -209,6 +209,11 @@ Tabela 1: Análise Comparativa Multidimensional: Modelo Transacional Capex vs. E
 Nota: Capex = Capital Expenditure; Opex = Operational Expenditure; MTTR = Mean Time to Repair; SLA = Service Level Agreement; LGPD = Lei Geral de Proteção de Dados.
 ```
 
+A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 meses é evidenciada na Figura 4, ilustrando a preservação de liquidez e a eliminação do custo de ociosidade sob o regime do Lucro Real:
+
+![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
+*Fonte: Elaborado pelos autores (2026).*
+
 A dinâmica visual comparativa dessa transformação estrutural é sintetizada na Figura 3, demonstrando o alívio de risco e a geração de valor nas cinco dimensões organizacionais da firma:
 
 ![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
@@ -225,6 +230,11 @@ Uma contribuição indispensável da Versão 5.0 consiste na formalização do p
 Para prevenir a transformação da assistência em vigilância corporativa ou perfilamento discriminatório, o framework estabelece o princípio de **Privacy by Design**:
 * **Isolamento de Camadas de Dados:** A telemetria técnica transmitida ao provedor restringe-se a parâmetros do equipamento (voltagem, ciclos de recarga da bateria de cadeiras motorizadas, latência de renderização de drivers de síntese de voz);
 * **Anonimização Estrita:** É vedada qualquer coleta ou correlação com dados de navegação, velocidade de digitação individual ou horários de produtividade do colaborador, salvaguardando integralmente a intimidade e a dignidade do trabalhador com deficiência.
+
+A arquitetura formal dessa blindagem ontológica de dados é apresentada na Figura 5, evidenciando o firewall regulatório entre a manutenção técnica e a privacidade do usuário:
+
+![Figura 5 – Arquitetura de Governança 'Privacy by Design' e Segregação Ontológica de Telemetria Técnica sob o Artigo 11 da LGPD](imagens/figura5_arquitetura_lgpd_privacy_design.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ---
 

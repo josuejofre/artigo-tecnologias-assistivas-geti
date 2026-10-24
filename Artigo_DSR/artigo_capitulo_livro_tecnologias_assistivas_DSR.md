@@ -255,7 +255,12 @@ A simulação numérica comprova que o modelo ATaaS:
 2. **Elimina R$ 87.500,00 de prejuízo financeiro direto** em ativos ociosos gerados pelo abandono precoce de equipamentos;
 3. **Preserva R$ 250.000,00 de liquidez imediata** no primeiro dia de contratação corporativa.
 
-A síntese visual dessa ruptura paradigmática é consolidada na Figura 3, que mapeia a transição estrutural em cinco dimensões-chave: gatilho decisório, estrutura econômico-financeira, integração operacional, suporte ao ciclo de vida e desfecho organizacional.
+A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 meses é evidenciada na Figura 4, destacando a área de preservação de capital e a proteção contra custos estocásticos:
+
+![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
+*Fonte: Elaborado pelos autores (2026).*
+
+A síntese visual dessa ruptura paradigmática sob a ótica dos modelos de negócio é consolidada na Figura 3, que mapeia a transição estrutural em cinco dimensões-chave: gatilho decisório, estrutura econômico-financeira, integração operacional, suporte ao ciclo de vida e desfecho organizacional.
 
 ![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
 *Fonte: Elaborado pelos autores (2026).*
@@ -271,6 +276,11 @@ Em cumprimento ao Meta-Requisito $MR_3$ e Princípio $DP_3$, o artefato resolve 
 O artefato introduz a blindagem por **Privacy by Design**:
 * **Segregação Estrita de Camadas de Telemetria:** Os sensores embutidos no hardware assistivo transmitem unicamente métricas operacionais do dispositivo (voltagem de célula, ciclos de carga, impedância de conexões físicas e latência de software);
 * **Vedação Absoluta de Rastreamento Comportamental:** É expressamente proibida a coleta de telemetria relacionada a horários de digitação, tempo de tela, cliques em sistemas ou qualquer indicador de vigilância laboral ou produtividade do indivíduo, prevenindo discriminação algorítmica.
+
+A arquitetura formal dessa segregação ontológica de dados é apresentada na Figura 5, detalhando o firewall ético e regulatório entre a manutenção do hardware e a intimidade do colaborador:
+
+![Figura 5 – Arquitetura de Governança 'Privacy by Design' e Segregação Ontológica de Telemetria Técnica sob o Artigo 11 da LGPD](imagens/figura5_arquitetura_lgpd_privacy_design.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ---
 
