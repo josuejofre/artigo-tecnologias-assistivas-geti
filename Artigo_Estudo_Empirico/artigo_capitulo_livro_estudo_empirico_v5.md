@@ -101,16 +101,10 @@ A inclusão de TAs corporativas requer um alinhamento clínico, funcional e moti
 
 Simultaneamente, a literatura de operações adverte para o **Paradoxo da Servitização** (*The Servitization Paradox* — Gebauer, Fleisch & Friedli, 2005). Esse fenômeno descreve a armadilha na qual empresas que expandem sua oferta de serviços incorrem em aumentos substanciais de custos operacionais e complexidade gerencial sem colher o correspondente retorno de rentabilidade ou satisfação do cliente. No ATaaS, esse risco se materializa se o provedor tentar customizar de forma artesanal e despadronizada cada dispositivo para cada cliente corporativo, pulverizando as economias de escala.
 
-A superação desse paradoxo ocorre mediante o princípio da **Modularidade de Serviços** (*Service Modularity* — Bask et al., 2010). Conforme modelado no Quadro 1, o ecossistema ATaaS resolve a tensão entre customização e padronização operando em duas camadas desacopladas:
+A superação desse paradoxo ocorre mediante o princípio da **Modularidade de Serviços** (*Service Modularity* — Bask et al., 2010). Conforme ilustrado na Figura 1, o ecossistema ATaaS resolve a tensão entre customização e padronização operando em duas camadas desacopladas:
 
-```
-[ BACK-OFFICE ESCALÁVEL E PADRONIZADO ]
-Infraestrutura de nuvem, logística de hot-swap, catálogo de hardware interoperável, telemetria de integridade técnica
-                     │
-                     ▼ (Modularidade por Interfaces Paramétricas)
-[ FRONT-OFFICE HIPERPERSONALIZADO ]
-Avaliação ergonômica biopsicossocial (MPT), adaptação biomecânica individual, treinamento humanizado no posto de trabalho
-```
+![Figura 1 – Arquitetura de Modularidade de Serviços no Ecossistema ATaaS: Desacoplamento entre Back-Office Escalável e Front-Office Hiperpersonalizado](imagens/figura_modularidade_servicos_ataas.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ### 2.3 Frameworks Seminais de Adoção e Implementação Tecnológica na Firma
 Para estruturar as rotinas internas da organização receptora, articulam-se três referenciais consolidados:
@@ -130,9 +124,9 @@ Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **c
 ## 3. METODOLOGIA E DESENHO DA PESQUISA
 
 ### 3.1 Desenho Metodológico Misto Triangulado (MMR)
-A investigação emprega uma abordagem metodológica mista convergente (*Mixed Methods Research* — Creswell & Plano Clark, 2018), fundamentada na complementaridade entre evidências bibliográficas secundárias de rigor internacional e dados empíricos primários obtidos no ecossistema corporativo brasileiro, conforme detalhado na Figura 1:
+A investigação emprega uma abordagem metodológica mista convergente (*Mixed Methods Research* — Creswell & Plano Clark, 2018), fundamentada na complementaridade entre evidências bibliográficas secundárias de rigor internacional e dados empíricos primários obtidos no ecossistema corporativo brasileiro, conforme detalhado na Figura 2:
 
-![Figura 1 – Fluxo Metodológico de Triagem Bibliográfica Estruturada (PRISMA 2020) e Protocolo de Levantamento de Campo com Gestores Brasileiros](imagens/figura1_metodologia_prisma_v5.png)
+![Figura 2 – Fluxo Metodológico de Triagem Bibliográfica Estruturada (PRISMA 2020) e Protocolo de Levantamento de Campo com Gestores Brasileiros](imagens/figura1_metodologia_prisma_v5.png)
 *Fonte: Elaborado pelos autores (2026).*
 
 ### 3.2 Estratégia de Busca e Mapeamento da Literatura
@@ -193,30 +187,26 @@ Onde:
 
 A análise matemática evidencia que a superioridade financeira do ATaaS reside em três fatores: (1) **Eliminação do custo de ociosidade (C_ocioso ≈ 0)**, uma vez que em caso de desligamento o equipamento retorna ao provedor ou é remanejado; (2) **Benefício fiscal explícito da dedutibilidade integral em Opex (1 - 0,34 = 0,66)**; e (3) **Preservação de liquidez corporativa**, evitando desembolsos concentrados de capital (P₀) e custos de oportunidade financeira.
 
-```
-Tabela 1: Análise Comparativa Multidimensional: Modelo Transacional Capex vs. Ecossistema Servitizado ATaaS (Opex).
-┌──────────────────────────────┬───────────────────────────────────────────┬───────────────────────────────────────────┐
-│ Dimensão de Análise          │ Modelo Tradicional (Transacional / Capex) │ Modelo ATaaS (Sistemas Produto-Serviço)   │
-├──────────────────────────────┼───────────────────────────────────────────┼───────────────────────────────────────────┤
-│ Natureza Financeira          │ Investimento em ativo imobilizado (Capex) │ Despesa operacional contínua (Opex)       │
-│ Impacto Fiscal Tributário    │ Depreciação contábil lenta (5 anos)       │ Dedutibilidade integral (Lucro Real 34%)  │
-│ Gestão de Manutenção         │ Reativa, desarticulada e com alto MTTR    │ Preventiva com SLA e Hot-swap em até 24h  │
-│ Risco de Abandono da TA      │ Crítico (30% a 50%) arcado pelo cliente   │ Mitigado por suporte ergonômico contínuo  │
-│ Acessibilidade dos ERPs      │ Conflito crônico com sistemas legados     │ Homologação e adequação de interfaces     │
-│ Gestão de Descarte / E-waste │ Passivo ambiental sob guarda da empresa   │ Economia circular gerida pelo provedor    │
-│ Governança de Privacidade    │ Descentralizada e suscetível a vazamentos │ Protocolos formais Privacy-by-Design/LGPD │
-└──────────────────────────────┴───────────────────────────────────────────┴───────────────────────────────────────────┘
-Nota: Capex = Capital Expenditure; Opex = Operational Expenditure; MTTR = Mean Time to Repair; SLA = Service Level Agreement; LGPD = Lei Geral de Proteção de Dados.
-```
+| Dimensão de Análise | Modelo Tradicional (Transacional / Capex) | Modelo ATaaS (Sistemas Produto-Serviço / Opex) |
+| :--- | :--- | :--- |
+| **Natureza Financeira** | Investimento em ativo imobilizado (Capex) | Despesa operacional contínua (Opex) |
+| **Impacto Fiscal Tributário** | Depreciação contábil lenta (5 anos) | Dedutibilidade integral no Lucro Real (34%) |
+| **Gestão de Manutenção** | Reativa, desarticulada e com elevado tempo de reparo (MTTR) | Preventiva contínua com SLA estrito e *hot-swap* em até 24h |
+| **Risco de Abandono da TA** | Crítico (30% a 50%), com custo arcado integralmente pela empresa | Mitigado por acompanhamento biopsicossocial contínuo |
+| **Acessibilidade dos ERPs** | Conflito crônico e paralisia com sistemas legados (SAP/TOTVS) | Homologação de interfaces e middleware de acessibilidade |
+| **Gestão de Descarte / E-waste** | Passivo ambiental e logístico sob guarda da empresa compradora | Economia circular e logística reversa geridas pelo operador |
+| **Governança de Privacidade** | Descentralizada e suscetível a riscos e passivos da LGPD | Protocolos formais *Privacy-by-Design* com segregação (art. 11) |
 
-A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 meses é evidenciada na Figura 4, ilustrando a preservação de liquidez e a eliminação do custo de ociosidade sob o regime do Lucro Real:
-
-![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
 *Fonte: Elaborado pelos autores (2026).*
 
 A dinâmica visual comparativa dessa transformação estrutural é sintetizada na Figura 3, demonstrando o alívio de risco e a geração de valor nas cinco dimensões organizacionais da firma:
 
 ![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
+*Fonte: Elaborado pelos autores (2026).*
+
+A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 meses é evidenciada na Figura 4, ilustrando a preservação de liquidez e a eliminação do custo de ociosidade sob o regime do Lucro Real:
+
+![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
 *Fonte: Elaborado pelos autores (2026).*
 
 ### 4.2 A Barreira dos ERPs Legados e a Mútua Adaptação
@@ -240,43 +230,25 @@ A arquitetura formal dessa blindagem ontológica de dados é apresentada na Figu
 
 ## 5. DIRETRIZES E RECOMENDAÇÕES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA
 
-Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro, conforme ilustrado no framework da Figura 2:
+Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro, conforme ilustrado no framework da Figura 6:
 
-![Figura 2 – Diretrizes Gerenciais para Servitização Assistiva no Brasil (Adaptação PSS e MPT)](imagens/figura2_framework_ataas_v5.png)
+![Figura 6 – Framework Integrador de Gestão da Inovação em Tecnologia Assistiva como Serviço (ATaaS): Arquitetura Modular e Roteiro de Implementação](imagens/figura2_framework_ataas_v5.png)
 *Fonte: Elaborado pelos autores (2026).*
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│     DIRETRIZES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA NO BRASIL (ATaaS / PSS / MPT)     │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 1: PROSPECÇÃO & AVALIAÇÃO ESTRATÉGICA (Scouting Biopsicossocial & Decisão TCU)    │
-│ • Diagnóstico centrado na pessoa (Modelo MPT de Scherer) em coprodução com o usuário  │
-│ • Matriz decisória Make, Buy or Servitize baseada no Custo Total de Uso (TCU)          │
-│ • Triagem de fornecedores com capacidade de modularidade e homologação de compliance   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 2: ENGENHARIA DE MÚTUA ADAPTAÇÃO & ACESSIBILIDADE SISTÊMICA                      │
-│ • Testes de interoperabilidade prévia entre TA e sistemas legados corporativos (ERPs)  │
-│ • Customização ágil via impressão 3D paramétrica e adaptação ergonômica do posto      │
-│ • Implementação da camada de segurança e privacidade (Privacy by Design / LGPD)        │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 3: CLIMA DE IMPLEMENTAÇÃO & CAPACITAÇÃO INTERFUNCIONAL (Values-Fit)               │
-│ • Formação do Comitê Interfuncional Permanente (D&I, TI, RH, SST e liderança direta)   │
-│ • Treinamento em serviço do colaborador e sensibilização das equipes de trabalho       │
-│ • Estabelecimento de canais abertos e desimpedidos de suporte e escuta ativa           │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 4: GOVERNANÇA DE SUSTENTAÇÃO BASEADA EM SLA & MONITORAMENTO ESG (Ciclo de Vida)   │
-│ • SLA estrito de manutenção corretiva com Hot-swap emergencial em até 24 horas         │
-│ • Uptime de disponibilidade funcional da TA garantido contratualmente em ≥ 98,5%       │
-│ • Gestão da logística reversa, remanufatura e descarte ecológico (Economia Circular)   │
-│ • Indicadores auditáveis de desempenho para relatórios de sustentabilidade (ODS 8 e 10)│
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+| Fase de Implementação | Foco Gerencial | Ações Críticas e Entregas Operacionais |
+| :--- | :--- | :--- |
+| **Fase 1: Prospecção & Avaliação Estratégica** | Scouting Biopsicossocial & Decisão TCU | • Diagnóstico centrado na pessoa (Modelo MPT de Scherer) em coprodução com o usuário;<br>• Matriz decisória *Make, Buy or Servitize* baseada no Custo Total de Uso (TCU);<br>• Triagem de fornecedores com capacidade de modularidade e homologação de compliance. |
+| **Fase 2: Engenharia de Mútua Adaptação** | Acessibilidade Sistêmica e Interoperabilidade | • Testes de interoperabilidade prévia entre TA e sistemas legados corporativos (SAP GUI e TOTVS);<br>• Customização ágil via impressão 3D paramétrica e adaptação ergonômica do posto de trabalho;<br>• Implementação da camada de segurança e privacidade (*Privacy by Design* / LGPD art. 11). |
+| **Fase 3: Clima de Implementação & Capacitação** | Engajamento Organizacional e Values-Fit | • Formação do Comitê Interfuncional Permanente (D&I, TI, RH, SST e liderança direta);<br>• Treinamento em serviço do colaborador e sensibilização das equipes de trabalho;<br>• Estabelecimento de canais abertos e desimpedidos de suporte técnico e escuta ativa. |
+| **Fase 4: Governança de Sustentação & ESG** | Sustentação por SLA e Ciclo de Vida | • SLA estrito de manutenção corretiva com substituição emergencial (*hot-swap*) em até 24 horas;<br>• *Uptime* de disponibilidade funcional da TA garantido contratualmente em patamar ≥ 98,5%;<br>• Gestão da logística reversa, remanufatura e descarte ecológico sob princípios de Economia Circular;<br>• Indicadores auditáveis de desempenho para relatórios corporativos de sustentabilidade (ODS 8 e 10). |
+
+*Fonte: Elaborado pelos autores (2026).*
 
 * **Transição Incremental via Aprendizado Bayesiano *(Probe-and-Learn)*:** Recomenda-se que as corporações superem a inércia dos comportamentos padrão (*defaults*; Gans, 2026) não por uma virada abrupta de 100% dos ativos, mas por pilotos experimentais controlados em postos-chave. Conforme preconizam Spina (2026) e Agrawal et al. (2026), tais testes controlados fornecem os sinais informativos empíricos indispensáveis para atualizar as crenças dos comitês executivos (CFO e TI) e comprovar a mitigação do abandono sob acordos de nível de serviço (SLA).
 
 ### Indicadores-Chave de Desempenho (KPIs de Governança ATaaS):
 1. **Taxa de Disponibilidade Funcional *(Uptime)*:** $≥ 98,5%$, medido pelo tempo de operação útil da ferramenta no posto;
-2. **Tempo Médio de Reparo ou Troca *(MTTR - Mean Time to Repair / Hot-swap)*:** $≤ 24 horas$, assegurando que o colaborador não fique ocioso ou isolado;
+2. **Tempo Médio de Reparo ou Troca *(MTTR - Mean Time to Repair / Hot-swap)*:** ≤ 24 horas, assegurando que o colaborador não fique ocioso ou isolado;
 3. **Taxa de Abandono da Tecnologia Assistiva:** Redução para patamares inferiores a 5% em 12 meses de contrato;
 4. **Índice de Clima de Implementação e Ajuste aos Valores *(Values-Fit Score)*:** Aferido semestralmente via instrumento psicométrico validado com a equipe e o colaborador.
 

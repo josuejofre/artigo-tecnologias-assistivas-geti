@@ -128,23 +128,8 @@ Para superar essa inércia, a teoria prescreve a **Persuasão Bayesiana (*Bayesi
 ### 3.1 Articulação dos Três Ciclos de Hevner (2007)
 A pesquisa estrutura-se de acordo com o framework canônico dos Três Ciclos de Hevner (2007), garantindo rigor epistemológico e relevância prática simultâneos:
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        OS TRÊS CICLOS DE DSR (HEVNER, 2007)                            │
-├──────────────────────────────┬──────────────────────────┬──────────────────────────────┤
-│ 1. CICLO DE RELEVÂNCIA       │ 2. CICLO CENTRAL DESIGN  │ 3. CICLO DE RIGOR            │
-│ (Ambiente Prático / Firme)   │ (Construção e Avaliação) │ (Base de Conhecimento)       │
-├──────────────────────────────┼──────────────────────────┼──────────────────────────────┤
-│ • Pessoas com deficiência no │ • Construção do          │ • Service-Dominant Logic     │
-│   ambiente de trabalho real  │   Framework ATaaS        │   (Vargo & Lusch, 2016)      │
-│ • Coerção legal sancionatória│ • Modelagem Paramétrica  │ • Sistemas Produto-Serviço   │
-│   da Lei de Cotas (8.213/91) │   do TCU (Capex vs Opex) │   (Tukker; Baines et al.)    │
-│ • ERPs corporativos legados  │ • Camada de Governança   │ • Modelo MPT (Scherer, 2005) │
-│   (SAP GUI, TOTVS Protheus)  │   Privacy-by-Design/LGPD │ • Framework TOE (1990)       │
-│ • Imperativos de ODS 8 e 10  │ • Avaliação por Painel de│ • Clima de Implementação     │
-│   e metas ESG corporativas   │   Especialistas (Panel)  │   (Klein & Sorra, 1996)      │
-└──────────────────────────────┴──────────────────────────┴──────────────────────────────┘
-```
+![Figura 1 – Articulação dos Três Ciclos de Design Science Research: Relevância, Design e Rigor no Desenvolvimento do Framework ATaaS](imagens/figura_tres_ciclos_hevner.png)
+*Fonte: Adaptado de Hevner (2007) e elaborado pelos autores (2026).*
 
 O **Ciclo de Relevância** capta as dores práticas do chão de fábrica e dos escritórios corporativos no Brasil; o **Ciclo de Rigor** fornece os alicerces teóricos para evitar soluções amadoras; e o **Ciclo de Design** desenvolve e refina iterativamente o artefato com base nos feedbacks do Painel de Especialistas.
 
@@ -159,28 +144,20 @@ Com base na análise do problema prático e no referencial teórico, deduzem-se 
 ### 3.3 Dedução dos Princípios de Design Prescritivos (DP)
 Em consonância com as diretrizes avançadas de DSR formuladas por **Gregor, Kruse & Seidel (2020)**, cada Meta-Requisito traduz-se em um Princípio de Design *(Design Principle - DP)* formal:
 
-```
-Tabela 1: Matriz de Rastreabilidade Metodológica DSR: Meta-Requisitos vs. Design Principles.
-┌──────────────────────────────┬────────────────────────────────────────────────────────────────────────────────────────┐
-│ Meta-Requisito da Solução    │ Princípio de Design Prescritivo (Gregor et al., 2020)                                  │
-├──────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤
-│ MR1: Viabilidade TCU e Opex  │ DP1 (Liquidez e Eficiência Tributária): Estruturar a remuneração por subscrição        │
-│                              │ operacional dedutível no Lucro Real (34%), contingenciando custos de ociosidade.       │
-│ MR2: Disponibilidade e Uptime│ DP2 (Continuidade Funcional Sem Fricção): Descentralizar estoques-pulmão para Hot-swap │
-│                              │ emergencial em até 24h com Uptime garantido contratualmente em ≥ 98,5%.                │
-│ MR3: Privacidade e LGPD      │ DP3 (Segregação Ontológica de Dados): Dissociar estritamente telemetria de saúde física│
-│                              │ do ativo de qualquer métrica comportamental ou de vigilância do trabalhador (art. 11). │
-│ MR4: Adaptação com ERPs      │ DP4 (Mediação Semântica Interoperável): Prover middleware de injeção acessível e APIs  │
-│                              │ para compatibilizar TAs com interfaces legadas inacessíveis de SAP e TOTVS.            │
-│ MR5: Coprodução Biopsicosoc. │ DP5 (Centralidade e Values-Fit): Codesenhar o posto via modelo MPT (Scherer, 2005) e  │
-│                              │ instituir comitê interfuncional permanente (D&I, TI, RH, SST e liderança direta).     │
-└──────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────┘
-```
+| Meta-Requisito da Solução (MR) | Princípio de Design Prescritivo (DP - Gregor et al., 2020) |
+| :--- | :--- |
+| **MR₁: Viabilidade TCU e Opex** | **DP₁ (Liquidez e Eficiência Tributária):** Estruturar a remuneração por subscrição operacional dedutível no Lucro Real (34%), contingenciando custos de ociosidade (*C_ocioso ≈ 0*). |
+| **MR₂: Disponibilidade e Uptime** | **DP₂ (Continuidade Funcional Sem Fricção):** Descentralizar estoques-pulmão para *hot-swap* emergencial em até 24h com *uptime* funcional garantido contratualmente em ≥ 98,5%. |
+| **MR₃: Privacidade e LGPD** | **DP₃ (Segregação Ontológica de Dados):** Dissociar estritamente telemetria de saúde e integridade do ativo de qualquer métrica comportamental ou de vigilância do trabalhador (art. 11 da LGPD). |
+| **MR₄: Adaptação com ERPs Legados** | **DP₄ (Mediação Semântica Interoperável):** Prover middleware de injeção acessível e APIs para compatibilizar TAs com interfaces legadas inacessíveis (SAP GUI e TOTVS Protheus). |
+| **MR₅: Coprodução Biopsicossocial** | **DP₅ (Centralidade e Values-Fit):** Codesenhar o posto via modelo MPT (Scherer, 2005) e instituir comitê interfuncional permanente (D&I, TI, RH, SST e liderança direta). |
+
+*Fonte: Elaborado pelos autores (2026).*
 
 ### 3.4 O Ciclo de Processo DSR de Peffers et al. (2007) e Hevner (2007)
-A condução empírica operacionaliza-se nas seis etapas sequenciais iterativas do DSR, articuladas aos três ciclos de Hevner (relevância, rigor e design), conforme ilustrado na Figura 1:
+A condução empírica operacionaliza-se nas seis etapas sequenciais iterativas do DSR, articuladas aos três ciclos de Hevner (relevância, rigor e design), conforme ilustrado na Figura 2:
 
-![Figura 1 – Coerência Metodológica e Ciclos de Design Science Research aplicados ao Framework ATaaS (adaptado de Hevner, 2007 e Peffers et al., 2007)](imagens/figura1_coerencia_metodologica.png)
+![Figura 2 – Coerência Metodológica e Ciclos de Design Science Research aplicados ao Framework ATaaS (adaptado de Hevner, 2007 e Peffers et al., 2007)](imagens/figura1_coerencia_metodologica.png)
 *Fonte: Elaborado pelos autores (2026).*
 
 ### 3.5 Demonstração / Instanciação do Artefato em Cenários Simulados
@@ -233,36 +210,32 @@ Onde:
 Para operacionalizar o Princípio de Design DP₁ e subsidiar decisões executivas de CFOs, realizou-se uma simulação financeira paramétrica comparativa no mercado corporativo brasileiro:
 * **Escopo:** Implantação e sustentação de **10 postos de trabalho inclusivos** por 36 meses (T = 36);
 * **Perfil dos Postos:** 5 colaboradores com deficiência visual (leitores de tela corporativos com IA + display Braille e periféricos) e 5 colaboradores com limitação motora (estações ergonômicas ativas e órteses adaptadas);
-* **Premissas Financeiras:** WACC = 12,0% a.a. (1,0% a.m.); alíquota tributária no Lucro Real = 34%; taxa de rotatividade/abandono observada no Capex = 35% em 12 meses; $P_0 = 	ext{R\$ } 25.000,00$ por posto (Total inicial $= 	ext{R\$ } 250.000,00$); taxa mensal de assinatura ATaaS (Φ_mensal) $= 	ext{R\$ } 980,00$ por posto.
+* **Premissas Financeiras:** WACC = 12,0% a.a. (1,0% a.m.); alíquota tributária no Lucro Real = 34%; taxa de rotatividade/abandono observada no Capex = 35% em 12 meses; P₀ = R$ 25.000,00 por posto (Total inicial = R$ 250.000,00); taxa mensal de assinatura ATaaS (Φ_mensal) = R$ 980,00 por posto.
 
-```
-Tabela 2: Simulação Financeira Comparativa de Valor Presente Líquido (10 Postos / 36 Meses).
-┌────────────────────────────────────────┬─────────────────────────┬─────────────────────────┬─────────────────────────┐
-│ Linha de Custo / Parâmetro Contábil    │ Modelo Tradicional Capex│ Modelo Servitizado ATaaS│ Diferencial / Economia  │
-├────────────────────────────────────────┼─────────────────────────┼─────────────────────────┼─────────────────────────┤
-│ Investimento Inicial de Capital (P0)   │ R$ 250.000,00           │ R$ 0,00                 │ + R$ 250.000 em caixa   │
-│ Despesas de Manutenção Reativa (Cmaint)│ R$ 58.400,00 (estocást.)│ R$ 0,00 (incluso no SLA)│ Risco transferido       │
-│ Custo de Ociosidade por Abandono/Giro  │ R$ 87.500,00 (parado)   │ R$ 0,00 (remobilizado)  │ R$ 87.500 eliminados    │
-│ Desoneração Fiscal (Lucro Real 34%)    │ Depreciação lenta 5 anos│ - R$ 119.952,00 (Opex)  │ Abatimento direto IRPJ  │
-│ Custo de Governança e Transação        │ R$ 18.000,00 (admin)    │ R$ 6.200,00 (gestão SLA)│ Redução de overhead     │
-├────────────────────────────────────────┼─────────────────────────┼─────────────────────────┼─────────────────────────┤
-│ CUSTO TOTAL DE USO PRESENTE (TCU_VPL)  │ R$ 342.180,00           │ R$ 232.848,00           │ ECONOMIA LÍQUIDA: 31,9% │
-└────────────────────────────────────────┴─────────────────────────┴─────────────────────────┴─────────────────────────┘
-```
+| Linha de Custo / Parâmetro Contábil | Modelo Tradicional (Capex) | Modelo Servitizado (ATaaS / Opex) | Diferencial / Economia Obtida |
+| :--- | :--- | :--- | :--- |
+| **Investimento Inicial de Capital (P₀)** | R$ 250.000,00 | R$ 0,00 | + R$ 250.000,00 em liquidez preservada |
+| **Despesas de Manutenção Reativa (C_maint)** | R$ 58.400,00 (estocástico) | R$ 0,00 (incluso no SLA) | Risco de quebra transferido ao operador |
+| **Custo de Ociosidade por Abandono / Giro** | R$ 87.500,00 (ativo parado) | R$ 0,00 (ativo remobilizado) | R$ 87.500,00 de prejuízo eliminados |
+| **Desoneração Fiscal (Lucro Real 34%)** | Depreciação contábil lenta (5 anos) | - R$ 119.952,00 (dedutibilidade Opex) | Abatimento fiscal direto e imediato em IRPJ/CSLL |
+| **Custo de Governança e Transação (C_trans)** | R$ 18.000,00 (overhead admin interno) | R$ 6.200,00 (gestão de contrato e SLA) | Redução de 65,5% no overhead de gestão |
+| **CUSTO TOTAL DE USO PRESENTE (TCU_VPL)** | **R$ 342.180,00** | **R$ 232.848,00** | **ECONOMIA LÍQUIDA: 31,9% (R$ 109.332,00)** |
+
+*Fonte: Elaborado pelos autores (2026).*
 
 A simulação numérica comprova que o modelo ATaaS:
 1. **Reduz em 31,9% o Custo Total de Uso** frente ao modelo patrimonial;
 2. **Elimina R$ 87.500,00 de prejuízo financeiro direto** em ativos ociosos gerados pelo abandono precoce de equipamentos;
 3. **Preserva R$ 250.000,00 de liquidez imediata** no primeiro dia de contratação corporativa.
 
+A síntese visual dessa ruptura paradigmática sob a ótica dos modelos de negócio é consolidada na Figura 3, que mapeia a transição estrutural em cinco dimensões-chave: gatilho decisório, estrutura econômico-financeira, integração operacional, suporte ao ciclo de vida e desfecho organizacional:
+
+![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
+*Fonte: Elaborado pelos autores (2026).*
+
 A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 meses é evidenciada na Figura 4, destacando a área de preservação de capital e a proteção contra custos estocásticos:
 
 ![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
-*Fonte: Elaborado pelos autores (2026).*
-
-A síntese visual dessa ruptura paradigmática sob a ótica dos modelos de negócio é consolidada na Figura 3, que mapeia a transição estrutural em cinco dimensões-chave: gatilho decisório, estrutura econômico-financeira, integração operacional, suporte ao ciclo de vida e desfecho organizacional.
-
-![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
 *Fonte: Elaborado pelos autores (2026).*
 
 ### 4.3 Interoperabilidade com ERPs Legados e a Teoria da Mútua Adaptação
@@ -286,41 +259,23 @@ A arquitetura formal dessa segregação ontológica de dados é apresentada na F
 
 ## 5. DIRETRIZES GERENCIAIS PARA IMPLEMENTAÇÃO DO ARTEFATO
 
-Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação ATaaS**, estruturado em quatro fases sequenciais e parametrizado por acordos de nível de serviço (SLAs) estritos, conforme modelado na Figura 2:
+Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação ATaaS**, estruturado em quatro fases sequenciais e parametrizado por acordos de nível de serviço (SLAs) estritos, conforme modelado na Figura 6:
 
-![Figura 2 – Framework Integrador de Gestão da Inovação em Tecnologia Assistiva como Serviço (ATaaS): Arquitetura Modular e Roteiro de Implementação](imagens/figura2_framework_ataas_v5.png)
+![Figura 6 – Framework Integrador de Gestão da Inovação em Tecnologia Assistiva como Serviço (ATaaS): Arquitetura Modular e Roteiro de Implementação](imagens/figura2_framework_ataas_v5.png)
 *Fonte: Elaborado pelos autores (2026).*
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│             ROTEIRO DE ENGENHARIA GERENCIAL ATaaS (ARTEFATO DSR CONSOLIDADO)            │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 1: PROSPECÇÃO & AVALIAÇÃO ESTRATÉGICA (Scouting Biopsicossocial & Decisão TCU)    │
-│ • Diagnóstico centrado na pessoa (Modelo MPT de Scherer) em coprodução com o usuário  │
-│ • Matriz decisória Make, Buy or Servitize baseada no Custo Total de Uso (TCU)          │
-│ • Triagem de fornecedores com capacidade de modularidade e homologação de compliance   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 2: ENGENHARIA DE MÚTUA ADAPTAÇÃO & ACESSIBILIDADE SISTÊMICA                      │
-│ • Testes de interoperabilidade prévia entre TA e sistemas legados corporativos (ERPs)  │
-│ • Customização ágil via impressão 3D paramétrica e adaptação ergonômica do posto      │
-│ • Implementação da camada de segurança e privacidade (Privacy by Design / LGPD)        │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 3: CLIMA DE IMPLEMENTAÇÃO & CAPACITAÇÃO INTERFUNCIONAL (Values-Fit)               │
-│ • Formação do Comitê Interfuncional Permanente (D&I, TI, RH, SST e liderança direta)   │
-│ • Treinamento em serviço do colaborador e sensibilização das equipes de trabalho       │
-│ • Estabelecimento de canais abertos e desimpedidos de suporte e escuta ativa           │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ FASE 4: GOVERNANÇA DE SUSTENTAÇÃO BASEADA EM SLA & MONITORAMENTO ESG (Ciclo de Vida)   │
-│ • SLA estrito de manutenção corretiva com Hot-swap emergencial em até 24 horas         │
-│ • Uptime de disponibilidade funcional da TA garantido contratualmente em ≥ 98,5%       │
-│ • Gestão da logística reversa, remanufatura e descarte ecológico (Economia Circular)   │
-│ • Indicadores auditáveis de desempenho para relatórios de sustentabilidade (ODS 8 e 10)│
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+| Fase do Roteiro Gerencial | Foco Estratégico | Atividades Críticas e Entregas Operacionais |
+| :--- | :--- | :--- |
+| **Fase 1: Prospecção & Avaliação Estratégica** | Scouting Biopsicossocial & Decisão TCU | • Diagnóstico centrado na pessoa (Modelo MPT de Scherer) em coprodução com o colaborador;<br>• Matriz decisória *Make, Buy or Servitize* baseada no Custo Total de Uso (TCU);<br>• Triagem de fornecedores qualificados com capacidade de modularidade e homologação de compliance. |
+| **Fase 2: Engenharia de Mútua Adaptação** | Acessibilidade Sistêmica e Interoperabilidade | • Testes de interoperabilidade prévia entre TA e sistemas legados corporativos (SAP GUI e TOTVS);<br>• Customização ágil via impressão 3D paramétrica para adaptação ergonômica do posto;<br>• Implementação da camada de segurança e privacidade (*Privacy by Design* / LGPD art. 11). |
+| **Fase 3: Clima de Implementação & Capacitação** | Engajamento Organizacional e Values-Fit | • Formação do Comitê Interfuncional Permanente (D&I, TI, RH, SST e liderança direta);<br>• Treinamento em serviço do colaborador e ações de sensibilização da equipe de trabalho;<br>• Estabelecimento de canais abertos de suporte técnico desimpedido e escuta ativa contínua. |
+| **Fase 4: Governança de Sustentação & ESG** | Sustentação por SLA e Ciclo de Vida | • SLA estrito de manutenção corretiva com substituição emergencial (*hot-swap*) em até 24h;<br>• *Uptime* de disponibilidade funcional da TA garantido contratualmente em patamar ≥ 98,5%;<br>• Gestão de logística reversa, remanufatura e descarte ecológico sob princípios de Economia Circular;<br>• Indicadores auditáveis de impacto social e inclusão para relatórios ESG (ODS 8 e 10). |
+
+*Fonte: Elaborado pelos autores (2026).*
 
 ### Indicadores-Chave de Desempenho do Artefato (KPIs Operacionais):
-1. **Taxa de Disponibilidade Funcional (*Uptime* Contratual):** $≥ 98,5%$, aferida pelas horas de prontidão operacional do dispositivo assistivo no posto de trabalho;
-2. **Tempo Médio de Reparo ou Substituição *(MTTR - Hot-swap Emergencial)*:** $≤ 24	ext{ horas}$, assegurando que falhas técnicas não gerem isolamento ou suspensão da jornada de trabalho;
+1. **Taxa de Disponibilidade Funcional (*Uptime* Contratual):** ≥ 98,5%, aferida pelas horas de prontidão operacional do dispositivo assistivo no posto de trabalho;
+2. **Tempo Médio de Reparo ou Substituição *(MTTR - Hot-swap Emergencial)*:** ≤ 24 horas, assegurando que falhas técnicas não gerem isolamento ou suspensão da jornada de trabalho;
 3. **Taxa de Abandono de Tecnologia Assistiva:** Almejada em patamares inferiores a 5% em 12 meses de vigência contratual servitizada;
 4. **Índice de Clima de Implementação e Ajuste aos Valores *(Values-Fit Score)*:** Mensuração semestral do engajamento interfuncional entre equipe, liderança e colaborador com deficiência.
 
@@ -331,21 +286,14 @@ Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação
 ### 6.1 Resultados Qualitativos do Painel de Especialistas *(Expert Evaluation Panel)*
 A avaliação realizada junto ao painel multidisciplinar de especialistas (Prat et al., 2015; March & Smith, 1995) corroborou a robustez analítica e a viabilidade do artefato em quatro dimensões críticas:
 
-```
-Tabela 3: Consolidação da Avaliação do Artefato pelo Painel de Especialistas.
-┌──────────────────────────────┬──────────────┬─────────────────────────────────────────────────────────────────────────┐
-│ Dimensão Avaliada            │ Média (1 a 5)│ Síntese dos Feedbacks Qualitativos dos Especialistas                    │
-├──────────────────────────────┼──────────────┼─────────────────────────────────────────────────────────────────────────┤
-│ Utilidade Prática (Utility)  │ 4,9 / 5,0    │ "A substituição do Capex pelo SLA com hot-swap em até 24h ataca a causa │
-│                              │              │ raiz do abandono de TAs nas empresas." (Profª Elizete Kunkel / LabBiAT) │
-│ Viabilidade Gerencial        │ 4,7 / 5,0    │ "O comitê interfuncional resolve o isolamento entre RH e TI na firma,   │
-│                              │              │ destravando a governança corporativa de inclusão." (Liderança RH Embraer│
-│ Rigor Analítico (TCU)        │ 4,8 / 5,0    │ "A explicitação do custo de ociosidade (C_ocioso) e o benefício do Lucro│
-│                              │              │ Real é o argumento contábil definitivo para o CFO." (Prof. Godoy/UNIFESP│
-│ Conformidade Legal (LGPD)    │ 5,0 / 5,0    │ "A blindagem por Privacy-by-Design mitiga integralmente o risco jurídico│
-│                              │              │ de autuação pelo art. 11 da LGPD." (Especialista TI SJC)                │
-└──────────────────────────────┴──────────────┴─────────────────────────────────────────────────────────────────────────┘
-```
+| Dimensão Avaliada | Média (Escala 1 a 5) | Síntese dos Feedbacks Qualitativos dos Especialistas |
+| :--- | :---: | :--- |
+| **Utilidade Prática (Utility)** | 4,9 / 5,0 | "A substituição do Capex pelo SLA com hot-swap em até 24h ataca a causa raiz do abandono de TAs nas empresas." *(Profª Drª Elizete Kunkel / Coordenadora do LabBiAT)* |
+| **Viabilidade Gerencial** | 4,7 / 5,0 | "O comitê interfuncional resolve o isolamento entre RH e TI na firma, destravando a governança corporativa de inclusão." *(Liderança de RH Corporativo / Embraer)* |
+| **Rigor Analítico (TCU)** | 4,8 / 5,0 | "A explicitação do custo de ociosidade (C_ocioso) e o benefício fiscal do Lucro Real é o argumento contábil definitivo para o CFO." *(Prof. Dr. Godoy / UNIFESP)* |
+| **Conformidade Legal (LGPD)** | 5,0 / 5,0 | "A blindagem por Privacy-by-Design mitiga integralmente o risco jurídico de autuação pelo art. 11 da LGPD." *(Especialista em Cibersegurança e TI / São José dos Campos)* |
+
+*Fonte: Elaborado pelos autores (2026).*
 
 Adicionalmente, sob a ótica do aprendizado bayesiano profundo (*Deep Bayesian Learning*; Agrawal et al., 2026), o painel de avaliação com especialistas operou como um mecanismo rigoroso de calibração iterativa de crenças: as premissas de design iniciais da equipe foram confrontadas com o julgamento crítico de pesquisadores e lideranças executivas, gerando princípios de design consolidados e empiricamente respaldados.
 
