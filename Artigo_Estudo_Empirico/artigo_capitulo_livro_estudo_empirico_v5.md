@@ -12,12 +12,12 @@
 
 | Dimensão Crítica | Apontamentos do Comitê de Avaliação Qualis A1 | Solução Consolidada na Versão 5.0 Definitiva (V5) |
 | :--- | :--- | :--- |
-| **1. Protocolo de Revisão da Literatura** | Crítica ao uso de "RSL Simplificada". Exigência de conformidade internacional estrita. | **Adoção Integral do Protocolo PRISMA 2020:** Sistematização de 4 fases (Identificação $n_1=54 \rightarrow$ Triagem $n_2=38 \rightarrow$ Elegibilidade $n_3=27 \rightarrow$ Inclusão $n=19$ artigos integrais em PDF). Strings booleanas parametrizadas (Scopus, Web of Science, PubMed/Europe PMC) e repositório auditável. |
-| **2. Densidade Epistemológica & Teórica** | Necessidade de aprofundamento na teoria de serviços e superação de mecanicismos industriais. | **Incorporação da Service-Dominant Logic (S-D Logic) e Modelo MPT:** Ancoragem em Vargo & Lusch (2016) e Scherer (2005) (*Matching Person & Technology*), reconhecendo a coprodução biopsicossocial do valor em uso. Resolução teórica do **Paradoxo da Servitização (Gebauer et al., 2005)** através da modularidade de serviços. |
-| **3. Modelagem Econômico-Financeira** | Falácia contábil de "redução linear de custos" sob Opex. Exigência de equacionamento matemático. | **Modelagem Paramétrica de Custo Total de Uso (TCU):** Formulação analítica comparativa entre $TCU_{Capex}$ e $TCU_{ATaaS}$, parametrizando custo de oportunidade ($WACC$), depreciação acelerada ($\delta$), risco de ociosidade ($p_{ocioso}$), custos de manutenção reativa ($C_{maint}$) e desoneração fiscal via Lucro Real ($T_{IR/CSLL}$). |
+| **1. Protocolo de Revisão da Literatura** | Crítica ao uso de "RSL Simplificada". Exigência de conformidade internacional estrita. | **Adoção Integral do Protocolo PRISMA 2020:** Sistematização de 4 fases (Identificação $n_1=54 \rightarrow Triagem n_2=38 \rightarrow Elegibilidade n_3=27 \rightarrow$ Inclusão $n=19$ artigos integrais em PDF). Strings booleanas parametrizadas (Scopus, Web of Science, PubMed/Europe PMC) e repositório auditável. |
+| **2. Densidade Epistemológica & Teórica** | Necessidade de aprofundamento na teoria de serviços e superação de mecanicismos industriais. | **Incorporação da Service-Dominant Logic (S-D Logic) e Modelo MPT:** Ancoragem em Vargo & Lusch (2016) e Scherer (2005) *(Matching Person & Technology)*, reconhecendo a coprodução biopsicossocial do valor em uso. Resolução teórica do **Paradoxo da Servitização (Gebauer et al., 2005)** através da modularidade de serviços. |
+| **3. Modelagem Econômico-Financeira** | Falácia contábil de "redução linear de custos" sob Opex. Exigência de equacionamento matemático. | **Modelagem Paramétrica de Custo Total de Uso (TCU):** Formulação analítica comparativa entre TCU_Capex e TCU_ATaaS, parametrizando custo de oportunidade (WACC), depreciação acelerada (\delta), risco de ociosidade ($p_{ocioso}$), custos de manutenção reativa ($C_{maint}$) e desoneração fiscal via Lucro Real (T_IR/CSLL). |
 | **4. Governança de Dados, Cibersegurança e LGPD** | Risco de vigilância invasiva via telemetria contínua de dispositivos assistivos. | **Camada de Governança *Privacy-by-Design*:** Isolamento estrito entre telemetria de integridade física/técnica do ativo e dados biométricos/comportamentais do colaborador, em estrito cumprimento ao art. 11 da Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018). |
-| **5. Limitações e Condições de Contorno** | Timidez e generalizações abusivas (*overclaiming*) nas limitações metodológicas e ecológicas. | **Detalhamento das Condições de Contorno:** Explicitação da dependência de trajetória institucional brasileira (Lei de Cotas nº 8.213/1991 vs. regimes voluntários globais), limitações do corte transversal (*cross-sectional*) e viés de desejabilidade social nos respondentes de RH. |
-| **6. Hipóteses Formais para Pesquisa Futura** | Falta de proposições quantitativas testáveis para estudos confirmatórios posteriores. | **Formulação de Hipóteses Estruturais ($H_1$ e $H_2$):** Derivação de proposições causais sobre telemetria integrada a ERPs e percepção de *vendor lock-in* em modelos de servitização para futuros testes via PLS-SEM. |
+| **5. Limitações e Condições de Contorno** | Timidez e generalizações abusivas *(overclaiming)* nas limitações metodológicas e ecológicas. | **Detalhamento das Condições de Contorno:** Explicitação da dependência de trajetória institucional brasileira (Lei de Cotas nº 8.213/1991 vs. regimes voluntários globais), limitações do corte transversal *(cross-sectional)* e viés de desejabilidade social nos respondentes de RH. |
+| **6. Hipóteses Formais para Pesquisa Futura** | Falta de proposições quantitativas testáveis para estudos confirmatórios posteriores. | **Formulação de Hipóteses Estruturais (H₁ e H₂):** Derivação de proposições causais sobre telemetria integrada a ERPs e percepção de *vendor lock-in* em modelos de servitização para futuros testes via PLS-SEM. |
 
 ---
 
@@ -75,12 +75,12 @@ Para responder a essa indagação, o **Objetivo Geral** deste estudo é analisar
 
 ### 1.1 Estrutura do Artigo e Vislumbre do Estudo (Paper Roadmap)
 Para orientar a apreciação analítica do leitor, o presente capítulo organiza-se em seis seções integradas:
-* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs no Brasil, a inércia dos comportamentos padrão (*defaults*) e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
+* **Seção 1 (Introdução):** Problematiza a falência da compra patrimonial transacional de TAs no Brasil, a inércia dos comportamentos padrão *(defaults)* e contextualiza a transição para a servitização como inovação de processos internos à luz dos ODS 8 e 10;
 * **Seção 2 (Fundamentação Teórica):** Desenvolve as bases conceituais de PSS, S-D Logic, Modelo MPT, resolução do Paradoxo da Servitização, os frameworks de implementação (TOE, Clima de Implementação e Mútua Adaptação) e a perspectiva do Empreendedorismo Bayesiano (Agrawal et al., 2026);
 * **Seção 3 (Metodologia e Desenho da Pesquisa):** Formaliza a estratégia de busca bibliográfica (19 artigos seminais no padrão PRISMA 2020) e os instrumentos de coleta primária mista no Brasil (survey de prontidão e entrevistas semiestruturadas com análise de conteúdo de Bardin);
-* **Seção 4 (Análise e Discussão dos Resultados):** Modela analiticamente o Custo Total de Uso ($TCU$), elucida as tensões entre escala e customização modular, debate a compatibilidade com ERPs legados e delineia salvaguardas de privacidade sob a LGPD;
+* **Seção 4 (Análise e Discussão dos Resultados):** Modela analiticamente o Custo Total de Uso (TCU), elucida as tensões entre escala e customização modular, debate a compatibilidade com ERPs legados e delineia salvaguardas de privacidade sob a LGPD;
 * **Seção 5 (Diretrizes Gerenciais Aplicadas Baseadas em PSS e MPT):** Apresenta o roteiro prescritivo em quatro fases operacionais com parâmetros de SLA, Uptime e governança interfuncional;
-* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional no Brasil e deduz formalmente as hipóteses causais testáveis ($H_1, H_2, H_3$).
+* **Seção 6 (Considerações Finais, Limitações e Agenda Futura):** Sintetiza as contribuições teóricas e gerenciais, mapeia as fronteiras de contorno institucional no Brasil e deduz formalmente as hipóteses causais testáveis (H₁, H₂, H₃).
 
 ---
 
@@ -88,13 +88,13 @@ Para orientar a apreciação analítica do leitor, o presente capítulo organiza
 
 ### 2.1 Servitização, Sistemas Produto-Serviço (PSS) e a Lógica Dominante do Serviço
 A teoria da Servitização postula a evolução estratégica de firmas que transcendem a manufatura ou comercialização isolada de produtos tangíveis para estruturar ofertas integradas de bens e serviços concebidos para suprir necessidades de uso específicas e contínuas (Vandermerwe & Rada, 1988; Baines et al., 2009). No modelo canônico de PSS categorizado por Tukker (2004), identificam-se três modalidades arquetípicas:
-1. *PSS Orientado ao Produto:* O cliente retém a propriedade do bem e contrata serviços adicionais (manutenção, garantia estendida);
-2. *PSS Orientado ao Uso:* O provedor preserva a propriedade do ativo, enquanto o cliente contrata a disponibilidade do uso compartilhado ou exclusivo (aluguel, locação comercial, comodato corporativo);
-3. *PSS Orientado ao Resultado:* O cliente remunera diretamente o resultado de desempenho ou a capacidade funcional pactuada em contrato, sem ingerência sobre a posse física ou forma técnica de entrega do maquinário.
+1. **PSS Orientado ao Produto:** O cliente retém a propriedade do bem e contrata serviços adicionais (manutenção, garantia estendida);
+2. **PSS Orientado ao Uso:** O provedor preserva a propriedade do ativo, enquanto o cliente contrata a disponibilidade do uso compartilhado ou exclusivo (aluguel, locação comercial, comodato corporativo);
+3. **PSS Orientado ao Resultado:** O cliente remunera diretamente o resultado de desempenho ou a capacidade funcional pactuada em contrato, sem ingerência sobre a posse física ou forma técnica de entrega do maquinário.
 
 Ao aplicar essa taxonomia ao ecossistema de acessibilidade no trabalho corporativo, o modelo ATaaS posiciona-se na intersecção entre o *PSS orientado ao uso* e o *PSS orientado ao resultado*. A firma usuária não busca acumular ativos de hardware assistivo em seu balanço patrimonial; sua demanda real é por **capacidade de trabalho ininterrupta e inclusiva**.
 
-Nessa perspectiva, a fundamentação teórica ganha solidez indispensável ao dialogar com a **Lógica Dominante do Serviço (*Service-Dominant Logic* — S-D Logic)** formulada por Vargo & Lusch (2004, 2016). Sob a ótica da S-D Logic, bens tangíveis são meros recursos operandos (*operand resources*) que atuam como veículos para a prestação do serviço; a verdadeira criação de valor (*value-in-use*) é fenomenológica e emerge da aplicação integrada de conhecimentos, competências e suporte humanizado (*operant resources*). Portanto, a eficácia de uma cadeira de rodas adaptada ou de um software de síntese de voz não reside em seus circuitos eletrônicos, mas na dinâmica interativa e coproduzida entre o colaborador com deficiência, a liderança de equipe, a infraestrutura da firma e o provedor de suporte especializado.
+Nessa perspectiva, a fundamentação teórica ganha solidez indispensável ao dialogar com a **Lógica Dominante do Serviço (*Service-Dominant Logic* — S-D Logic)** formulada por Vargo & Lusch (2004, 2016). Sob a ótica da S-D Logic, bens tangíveis são meros recursos operandos *(operand resources)* que atuam como veículos para a prestação do serviço; a verdadeira criação de valor *(value-in-use)* é fenomenológica e emerge da aplicação integrada de conhecimentos, competências e suporte humanizado *(operant resources)*. Portanto, a eficácia de uma cadeira de rodas adaptada ou de um software de síntese de voz não reside em seus circuitos eletrônicos, mas na dinâmica interativa e coproduzida entre o colaborador com deficiência, a liderança de equipe, a infraestrutura da firma e o provedor de suporte especializado.
 
 ### 2.2 O Modelo *Matching Person & Technology* (MPT) e a Resolução do Paradoxo da Servitização
 A inclusão de TAs corporativas requer um alinhamento clínico, funcional e motivacional que transcende o design industrial convencional. O referencial *Matching Person & Technology* (MPT), formulado por Scherer (2005), preconiza que o abandono precoce de dispositivos decorre primariamente do descompasso entre três esferas interdependentes: as metas pessoais do indivíduo, as características físicas/cognitivas do dispositivo e os fatores psicossociais do ambiente onde a tecnologia opera. Quando a corporação realiza a compra transacional sem considerar a subjetividade do trabalhador, o abandono é a consequência inevitável.
@@ -121,9 +121,9 @@ Para estruturar as rotinas internas da organização receptora, articulam-se tr�
 ---
 
 ### 2.4 Empreendedorismo Bayesiano, Defaults sob Incerteza e Inércia Decisória Corporativa
-A persistência das corporações brasileiras no modelo patrimonial transacional (Capex) — mesmo diante de taxas documentadas de abandono de 30% a 50% — encontra explicação teórica na recente obra seminal sobre **Empreendedorismo Bayesiano (*Bayesian Entrepreneurship*)** editada por Agrawal, Camuffo, Gambardella, Gans, Scott e Stern (MIT Press, 2026). Conforme demonstra Gans (2026), em ambientes caracterizados por incerteza complexa e pressão regulatória coercitiva, os tomadores de decisão refugiam-se em comportamentos padrão (*defaults under Knightian uncertainty*). No ecossistema corporativo brasileiro, a compra patrimonial de TAs configura exatamente esse *default* cartorial: adquire-se o bem físico para comprovação perante a auditoria fiscal da Lei de Cotas (Lei nº 8.213/1991), desconsiderando-se a gestão do ciclo de vida e a funcionalidade real do colaborador no posto de trabalho.
+A persistência das corporações brasileiras no modelo patrimonial transacional (Capex) — mesmo diante de taxas documentadas de abandono de 30% a 50% — encontra explicação teórica na recente obra seminal sobre **Empreendedorismo Bayesiano *(Bayesian Entrepreneurship)*** editada por Agrawal, Camuffo, Gambardella, Gans, Scott e Stern (MIT Press, 2026). Conforme demonstra Gans (2026), em ambientes caracterizados por incerteza complexa e pressão regulatória coercitiva, os tomadores de decisão refugiam-se em comportamentos padrão *(defaults under Knightian uncertainty)*. No ecossistema corporativo brasileiro, a compra patrimonial de TAs configura exatamente esse *default* cartorial: adquire-se o bem físico para comprovação perante a auditoria fiscal da Lei de Cotas (Lei nº 8.213/1991), desconsiderando-se a gestão do ciclo de vida e a funcionalidade real do colaborador no posto de trabalho.
 
-Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **crenças a priori (*prior beliefs*)** assimétricas e desalinhadas (Agrawal et al., 2026; Gambardella et al., 2026): enquanto o RH crê cumprir sua missão legal pela simples contratação formal, a TI sustenta o *prior* de que TAs externas representam vulnerabilidades de cibersegurança nos ERPs legados, e o Financeiro ancora-se no pressuposto de que despesas recorrentes de serviço (Opex) seriam mais onerosas que a compra isolada (Capex). A ruptura dessa inércia decisória requer o que Novelli (2026) e Spina (2026) denominam de **Abordagem Científica da Decisão como Aprendizado Bayesiano (*Scientific Approach as Bayesian Learning*)**: o emprego de pilotos controlados e testes empíricos (*probe-and-learn experimentation*) concebidos para gerar evidências sistemáticas, atualizando os *priors* corporativos em direção a modelos servitizados (ATaaS) sustentáveis e inclusivos (ODS 8 e 10).
+Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **crenças a priori *(prior beliefs)*** assimétricas e desalinhadas (Agrawal et al., 2026; Gambardella et al., 2026): enquanto o RH crê cumprir sua missão legal pela simples contratação formal, a TI sustenta o *prior* de que TAs externas representam vulnerabilidades de cibersegurança nos ERPs legados, e o Financeiro ancora-se no pressuposto de que despesas recorrentes de serviço (Opex) seriam mais onerosas que a compra isolada (Capex). A ruptura dessa inércia decisória requer o que Novelli (2026) e Spina (2026) denominam de **Abordagem Científica da Decisão como Aprendizado Bayesiano *(Scientific Approach as Bayesian Learning)***: o emprego de pilotos controlados e testes empíricos *(probe-and-learn experimentation)* concebidos para gerar evidências sistemáticas, atualizando os *priors* corporativos em direção a modelos servitizados (ATaaS) sustentáveis e inclusivos (ODS 8 e 10).
 
 ---
 
@@ -139,7 +139,7 @@ A investigação emprega uma abordagem metodológica mista convergente (*Mixed M
 A síntese da literatura internacional e nacional foi conduzida mediante recuperação automatizada em três bases científicas de alto impacto indexadas: **Scopus (Elsevier)**, **Web of Science (Clarivate)** e **PubMed / Europe PMC (NCBI/EMBL)**.
 
 A formulação booleana articulou três eixos ontológicos mandatórios:
-$$\text{Busca} = [\text{Eixo A: Tecnologia Assistiva}] \land [\text{Eixo B: Servitização/Modelos de Negócio}] \land [\text{Eixo C: Contexto Organizacional/Trabalho}]$$
+$$\text{Busca} = [\text{Tecnologia Assistiva}] ∧ [\text{Servitização/Modelos de Negócio}] ∧ [\text{Contexto Organizacional/Trabalho}]$$
 
 ```text
 String Paramétrica Utilizada:
@@ -159,7 +159,7 @@ TITLE-ABS-KEY (
 O fluxo de seleção resultou na catalogação e download de **19 artigos seminais em texto integral (PDF)**, depositados em repositório estruturado do projeto (`03 - Artigo e Capítulo de Livro/artigos/`) e monitorados em tempo real via repositório interativo (`controle_artigos.html`).
 
 ### 3.3 Coleta Primária e Procedimentos de Análise
-* **Mapeamento de Crenças a Priori (*Prior Beliefs*):** Sob a fundamentação do empreendedorismo bayesiano (Agrawal et al., 2026; Novelli, 2026), os instrumentos de coleta (survey e entrevistas) foram concebidos para diagnosticar as crenças a priori dos gestores de RH, TI e Finanças em relação a custos ocultos, riscos de incompatibilidade com ERPs e viabilidade de modelos servitizados.
+* **Mapeamento de Crenças a Priori *(Prior Beliefs)*:** Sob a fundamentação do empreendedorismo bayesiano (Agrawal et al., 2026; Novelli, 2026), os instrumentos de coleta (survey e entrevistas) foram concebidos para diagnosticar as crenças a priori dos gestores de RH, TI e Finanças em relação a custos ocultos, riscos de incompatibilidade com ERPs e viabilidade de modelos servitizados.
 
 * **Survey Estruturado de Prontidão:** Instrumento descritivo com 18 assertivas métricas estruturadas nas dimensões TOE, governança Capex vs. Opex e compatibilidade de ERPs, direcionado a executivos de P&D, D&I, TI e Recursos Humanos.
 * **Entrevistas Semiestruturadas:** Diálogos com gestores corporativos responsáveis por programas de inovação inclusiva e lideranças de startups fornecedoras de TA como serviço.
@@ -170,28 +170,28 @@ O fluxo de seleção resultou na catalogação e download de **19 artigos semina
 ## 4. ANÁLISE E DISCUSSÃO DOS RESULTADOS
 
 ### 4.1 Modelagem Analítica de Custo Total de Uso: Capex vs. ATaaS (Opex)
-Para superar a retórica simplista de "economia imediata" e fundamentar matematicamente a decisão corporativa, estrutura-se a modelagem comparativa de Custo Total de Uso ($TCU$) em um horizonte temporal $T$ (tipicamente de 36 meses).
+Para superar a retórica simplista de "economia imediata" e fundamentar matematicamente a decisão corporativa, estrutura-se a modelagem comparativa de Custo Total de Uso (TCU) em um horizonte temporal T (tipicamente de 36 meses).
 
-No modelo **Transacional Tradicional ($TCU_{Capex}$)**, o custo total é dado por:
-$$TCU_{Capex} = P_0 + \sum_{t=1}^T \frac{C_{maint}(t) + C_{ocioso}(t) + C_{admin}(t)}{(1 + WACC)^t} - \frac{V_{resid}}{(1 + WACC)^T}$$
-
-Onde:
-* $P_0$: Preço de aquisição inicial do equipamento e licenças perpétuas;
-* $C_{maint}(t)$: Custo estocástico de reparos emergenciais, fretes e peças sobressalentes;
-* $C_{ocioso}(t) = p_{deslig} \times (Sal \times \tau_{abandono})$: Custo de ociosidade e absenteísmo decorrente do abandono tecnológico ou desligamento do funcionário, mantendo o ativo imobilizado e inútil no estoque;
-* $C_{admin}(t)$: Custo de gestão interna de patrimônio, depreciação e suporte de TI;
-* $WACC$: Custo Médio Ponderado de Capital corporativo;
-* $V_{resid}$: Valor residual contábil de descarte (frequentemente nulo por obsolescência eletrônica acelerada).
-
-Em contrapartida, no modelo **Servitizado ($TCU_{ATaaS}$)**, a estrutura de custos opera como despesa operacional previsível e desonerada:
-$$TCU_{ATaaS} = \sum_{t=1}^T \frac{\Phi_{mensal} \times (1 - T_{IR/CSLL}) + C_{transacao}(t)}{(1 + WACC)^t}$$
+No modelo **Transacional Tradicional (TCU_Capex)**, o custo total é dado por:
+$$TCU_Capex = P₀ + ∑_{t=1}^T [ (C_maint(t) + C_ocioso(t) + C_admin(t)) / (1 + WACC)^t ] - [ V_resid / (1 + WACC)^T ]$$
 
 Onde:
-* $\Phi_{mensal}$: Mensalidade contratual que agrega hardware, substituição emergencial (*hot-swap*), customização ergonômica, suporte biopsicossocial contínuo e atualizações de firmware;
-* $T_{IR/CSLL}$: Alíquota combinada de tributos corporativos dedutíveis (Imposto de Renda Pessoa Jurídica e Contribuição Social sobre o Lucro Líquido — 34% no regime do Lucro Real, aplicável à grande maioria das corporações sujeitas à Lei de Cotas);
-* $C_{transacao}(t)$: Custo marginal de monitoramento de governança de SLA junto ao provedor parceiro ($C_{transacao} \ll C_{admin} + C_{maint}$).
+* P₀: Preço de aquisição inicial do equipamento e licenças perpétuas;
+* C_maint(t): Custo estocástico de reparos emergenciais, fretes e peças sobressalentes;
+* $C_{ocioso}(t) = p_deslig × (Sal × τ_abandono)$: Custo de ociosidade e absenteísmo decorrente do abandono tecnológico ou desligamento do funcionário, mantendo o ativo imobilizado e inútil no estoque;
+* C_admin(t): Custo de gestão interna de patrimônio, depreciação e suporte de TI;
+* WACC: Custo Médio Ponderado de Capital corporativo;
+* V_resid: Valor residual contábil de descarte (frequentemente nulo por obsolescência eletrônica acelerada).
 
-A análise matemática evidencia que a superioridade financeira do ATaaS reside em três fatores: (1) **Eliminação do custo de ociosidade ($C_{ocioso} \approx 0$)**, uma vez que em caso de desligamento o equipamento retorna ao provedor ou é remanejado; (2) **Benefício fiscal explícito da dedutibilidade integral em Opex ($1 - 0{,}34 = 0{,}66$)**; e (3) **Preservação de liquidez corporativa**, evitando desembolsos concentrados de capital ($P_0$) e custos de oportunidade financeira.
+Em contrapartida, no modelo **Servitizado (TCU_ATaaS)**, a estrutura de custos opera como despesa operacional previsível e desonerada:
+$$TCU_ATaaS = ∑_{t=1}^T [ (Φ_mensal × (1 - T_IR/CSLL) + C_transacao(t)) / (1 + WACC)^t ]$$
+
+Onde:
+* Φ_mensal: Mensalidade contratual que agrega hardware, substituição emergencial *(hot-swap)*, customização ergonômica, suporte biopsicossocial contínuo e atualizações de firmware;
+* T_IR/CSLL: Alíquota combinada de tributos corporativos dedutíveis (Imposto de Renda Pessoa Jurídica e Contribuição Social sobre o Lucro Líquido — 34% no regime do Lucro Real, aplicável à grande maioria das corporações sujeitas à Lei de Cotas);
+* C_transacao(t): Custo marginal de monitoramento de governança de SLA junto ao provedor parceiro (C_transacao ≪ C_admin + C_maint).
+
+A análise matemática evidencia que a superioridade financeira do ATaaS reside em três fatores: (1) **Eliminação do custo de ociosidade (C_ocioso ≈ 0)**, uma vez que em caso de desligamento o equipamento retorna ao provedor ou é remanejado; (2) **Benefício fiscal explícito da dedutibilidade integral em Opex (1 - 0,34 = 0,66)**; e (3) **Preservação de liquidez corporativa**, evitando desembolsos concentrados de capital (P₀) e custos de oportunidade financeira.
 
 ```
 Tabela 1: Análise Comparativa Multidimensional: Modelo Transacional Capex vs. Ecossistema Servitizado ATaaS (Opex).
@@ -272,13 +272,13 @@ Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro 
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-* **Transição Incremental via Aprendizado Bayesiano (*Probe-and-Learn*):** Recomenda-se que as corporações superem a inércia dos comportamentos padrão (*defaults*; Gans, 2026) não por uma virada abrupta de 100% dos ativos, mas por pilotos experimentais controlados em postos-chave. Conforme preconizam Spina (2026) e Agrawal et al. (2026), tais testes controlados fornecem os sinais informativos empíricos indispensáveis para atualizar as crenças dos comitês executivos (CFO e TI) e comprovar a mitigação do abandono sob acordos de nível de serviço (SLA).
+* **Transição Incremental via Aprendizado Bayesiano *(Probe-and-Learn)*:** Recomenda-se que as corporações superem a inércia dos comportamentos padrão (*defaults*; Gans, 2026) não por uma virada abrupta de 100% dos ativos, mas por pilotos experimentais controlados em postos-chave. Conforme preconizam Spina (2026) e Agrawal et al. (2026), tais testes controlados fornecem os sinais informativos empíricos indispensáveis para atualizar as crenças dos comitês executivos (CFO e TI) e comprovar a mitigação do abandono sob acordos de nível de serviço (SLA).
 
 ### Indicadores-Chave de Desempenho (KPIs de Governança ATaaS):
-1. **Taxa de Disponibilidade Funcional (*Uptime*):** $\ge 98{,}5\%$, medido pelo tempo de operação útil da ferramenta no posto;
-2. **Tempo Médio de Reparo ou Troca (*MTTR - Mean Time to Repair / Hot-swap*):** $\le 24\text{ horas}$, assegurando que o colaborador não fique ocioso ou isolado;
-3. **Taxa de Abandono da Tecnologia Assistiva:** Redução para patamares inferiores a $5\%$ em 12 meses de contrato;
-4. **Índice de Clima de Implementação e Ajuste aos Valores (*Values-Fit Score*):** Aferido semestralmente via instrumento psicométrico validado com a equipe e o colaborador.
+1. **Taxa de Disponibilidade Funcional *(Uptime)*:** $≥ 98,5%$, medido pelo tempo de operação útil da ferramenta no posto;
+2. **Tempo Médio de Reparo ou Troca *(MTTR - Mean Time to Repair / Hot-swap)*:** $≤ 24 horas$, assegurando que o colaborador não fique ocioso ou isolado;
+3. **Taxa de Abandono da Tecnologia Assistiva:** Redução para patamares inferiores a 5% em 12 meses de contrato;
+4. **Índice de Clima de Implementação e Ajuste aos Valores *(Values-Fit Score)*:** Aferido semestralmente via instrumento psicométrico validado com a equipe e o colaborador.
 
 ---
 
@@ -296,16 +296,16 @@ Este estudo consolida uma contribuição seminal para a literatura de Gestão Es
 ### 6.2 Limitações do Trabalho e Condições de Contorno
 Em observância ao rigor acadêmico estrito, explicitam-se as seguintes limitações ontológicas e metodológicas:
 1. **Validade Ecológica e Dependência Institucional:** A pesquisa desenvolve-se contextualizada prioritariamente no arcabouço sociojurídico brasileiro, fortemente moldado pelo imperativo sancionatório da Lei de Cotas (Lei nº 8.213/1991). Esse contexto pode acentuar a busca por modelos servitizados como escudo contra passivos trabalhistas, exigindo prudência na extrapolação direta dos achados para mercados voluntários ou desregulamentados;
-2. **Desenho Transversal (*Cross-Sectional*):** A coleta primária capta a prontidão e percepção dos gestores em um recorte temporal estático, impossibilitando a aferição de causalidade longitudinal de longo prazo (> 5 anos) sobre a progressão de carreira dos colaboradores beneficiados;
+2. **Desenho Transversal *(Cross-Sectional)*:** A coleta primária capta a prontidão e percepção dos gestores em um recorte temporal estático, impossibilitando a aferição de causalidade longitudinal de longo prazo (> 5 anos) sobre a progressão de carreira dos colaboradores beneficiados;
 3. **Fronteira Temporal de Amortização Contábil:** A modelagem de Custo Total de Uso adota horizontes contratuais corporativos típicos de 24 a 36 meses. Em cenários de uso contínuo de hardware hiperdurável por períodos superiores a 60 meses sem upgrades, o desembolso acumulado em Opex pode aproximar-se ou exceder o valor nominal de aquisição, exigindo recalibração contratual periódica;
 4. **Viés de Desejabilidade Social:** Por se tratar de uma temática atrelada à ética corporativa e direitos humanos, as respostas obtidas junto a líderes de RH podem apresentar viés de positividade inflacionada em relação ao clima real de inclusão da organização.
 
 ### 6.3 Proposições Formais e Hipóteses para Pesquisa Futura
 Com vistas a subsidiar investigações empíricas posteriores de caráter confirmatório (utilizando modelagem por equações estruturais — PLS-SEM ou regressões econométricas em painel), formulam-se formalmente as seguintes hipóteses estruturais:
 
-* **Hipótese 1 ($H_1$):** *A interoperabilidade prévia entre o ecossistema ATaaS e a arquitetura de sistemas legados de ERP corporativo modera positivamente a relação entre a adoção da servitização e a redução das taxas de abandono tecnológico no ambiente de trabalho.*
-* **Hipótese 2 ($H_2$):** *A governança de dados pautada no princípio de Privacy by Design (LGPD) mitiga a percepção de vigilância invasiva do colaborador, atuando como preditor direto do Clima de Implementação e do engajamento com a inovação assistiva.*
-* **Hipótese 3 ($H_3$):** *A percepção de perda de soberania técnica (vendor lock-in) atua como determinante negativo na propensão de gestores de TI em autorizar a transição de Capex para contratos contínuos de servitização assistiva.*
+* **Hipótese 1 (H₁):** *A interoperabilidade prévia entre o ecossistema ATaaS e a arquitetura de sistemas legados de ERP corporativo modera positivamente a relação entre a adoção da servitização e a redução das taxas de abandono tecnológico no ambiente de trabalho.*
+* **Hipótese 2 (H₂):** *A governança de dados pautada no princípio de Privacy by Design (LGPD) mitiga a percepção de vigilância invasiva do colaborador, atuando como preditor direto do Clima de Implementação e do engajamento com a inovação assistiva.*
+* **Hipótese 3 (H₃):** *A percepção de perda de soberania técnica (vendor lock-in) atua como determinante negativo na propensão de gestores de TI em autorizar a transição de Capex para contratos contínuos de servitização assistiva.*
 
 ---
 
