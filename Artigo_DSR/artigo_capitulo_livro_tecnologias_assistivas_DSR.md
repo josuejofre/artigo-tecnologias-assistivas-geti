@@ -177,18 +177,11 @@ Tabela 1: Matriz de Rastreabilidade Metodológica DSR: Meta-Requisitos vs. Desig
 └──────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 3.4 O Ciclo de Processo DSR de Peffers et al. (2007)
-A condução empírica operacionaliza-se nas seis etapas sequenciais iterativas:
+### 3.4 O Ciclo de Processo DSR de Peffers et al. (2007) e Hevner (2007)
+A condução empírica operacionaliza-se nas seis etapas sequenciais iterativas do DSR, articuladas aos três ciclos de Hevner (relevância, rigor e design), conforme ilustrado na Figura 1:
 
-```mermaid
-flowchart TD
-    E1["Etapa 1: Identificação do Problema e Motivação<br/>(Abandono de TA 30-50%, Falência do Capex)"] --> E2["Etapa 2: Definição dos Meta-Requisitos (MR1 a MR5)<br/>(Objetivos da Solução e Design Principles DP1-DP5)"]
-    E2 --> E3["Etapa 3: Design e Desenvolvimento do Artefato<br/>(Construção do Framework Integrador ATaaS)"]
-    E3 --> E4["Etapa 4: Demonstração e Instanciação<br/>(Simulação em Cenários Corporativos Prototípicos)"]
-    E4 --> E5["Etapa 5: Avaliação por Painel de Especialistas<br/>(Expert Evaluation Panel: Utilidade, Rigor e LGPD)"]
-    E5 --> E6["Etapa 6: Comunicação e Contribuição Científica<br/>(Capítulo PPGPIT e Tipologia Tipo 2 de DSR)"]
-    E5 -.->|"Ciclo de Refinamento Iterativo"| E3
-```
+![Figura 1 – Coerência Metodológica e Ciclos de Design Science Research aplicados ao Framework ATaaS (adaptado de Hevner, 2007 e Peffers et al., 2007)](imagens/figura1_coerencia_metodologica.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ### 3.5 Demonstração / Instanciação do Artefato em Cenários Simulados
 Conforme preconizado por Peffers et al. (2007), a demonstração evidencia a capacidade do artefato em resolver instâncias concretas do problema. O Framework ATaaS foi instanciado em dois cenários organizacionais prototípicos:
@@ -262,6 +255,11 @@ A simulação numérica comprova que o modelo ATaaS:
 2. **Elimina R$ 87.500,00 de prejuízo financeiro direto** em ativos ociosos gerados pelo abandono precoce de equipamentos;
 3. **Preserva R$ 250.000,00 de liquidez imediata** no primeiro dia de contratação corporativa.
 
+A síntese visual dessa ruptura paradigmática é consolidada na Figura 3, que mapeia a transição estrutural em cinco dimensões-chave: gatilho decisório, estrutura econômico-financeira, integração operacional, suporte ao ciclo de vida e desfecho organizacional.
+
+![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
+*Fonte: Elaborado pelos autores (2026).*
+
 ### 4.3 Interoperabilidade com ERPs Legados e a Teoria da Mútua Adaptação
 Atendendo ao Meta-Requisito $MR_4$ e Princípio $DP_4$, o artefato incorpora formalmente a camada de **interoperabilidade sistêmica**. A maior barreira de inclusão digital nas corporações brasileiras reside na incompatibilidade de sistemas ERP legados (SAP GUI, TOTVS Protheus e portais intranet proprietários), construídos sobre tecnologias legadas desprovidas de semântica acessível para leitores de tela ou comandos adaptados.
 
@@ -278,7 +276,10 @@ O artefato introduz a blindagem por **Privacy by Design**:
 
 ## 5. DIRETRIZES GERENCIAIS PARA IMPLEMENTAÇÃO DO ARTEFATO
 
-Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação ATaaS**, estruturado em quatro fases sequenciais:
+Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação ATaaS**, estruturado em quatro fases sequenciais e parametrizado por acordos de nível de serviço (SLAs) estritos, conforme modelado na Figura 2:
+
+![Figura 2 – Framework Integrador de Gestão da Inovação em Tecnologia Assistiva como Serviço (ATaaS): Arquitetura Modular e Roteiro de Implementação](imagens/figura2_framework_ataas_v5.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐

@@ -130,24 +130,10 @@ Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **c
 ## 3. METODOLOGIA E DESENHO DA PESQUISA
 
 ### 3.1 Desenho Metodológico Misto Triangulado (MMR)
-A investigação emprega uma abordagem metodológica mista convergente (*Mixed Methods Research* — Creswell & Plano Clark, 2018), fundamentada na complementaridade entre evidências bibliográficas secundárias de rigor internacional e dados empíricos primários obtidos no ecossistema corporativo brasileiro.
+A investigação emprega uma abordagem metodológica mista convergente (*Mixed Methods Research* — Creswell & Plano Clark, 2018), fundamentada na complementaridade entre evidências bibliográficas secundárias de rigor internacional e dados empíricos primários obtidos no ecossistema corporativo brasileiro, conforme detalhado na Figura 1:
 
-```mermaid
-flowchart LR
-    subgraph ETAPA1["Fase 1: Mapeamento da Literatura"]
-        P1["Estado da Arte da Literatura<br/>(Scopus, WoS, PubMed)<br/>54 identificados ➔ 19 incluídos em PDF"]
-    end
-    subgraph ETAPA2["Fase 2: Levantamento Empírico no Brasil"]
-        P2["Survey Estruturado<br/>Prontidão Organizacional<br/>(Escala Likert 1 a 5)"]
-        P3["Entrevistas Qualitativas<br/>Lideranças Corporativas<br/>(Análise de Conteúdo - Bardin)"]
-    end
-    subgraph SINTESE["Fase 3: Diretrizes & Recomendações"]
-        OUT["Diretrizes Gerenciais ATaaS<br/>Adaptação PSS & MPT<br/>Capítulo PPGPIT"]
-    end
-    P1 --> OUT
-    P2 --> OUT
-    P3 --> OUT
-```
+![Figura 1 – Fluxo Metodológico de Triagem Bibliográfica Estruturada (PRISMA 2020) e Protocolo de Levantamento de Campo com Gestores Brasileiros](imagens/figura1_metodologia_prisma_v5.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ### 3.2 Estratégia de Busca e Mapeamento da Literatura
 A síntese da literatura internacional e nacional foi conduzida mediante recuperação automatizada em três bases científicas de alto impacto indexadas: **Scopus (Elsevier)**, **Web of Science (Clarivate)** e **PubMed / Europe PMC (NCBI/EMBL)**.
@@ -223,6 +209,11 @@ Tabela 1: Análise Comparativa Multidimensional: Modelo Transacional Capex vs. E
 Nota: Capex = Capital Expenditure; Opex = Operational Expenditure; MTTR = Mean Time to Repair; SLA = Service Level Agreement; LGPD = Lei Geral de Proteção de Dados.
 ```
 
+A dinâmica visual comparativa dessa transformação estrutural é sintetizada na Figura 3, demonstrando o alívio de risco e a geração de valor nas cinco dimensões organizacionais da firma:
+
+![Figura 3 – Transição Paradigmática na Gestão Estratégica de Tecnologias Assistivas: Da Aquisição Transacional Patrimonial (Capex) para a Servitização Contínua em Tecnologia Assistiva como Serviço (ATaaS / Opex)](imagens/figura3_transicao_capex_ataas.png)
+*Fonte: Elaborado pelos autores (2026).*
+
 ### 4.2 A Barreira dos ERPs Legados e a Mútua Adaptação
 A investigação empírica e bibliográfica confirma que a maior barreira técnica à inclusão não reside na Tecnologia Assistiva em si, mas na **inacessibilidade da arquitetura dos ERPs corporativos legados** (SAP GUI, TOTVS Protheus, portais corporativos em intranet). Tais softwares frequentemente utilizam interfaces gráficas não-semânticas, incompatíveis com leitores de tela como NVDA ou JAWS, e carecem de atalhos acessíveis por teclado ou suporte a dispositivos de apontamento ocular.
 
@@ -239,7 +230,10 @@ Para prevenir a transformação da assistência em vigilância corporativa ou pe
 
 ## 5. DIRETRIZES E RECOMENDAÇÕES GERENCIAIS PARA SERVITIZAÇÃO ASSISTIVA
 
-Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro:
+Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro fases sequenciais e interdependentes, concebidas a partir da adaptação dos modelos seminais de Sistemas Produto-Serviço (Tukker, 2004; Baines et al., 2009) e Matching Person & Technology (Scherer, 2005) à realidade do ambiente corporativo brasileiro, conforme ilustrado no framework da Figura 2:
+
+![Figura 2 – Diretrizes Gerenciais para Servitização Assistiva no Brasil (Adaptação PSS e MPT)](imagens/figura2_framework_ataas_v5.png)
+*Fonte: Elaborado pelos autores (2026).*
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
