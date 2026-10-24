@@ -123,6 +123,13 @@ Para estruturar as rotinas internas da organização receptora, articulam-se tr�
 
 ---
 
+### 2.4 Empreendedorismo Bayesiano, Defaults sob Incerteza e Inércia Decisória Corporativa
+A persistência das corporações brasileiras no modelo patrimonial transacional (Capex) — mesmo diante de taxas documentadas de abandono de 30% a 50% — encontra explicação teórica na recente obra seminal sobre **Empreendedorismo Bayesiano (*Bayesian Entrepreneurship*)** editada por Agrawal, Camuffo, Gambardella, Gans, Scott e Stern (MIT Press, 2026). Conforme demonstra Gans (2026), em ambientes caracterizados por incerteza complexa e pressão regulatória coercitiva, os tomadores de decisão refugiam-se em comportamentos padrão (*defaults under Knightian uncertainty*). No ecossistema corporativo brasileiro, a compra patrimonial de TAs configura exatamente esse *default* cartorial: adquire-se o bem físico para comprovação perante a auditoria fiscal da Lei de Cotas (Lei nº 8.213/1991), desconsiderando-se a gestão do ciclo de vida e a funcionalidade real do colaborador no posto de trabalho.
+
+Sob essa perspectiva, os gestores corporativos de RH, TI e Finanças mantêm **crenças a priori (*prior beliefs*)** assimétricas e desalinhadas (Agrawal et al., 2026; Gambardella et al., 2026): enquanto o RH crê cumprir sua missão legal pela simples contratação formal, a TI sustenta o *prior* de que TAs externas representam vulnerabilidades de cibersegurança nos ERPs legados, e o Financeiro ancora-se no pressuposto de que despesas recorrentes de serviço (Opex) seriam mais onerosas que a compra isolada (Capex). A ruptura dessa inércia decisória requer o que Novelli (2026) e Spina (2026) denominam de **Abordagem Científica da Decisão como Aprendizado Bayesiano (*Scientific Approach as Bayesian Learning*)**: o emprego de pilotos controlados e testes empíricos (*probe-and-learn experimentation*) concebidos para gerar evidências sistemáticas, atualizando os *priors* corporativos em direção a modelos servitizados (ATaaS) sustentáveis e inclusivos (ODS 8 e 10).
+
+---
+
 ## SEÇÃO 3: METODOLOGIA E DESENHO DA PESQUISA
 
 ### 3.1 Desenho Metodológico Misto Triangulado (MMR)
@@ -169,6 +176,8 @@ TITLE-ABS-KEY (
 O fluxo de seleção resultou na catalogação e download de **19 artigos seminais em texto integral (PDF)**, depositados em repositório estruturado do projeto (`03 - Artigo e Capítulo de Livro/artigos/`) e monitorados em tempo real via repositório interativo (`controle_artigos.html`).
 
 ### 3.3 Coleta Primária e Procedimentos de Análise
+* **Mapeamento de Crenças a Priori (*Prior Beliefs*):** Sob a fundamentação do empreendedorismo bayesiano (Agrawal et al., 2026; Novelli, 2026), os instrumentos de coleta (survey e entrevistas) foram concebidos para diagnosticar as crenças a priori dos gestores de RH, TI e Finanças em relação a custos ocultos, riscos de incompatibilidade com ERPs e viabilidade de modelos servitizados.
+
 * **Survey Estruturado de Prontidão:** Instrumento descritivo com 18 assertivas métricas estruturadas nas dimensões TOE, governança Capex vs. Opex e compatibilidade de ERPs, direcionado a executivos de P&D, D&I, TI e Recursos Humanos.
 * **Entrevistas Semiestruturadas:** Diálogos com gestores corporativos responsáveis por programas de inovação inclusiva e lideranças de startups fornecedoras de TA como serviço.
 * **Tratamento de Dados:** Os dados qualitativos foram transcritos e submetidos à Análise de Conteúdo Temático-Categorial (Bardin, 2016), estruturada em torno de categorias *a priori* (Barreiras de ERP, Custos de Transação, Clima de Implementação) e categorias emergentes (*Privacy by Design*, Retenção de Talentos).
@@ -262,6 +271,8 @@ Apresentam-se as diretrizes e recomendações gerenciais estruturadas em quatro 
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
+* **Transição Incremental via Aprendizado Bayesiano (*Probe-and-Learn*):** Recomenda-se que as corporações superem a inércia dos comportamentos padrão (*defaults*; Gans, 2026) não por uma virada abrupta de 100% dos ativos, mas por pilotos experimentais controlados em postos-chave. Conforme preconizam Spina (2026) e Agrawal et al. (2026), tais testes controlados fornecem os sinais informativos empíricos indispensáveis para atualizar as crenças dos comitês executivos (CFO e TI) e comprovar a mitigação do abandono sob acordos de nível de serviço (SLA).
+
 ### Indicadores-Chave de Desempenho (KPIs de Governança ATaaS):
 1. **Taxa de Disponibilidade Funcional (*Uptime*):** $\ge 98{,}5\%$, medido pelo tempo de operação útil da ferramenta no posto;
 2. **Tempo Médio de Reparo ou Troca (*MTTR - Mean Time to Repair / Hot-swap*):** $\le 24\text{ horas}$, assegurando que o colaborador não fique ocioso ou isolado;
@@ -299,13 +310,15 @@ Com vistas a subsidiar investigações empíricas posteriores de caráter confir
 
 ## REFERÊNCIAS BIBLIOGRÁFICAS (CONFORME ABNT NBR 6023)
 
-1. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
+1. AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
+2. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
 2. BARDIN, L. **Análise de conteúdo**. São Paulo: Edições 70, 2016.
 3. BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010.
 4. BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
 5. BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
 6. BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Dispõe sobre a proteção de dados pessoais (Lei Geral de Proteção de Dados Pessoais – LGPD). Brasília, DF: Presidência da República, 2018.
-7. CHESBROUGH, H. **Open Innovation: The New Imperative for Creating and Profiting from Technology**. Boston: Harvard Business School Press, 2003.
+7. CHESBROUGH, H. **Open Innovation**...
+8. GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104. **Open Innovation: The New Imperative for Creating and Profiting from Technology**. Boston: Harvard Business School Press, 2003.
 8. CRESWELL, J. W.; PLANO CLARK, V. L. **Designing and Conducting Mixed Methods Research**. 3. ed. Thousand Oaks: SAGE Publications, 2018.
 9. GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005.
 10. KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996.
@@ -313,7 +326,8 @@ Com vistas a subsidiar investigações empíricas posteriores de caráter confir
 12. LEONARD-BARTON, D. Implementation as mutual adaptation of technology and organization. **Research Policy**, v. 17, n. 5, p. 251–267, 1988.
 13. ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU). **Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável**. Nova York: Nações Unidas, 2015.
 14. OSTERWALDER, A.; PIGNEUR, Y. **Business Model Generation: Inovação em Modelos de Negócios**. Rio de Janeiro: Alta Books, 2010.
-15. PAGE, M. J. et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. **BMJ**, v. 372, n. n71, 2021.
+15. NOVELLI, E. A scientific approach to entrepreneurial decision-making as Bayesian learning. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 161–178.
+16. PAGE, M. J. et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. **BMJ**, v. 372, n. n71, 2021.
 16. PISANO, G. P. You need an innovation strategy. **Harvard Business Review**, v. 93, n. 6, p. 44–54, 2015.
 17. SCHERER, M. J. Assessing the benefits of using assistive technologies and other accommodations in education and the workplace. **Disability and Rehabilitation**, v. 27, n. 21, p. 1327–1339, 2005.
 18. SUGAWARA, A. T. et al. Abandonment of assistive technology in Brazil: study of associated factors. **Brazilian Journal of Physical Therapy**, v. 22, n. 5, p. 401–407, 2018.

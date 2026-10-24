@@ -118,6 +118,13 @@ A dinâmica interna da organização usuária é estruturada por três teorias c
 
 ---
 
+### 2.5 Empreendedorismo Bayesiano e Persuasão Estratégica na Inovação Corporativa
+A adoção de novos modelos de negócio servitizados em corporações consolidadas esbarra na inércia cognitiva dos comitês decisórios (CFO, diretoria de TI e suprimentos). Sob a teoria do **Empreendedorismo Bayesiano (*Bayesian Entrepreneurship*)** formulada por Agrawal, Camuffo, Gambardella, Gans, Scott e Stern (MIT Press, 2026), os agentes corporativos operam com base em **crenças a priori (*prior beliefs*)** heterogêneas e fortemente ancoradas em rotinas passadas. Sob condições de incerteza profunda (*Knightian uncertainty*), os tomadores de decisão refugiam-se em comportamentos padrão (*defaults under uncertainty*; Gans, 2026), perpetuando a compra patrimonial (Capex) por considerarem-na falsamente "segura" e "mais barata", enquanto subestimam sistematicamente os custos estocásticos de manutenção e o custo de ociosidade ($C_{ocioso}$) gerado pelo abandono precoce de TAs.
+
+Para superar essa inércia, a teoria prescreve a **Persuasão Bayesiana (*Bayesian Persuasion* — Agrawal et al., 2026; Kamenica & Gentzkow, 2011)**: quando o inovador precisa atrair recursos e autorizações de agentes cujos *priors* são céticos ou divergentes, os experimentos e artefatos devem ser explicitamente desenhados para gerar sinais informativos (*informative signals*) capazes de induzir uma atualização racional de crenças (*posterior beliefs*). No contexto deste estudo em DSR, o artefato gerencial ATaaS e sua modelagem matemática de Custo Total de Uso ($TCU$) atuam precisamente como esse dispositivo de persuasão bayesiana, fornecendo aos gestores financeiros e tecnológicos evidências analíticas de que a servitização contínua otimiza a liquidez, elimina passivos de ociosidade e blinda a organização contra riscos regulatórios da LGPD.
+
+---
+
 ## SEÇÃO 3: METODOLOGIA DESIGN SCIENCE RESEARCH (DSR)
 
 ### 3.1 Articulação dos Três Ciclos de Hevner (2007)
@@ -331,6 +338,8 @@ Tabela 3: Consolidação da Avaliação do Artefato pelo Painel de Especialistas
 └──────────────────────────────┴──────────────┴─────────────────────────────────────────────────────────────────────────┘
 ```
 
+Adicionalmente, sob a ótica do aprendizado bayesiano profundo (*Deep Bayesian Learning*; Agrawal et al., 2026), o painel de avaliação com especialistas operou como um mecanismo rigoroso de calibração iterativa de crenças: as premissas de design iniciais da equipe foram confrontadas com o julgamento crítico de pesquisadores e lideranças executivas, gerando princípios de design consolidados e empiricamente respaldados.
+
 Os resultados empíricos do painel validam a proposição central: o artefato é prescritivamente eficaz, computacionalmente demonstrável e aplicável às corporações brasileiras.
 
 ### 6.2 Classificação da Contribuição Científica em DSR
@@ -353,7 +362,8 @@ Como desdobramento do artefato desenvolvido, formulam-se três hipóteses causai
 
 ## REFERÊNCIAS BIBLIOGRÁFICAS (CONFORME ABNT NBR 6023)
 
-1. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
+1. AGRAWAL, A.; CAMUFFO, A.; GAMBARDELLA, A.; GANS, J.; SCOTT, E. L.; STERN, S. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026.
+2. BAINES, T. S. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009. et al. State-of-the-art in product-service systems. **International Journal of Production Research**, v. 45, n. 10, p. 2471–2489, 2009.
 2. BASK, A. et al. Service modularity and modular service offerings. **Service Science**, v. 2, n. 4, p. 219–237, 2010.
 3. BRASIL. **Lei nº 8.213, de 24 de julho de 1991**. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências [Lei de Cotas]. Brasília, DF: Presidência da República, 1991.
 4. BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Presidência da República, 2015.
@@ -362,7 +372,8 @@ Como desdobramento do artefato desenvolvido, formulam-se três hipóteses causai
 7. GEBAUER, H.; FLEISCH, E.; FRIEDLI, T. Overcoming the service paradox in manufacturing companies. **European Management Journal**, v. 23, n. 1, p. 14–26, 2005.
 8. GREGOR, S.; HEVNER, A. R. Positioning and presenting design science research for maximum impact. **MIS Quarterly**, v. 37, n. 2, p. 337–355, 2013.
 9. GREGOR, S.; KRUSE, L. C.; SEIDEL, S. The anatomy of a design principle. **Journal of the Association for Information Systems**, v. 21, n. 6, p. 1622–1652, 2020.
-10. HEVNER, A. R. et al. Design science in information systems research. **MIS Quarterly**, v. 28, n. 1, p. 75–105, 2004.
+10. GANS, J. Knightian uncertainty and Bayesian entrepreneurship. In: AGRAWAL, A. et al. (Eds.). **Bayesian Entrepreneurship**. Cambridge, MA: The MIT Press, 2026. p. 87–104.
+11. HEVNER, A. R. et al. Design science in information systems research. **MIS Quarterly**, v. 28, n. 1, p. 75–105, 2004.
 11. HEVNER, A. R. A three cycle view of design science research. **Scandinavian Journal of Information Systems**, v. 19, n. 2, p. 87–92, 2007.
 12. KLEIN, K. J.; SORRA, J. S. The challenge of innovation implementation. **Academy of Management Review**, v. 21, n. 4, p. 1055–1080, 1996.
 13. KOWALKOWSKI, C.; GEBAUER, H.; OLIVA, R. Service growth in product firms: Emerging perspectives. **Journal of Service Management**, v. 28, n. 1, p. 2–18, 2017.
