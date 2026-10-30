@@ -184,11 +184,7 @@
       background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.92));
       border: 1px solid var(--border-highlight);
       border-radius: 20px;
-      padding: 28px 32px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
+      padding: 26px 32px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
     }
 
@@ -863,33 +859,27 @@
         <button class="btn-sm" onclick="changeFontSize(1)" title="Aumentar fonte">A+</button>
         <button class="btn-sm" onclick="changeFontSize(-1)" title="Diminuir fonte">A-</button>
         <button class="btn-sm" onclick="toggleContrast()" title="Alternar Alto Contraste">⚡ Alto Contraste</button>
-        <a class="btn-sm" href="index.html">📊 Apresentação</a>
-        <a class="btn-sm" href="controle_artigos.html">📚 Base RSL (19 PDFs)</a>
         <button class="btn-sm primary" onclick="window.print()">🖨️ Exportar Parecer (PDF)</button>
       </div>
     </div>
   </header>
 
-  <!-- HERO COM QR CODE DO ARTIGO -->
+  <!-- HERO DA FERRAMENTA -->
   <section class="hero">
     <div class="hero-card">
       <div>
-        <div class="hero-tag">⚙️ Artefato Tecnológico-Gerencial (Design Science Research — Hevner, 2007)</div>
-        <h2>Tomada de Decisão Executiva em <span>Tecnologia Assistiva como Serviço (ATaaS)</span></h2>
+        <div class="hero-tag">⚙️ Plataforma Executiva de Decisão e Simulação Financeira</div>
+        <h2>Tomada de Decisão em <span>Tecnologia Assistiva como Serviço (ATaaS)</span></h2>
         <p>
-          Ferramenta interativa desenvolvida no Programa de Pós-Graduação em Inovação Tecnológica da <strong>UNIFESP (GETI 2026)</strong> para apoiar gestores de RH, D&amp;I, TI, SST e Finanças (CFOs) a diagnosticar a viabilidade de transição da compra pontual (Capex) para modelos servitizados (Opex/PSS), mitigando o abandono tecnológico (30%–50%) em conformidade com a <strong>LGPD (Art. 11)</strong> e os <strong>ODS 8 e 10 da ONU</strong>.
+          Avalie se a sua organização deve adquirir Tecnologias Assistivas por compra tradicional (<strong>Capex</strong>) ou contratá-las como serviço contínuo (<strong>ATaaS / Opex</strong>), simulando o Custo Total de Uso (VPL), o abatimento fiscal, a integração com sistemas (ERPs) e a conformidade com a <strong>LGPD (Art. 11)</strong>.
         </p>
         <div class="hero-badges">
-          <span class="pill">✔ Modelagem Paramétrica TCU (VPL)</span>
-          <span class="pill">✔ Benefício Fiscal Lucro Real (34%)</span>
-          <span class="pill">✔ Mútua Adaptação com ERPs (SAP/TOTVS)</span>
+          <span class="pill">✔ Diagnóstico Make, Buy or Servitize</span>
+          <span class="pill">✔ Simulador Financeiro TCU (VPL)</span>
+          <span class="pill">✔ Interoperabilidade com ERPs (SAP/TOTVS)</span>
           <span class="pill">✔ SLA Hot-Swap ≤ 24h &amp; Uptime ≥ 98,5%</span>
-          <span class="pill">✔ Segregação de Telemetria (LGPD)</span>
+          <span class="pill">✔ Governança de Dados (LGPD Art. 11)</span>
         </div>
-      </div>
-      <div class="qr-box" title="QR Code oficial de acesso rápido ao Framework ATaaS">
-        <img src="Artigo_DSR/imagens/qrcode_framework_ataas.png" alt="QR Code para acessar o Framework ATaaS no GitHub Pages" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/framework_ataas.html'">
-        <span>Acesse no celular<br>Framework ATaaS</span>
       </div>
     </div>
   </section>
@@ -932,12 +922,12 @@
     <!-- ===================================================================== -->
     <section id="tab-decisao" class="tab-section active" aria-labelledby="titulo-decisao">
       <div class="preset-bar no-print">
-        <span>⚡ Carregar Cenário do Artigo:</span>
-        <button class="btn-sm" onclick="loadScenario('padrao')">🏢 Corporação Lucro Real (10 Postos - Artigo DSR)</button>
-        <button class="btn-sm" onclick="loadScenario('cenarioA')">💻 Cenário A: TI / Controladoria (ERP SAP + Def. Visual)</button>
-        <button class="btn-sm" onclick="loadScenario('cenarioB')">🏭 Cenário B: Manufatura (Exoesqueleto + SLA 24h)</button>
-        <button class="btn-sm" onclick="loadScenario('setorPublico')">🏫 Rede Pública / Educação (Demanda Flutuante Anual)</button>
-        <button class="btn-sm" onclick="loadScenario('compraPontual')">🏠 Pequena Empresa (1 Posto Simples / Sem ERP Legado)</button>
+        <span>⚡ Carregar Perfil de Simulação:</span>
+        <button class="btn-sm" onclick="loadScenario('padrao')">🏢 Grande Empresa — Lucro Real (10 Postos)</button>
+        <button class="btn-sm" onclick="loadScenario('cenarioA')">💻 Escritório / TI (Integração ERP SAP + Leitor de Tela)</button>
+        <button class="btn-sm" onclick="loadScenario('cenarioB')">🏭 Indústria / Manufatura (Exoesqueleto + SLA 24h)</button>
+        <button class="btn-sm" onclick="loadScenario('setorPublico')">🏫 Setor Público / Educação (Demanda Variável Anual)</button>
+        <button class="btn-sm" onclick="loadScenario('compraPontual')">🏠 Pequena Empresa (1 Posto Simples / Sem ERP)</button>
       </div>
 
       <div class="grid-2">
@@ -945,15 +935,15 @@
         <div class="card">
           <div class="card-header">
             <div>
-              <h3 class="card-title" id="titulo-decisao">Parâmetros Organizacionais e Sociotécnicos</h3>
-              <p class="card-subtitle">Avalie as 6 dimensões baseadas nos Princípios de Design (DP₁ a DP₅) do Framework ATaaS</p>
+              <h3 class="card-title" id="titulo-decisao">Diagnóstico do Cenário da Organização</h3>
+              <p class="card-subtitle">Selecione a realidade da sua empresa nos 6 critérios estratégicos abaixo</p>
             </div>
           </div>
 
           <div class="q-block">
             <label for="q1">
               <span>1. Regime Tributário e Custo de Oportunidade de Capital</span>
-              <span class="dp-tag">DP₁ • Finanças</span>
+              <span class="dp-tag">Finanças &amp; Impostos</span>
             </label>
             <select id="q1" class="q-select" onchange="evaluateDecision()">
               <option value="20" selected>Lucro Real (dedução integral de 34% IRPJ/CSLL em Opex) e alto custo de capital</option>
@@ -966,7 +956,7 @@
           <div class="q-block">
             <label for="q2">
               <span>2. Dinâmica da Demanda, Rotatividade (Turnover) e Risco de Ociosidade</span>
-              <span class="dp-tag">DP₁ • Ociosidade</span>
+              <span class="dp-tag">Escala &amp; Estoque</span>
             </label>
             <select id="q2" class="q-select" onchange="evaluateDecision()">
               <option value="20" selected>Múltiplos postos (≥ 5) ou rotatividade/mudança funcional relevante (risco de TA ociosa no estoque)</option>
@@ -978,7 +968,7 @@
           <div class="q-block">
             <label for="q3">
               <span>3. Criticidade Operacional e Impacto de Falha Técnica (SLA / Hot-Swap)</span>
-              <span class="dp-tag">DP₂ • Disponibilidade</span>
+              <span class="dp-tag">Disponibilidade &amp; SLA</span>
             </label>
             <select id="q3" class="q-select" onchange="evaluateDecision()">
               <option value="20" selected>Crítica: falha na TA paralisa o colaborador; exige substituição emergencial (Hot-swap ≤ 24h)</option>
@@ -990,7 +980,7 @@
           <div class="q-block">
             <label for="q4">
               <span>4. Arquitetura de Sistemas Corporativos (ERPs Legados: SAP, TOTVS, Intranet)</span>
-              <span class="dp-tag">DP₄ • Mútua Adaptação</span>
+              <span class="dp-tag">Integração de TI</span>
             </label>
             <select id="q4" class="q-select" onchange="evaluateDecision()">
               <option value="15" selected>Sistemas legados complexos que exigem scripts de injeção acessível, APIs e homologação contínua</option>
@@ -1001,20 +991,20 @@
 
           <div class="q-block">
             <label for="q5">
-              <span>5. Capacidade Interna para Avaliação Biopsicossocial (Modelo MPT) e Treinamento</span>
-              <span class="dp-tag">DP₅ • MPT &amp; Clima</span>
+              <span>5. Capacidade Interna para Avaliação Ergonômica e Treinamento Contínuo</span>
+              <span class="dp-tag">Suporte &amp; Adaptação</span>
             </label>
             <select id="q5" class="q-select" onchange="evaluateDecision()">
-              <option value="15" selected>Ausência de especialistas internos em TA; requer coprodução, ergonomia e suporte de parceiro externo</option>
-              <option value="10">Equipe de SST/RH realiza triagem básica, mas carece de acompanhamento longitudinal pós-adoção</option>
+              <option value="15" selected>Ausência de especialistas internos em TA; requer avaliação ergonômica e suporte de parceiro externo</option>
+              <option value="10">Equipe de SST/RH realiza triagem básica, mas carece de acompanhamento contínuo pós-adoção</option>
               <option value="3">A empresa já possui laboratório interno de ergonomia assistiva e equipe dedicada</option>
             </select>
           </div>
 
           <div class="q-block">
             <label for="q6">
-              <span>6. Governança de Dados Sensíveis de Saúde (Art. 11 da LGPD) e Metas ESG (ODS 8 e 10)</span>
-              <span class="dp-tag">DP₃ • LGPD &amp; ESG</span>
+              <span>6. Governança de Dados Sensíveis de Saúde (Art. 11 da LGPD) e Metas ESG</span>
+              <span class="dp-tag">LGPD &amp; ESG</span>
             </label>
             <select id="q6" class="q-select" onchange="evaluateDecision()">
               <option value="10" selected>Alta exigência: requer Privacy-by-Design (segregação de telemetria) e métricas auditáveis para relatório ESG</option>
@@ -1028,8 +1018,8 @@
         <div class="card">
           <div class="card-header">
             <div>
-              <h3 class="card-title">Parecer do Sistema de Apoio à Decisão</h3>
-              <p class="card-subtitle">Diagnóstico automático ponderado pelas 5 dimensões do Framework ATaaS</p>
+              <h3 class="card-title">Parecer de Recomendação Executiva</h3>
+              <p class="card-subtitle">Indicação do modelo ideal de contratação com base no perfil da organização</p>
             </div>
           </div>
 
@@ -1040,43 +1030,43 @@
             </div>
             <div id="verdict-title" class="verdict-title">Servitização Contínua Integral (ATaaS / Opex)</div>
             <p id="verdict-desc" class="verdict-desc">
-              A estrutura tributária, o risco de ociosidade patrimonial e a necessidade de integração com ERPs indicam forte vantagem econômica e operacional na contratação como serviço contínuo (PSS Orientado ao Uso/Resultado).
+              A estrutura tributária, o risco de ociosidade patrimonial e a necessidade de integração com ERPs indicam forte vantagem econômica e operacional na contratação como serviço contínuo.
             </p>
           </div>
 
-          <h4 style="font-size: 0.88rem; color: var(--text-main); margin-bottom: 8px;">Decomposição por Princípio de Design (Gregor et al., 2020):</h4>
+          <h4 style="font-size: 0.88rem; color: var(--text-main); margin-bottom: 8px;">Pontuação por Eixo Decisório:</h4>
           <div class="dim-bar-list">
             <div class="dim-item">
               <div class="dim-item-top">
-                <span>DP₁ — Liquidez, Eficiência Tributária e Mitigação de Ociosidade</span>
+                <span>1. Liquidez, Eficiência Tributária e Redução de Ociosidade</span>
                 <span id="bar-dp1-txt">40 / 40 pts</span>
               </div>
               <div class="progress-track"><div id="bar-dp1" class="progress-fill" style="width: 100%;"></div></div>
             </div>
             <div class="dim-item">
               <div class="dim-item-top">
-                <span>DP₂ — Continuidade Funcional Sem Fricção (Hot-swap ≤ 24h)</span>
+                <span>2. Continuidade Operacional e SLA de Substituição (Hot-swap ≤ 24h)</span>
                 <span id="bar-dp2-txt">20 / 20 pts</span>
               </div>
               <div class="progress-track"><div id="bar-dp2" class="progress-fill" style="width: 100%;"></div></div>
             </div>
             <div class="dim-item">
               <div class="dim-item-top">
-                <span>DP₄ — Mediação Semântica e Adaptação com ERPs Legados</span>
+                <span>3. Interoperabilidade e Adaptação com ERPs Corporativos</span>
                 <span id="bar-dp4-txt">15 / 15 pts</span>
               </div>
               <div class="progress-track"><div id="bar-dp4" class="progress-fill" style="width: 100%;"></div></div>
             </div>
             <div class="dim-item">
               <div class="dim-item-top">
-                <span>DP₅ — Coprodução Biopsicossocial (MPT) e Clima de Implementação</span>
+                <span>4. Suporte Ergonômico Especializado e Treinamento Contínuo</span>
                 <span id="bar-dp5-txt">15 / 15 pts</span>
               </div>
               <div class="progress-track"><div id="bar-dp5" class="progress-fill" style="width: 100%;"></div></div>
             </div>
             <div class="dim-item">
               <div class="dim-item-top">
-                <span>DP₃ — Segregação Ontológica de Telemetria (Art. 11 LGPD &amp; ESG)</span>
+                <span>5. Proteção de Dados Sensíveis (LGPD Art. 11) e Indicadores ESG</span>
                 <span id="bar-dp3-txt">10 / 10 pts</span>
               </div>
               <div class="progress-track"><div id="bar-dp3" class="progress-fill" style="width: 100%;"></div></div>
@@ -1107,7 +1097,7 @@
               <h3 class="card-title" id="titulo-simulador">Parâmetros da Simulação Financeira (TCU)</h3>
               <p class="card-subtitle">Ajuste as variáveis para comparar Capex vs. ATaaS (Opex) em Valor Presente Líquido</p>
             </div>
-            <button class="btn-sm no-print" onclick="resetSimulator()">↺ Padrão do Artigo (10 Postos)</button>
+            <button class="btn-sm no-print" onclick="resetSimulator()">↺ Restaurar Padrão (10 Postos)</button>
           </div>
 
           <div class="slider-group">
@@ -1116,7 +1106,7 @@
               <span class="slider-val" id="val-postos">10 postos</span>
             </div>
             <input type="range" id="sim-postos" min="1" max="50" step="1" value="10" oninput="runSimulation()">
-            <div class="slider-hint">Padrão da simulação do artigo: 10 postos (5 deficiência visual + 5 limitação motora).</div>
+            <div class="slider-hint">Quantidade de estações de trabalho ou colaboradores atendidos por Tecnologias Assistivas.</div>
           </div>
 
           <div class="slider-group">
@@ -1143,16 +1133,16 @@
               <span class="slider-val" id="val-fee">R$ 980 / mês</span>
             </div>
             <input type="range" id="sim-fee" min="200" max="2500" step="20" value="980" oninput="runSimulation()">
-            <div class="slider-hint">Inclui comodato do equipamento, suporte MPT, adaptação de ERP e SLA de Hot-swap em até 24h.</div>
+            <div class="slider-hint">Inclui fornecimento do equipamento, suporte ergonômico, adaptação de ERP e SLA de Hot-swap em até 24h.</div>
           </div>
 
           <div class="slider-group">
             <div class="slider-header">
-              <label for="sim-turnover">Taxa de Abandono / Rotatividade no Modelo Capex (p_deslig)</label>
+              <label for="sim-turnover">Taxa de Desuso / Rotatividade no Modelo Capex (p_deslig)</label>
               <span class="slider-val" id="val-turnover">35%</span>
             </div>
             <input type="range" id="sim-turnover" min="0" max="60" step="5" value="35" oninput="runSimulation()">
-            <div class="slider-hint">Literatura (Scherer, 2005; Sugawara et al., 2018) aponta 30% a 50% de abandono gerando ativos ociosos.</div>
+            <div class="slider-hint">Percentual médio de equipamentos comprados que ficam ociosos por mudança de função, desligamento ou falta de reparo.</div>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -1275,7 +1265,7 @@
           </div>
 
           <div class="formula-box">
-            <div><strong>Equações Estruturais do Artefato (Seção 4.1 do Capítulo):</strong></div>
+            <div><strong>Fórmula de Cálculo do Custo Total de Uso (TCU em Valor Presente):</strong></div>
             <div>• TCU_Capex = P₀ + Σ [ (C_maint(t) + C_ocioso(t) + C_admin(t)) / (1 + WACC)^t ] - V_resid / (1 + WACC)^T</div>
             <div>• TCU_ATaaS = Σ [ (Φ_mensal × (1 - T_IR/CSLL) + C_trans(t)) / (1 + WACC)^t ]</div>
           </div>
@@ -1485,12 +1475,12 @@
           </div>
         </div>
 
-        <!-- INSTRUMENTO RÁPIDO DE VALIDAÇÃO DO ARTEFATO (PRAT ET AL., 2015) -->
+        <!-- INSTRUMENTO RÁPIDO DE FEEDBACK EXECUTIVO -->
         <div class="card">
           <div class="card-header">
             <div>
-              <h3 class="card-title">Validação Rápida por Especialistas e Fornecedores</h3>
-              <p class="card-subtitle">Protocolo de Avaliação de Artefato DSR (Prat et al., 2015) — gere seu parecer em 1 minuto</p>
+              <h3 class="card-title">Avaliação Prática da Ferramenta</h3>
+              <p class="card-subtitle">Registre sua avaliação executiva em 1 minuto para envio rápido</p>
             </div>
           </div>
 
