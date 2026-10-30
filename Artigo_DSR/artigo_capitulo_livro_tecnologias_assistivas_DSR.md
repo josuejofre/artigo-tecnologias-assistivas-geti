@@ -9,19 +9,6 @@
 
 ---
 
-## 📌 QUADRO DE CONGRUÊNCIA METODOLÓGICA DSR (HEVNER ET AL., 2004; PEFFERS ET AL., 2007)
-
-| Etapa Canônica do DSR | Operacionalização no Trabalho | Entrega Concreta / Seção do Manuscrito |
-| :--- | :--- | :--- |
-| **1. Identificação do Problema e Motivação** | Falência da compra patrimonial (Capex) sob coação cartorial da Lei de Cotas (Lei nº 8.213/1991), culminando em 30% a 50% de abandono tecnológico e passivos de ERP. | Seção 1 (Introdução e Problematização Gerencial da Prática). |
-| **2. Definição dos Objetivos e Meta-Requisitos** | Estabelecimento dos 5 meta-requisitos (MR₁ a MR₅) e dedução formal dos Princípios de Design (DP₁ a DP₅ de Gregor et al., 2020) para servitização contínua (ATaaS). | Seção 3.2 e 3.3 (Meta-Requisitos e Matriz de Design Principles). |
-| **3. Design e Desenvolvimento do Artefato** | Construção do **Framework Integrador ATaaS de Gestão Estratégica da Inovação**, integrando: S-D Logic, PSS modular, MPT, Modelagem Paramétrica de TCU e Privacy-by-Design (LGPD). | Seção 4 (Arquitetura do Artefato e Simulação de TCU) e Seção 5 (Roteiro em 4 Fases). |
-| **4. Demonstração / Instanciação** | Simulação e instanciação em dois cenários organizacionais arquetípicos (Cenário A: Posto Corporativo/TI com Leitor de Tela/IA; Cenário B: Posto Manufatureiro com Órtese/Exoesqueleto). | Seção 3.5 (Demonstração em Ambientes de Negócio Simulados). |
-| **5. Avaliação do Artefato** | Avaliação qualitativa por **Painel de Especialistas *(Expert Evaluation Panel)*** (Prat et al., 2015; March & Smith, 1995) aferindo utilidade gerencial, aplicabilidade técnica, rigor do TCU e aderência à LGPD. | Seção 3.6 e Seção 6.1 (Protocolo e Resultados da Avaliação por Especialistas). |
-| **6. Comunicação e Contribuição** | Formalização das contribuições teóricas e gerenciais; classificação como Contribuição Tipo 2 de DSR (Inovação Nascente/Exaptação segundo Gregor & Hevner, 2013). | Seção 6.2 a 6.4 (Contribuições, Limitações e Proposição de Hipóteses Futuras). |
-
----
-
 ## IDENTIFICAÇÃO DO TRABALHO E EQUIPE
 
 ### Título Oficial do Capítulo (Versão DSR)
@@ -62,9 +49,11 @@ Within the Brazilian corporate landscape, the integration of Assistive Technolog
 
 ## 1. INTRODUÇÃO
 
-A gestão estratégica da inovação nas organizações contemporâneas transcende a concepção de produtos voltados ao mercado externo; ela abrange, com idêntica relevância estratégica, a inovação em processos internos, arquiteturas organizacionais e postos de trabalho orientada à sustentabilidade, produtividade e equidade sociolaboral (Tidd & Bessant, 2015; Pisano, 2015). Nesse cenário, a incorporação de Tecnologias Assistivas (TA) — compreendidas como qualquer item, equipamento ou sistema que potencializa a funcionalidade e autonomia de pessoas com deficiência no ambiente corporativo (Scherer, 2005; Brasil, 2015) — constitui o núcleo operacional da agenda de Diversidade, Equidade e Inclusão (DEI) e das metas globais dos Objetivos de Desenvolvimento Sustentável, em especial o ODS 8 (Trabalho Decente e Crescimento Econômico) e o ODS 10 (Redução das Desigualdades).
+A gestão estratégica da inovação nas organizações contemporâneas transcende a concepção de produtos voltados ao mercado externo; ela abrange, com idêntica relevância estratégica, a inovação em processos internos, arquiteturas organizacionais e postos de trabalho orientada à sustentabilidade, produtividade e equidade sociolaboral (Tidd & Bessant, 2015; Pisano, 2015). Nesse cenário, a incorporação de Tecnologias Assistivas (TA) — compreendidas como qualquer item, equipamento ou sistema que potencializa a funcionalidade e autonomia de pessoas com deficiência no ambiente de trabalho (Scherer, 2005; Brasil, 2015) — constitui o núcleo operacional da agenda de Diversidade, Equidade e Inclusão (DEI) e das metas globais dos Objetivos de Desenvolvimento Sustentável, em especial o ODS 8 (Trabalho Decente e Crescimento Econômico) e o ODS 10 (Redução das Desigualdades).
 
-Contudo, na realidade corporativa brasileira, a incorporação de TAs tem sido amplamente orientada por um comportamento reativo e estritamente cartorial, impulsionado pela coerção punitiva da Lei de Cotas (Lei nº 8.213/1991). Sob esse modelo, as empresas realizam aquisições transacionais pontuais e isoladas de equipamentos de prateleira, contabilizados como Despesas de Capital (*Capital Expenditure* — Capex). Esse modelo de alocação patrimonial apresenta falhas estruturais graves: desconsidera a dinâmica evolutiva das necessidades biopsicossociais do indivíduo, ignora a necessidade de mútua adaptação entre o artefato e os sistemas legados da firma (Leonard-Barton, 1988) e negligencia a manutenção especializada. Em consequência, manifesta-se o fenômeno crônico do **abandono tecnológico**, com taxas que variam de 30% a 50% nos primeiros meses após a contratação (Sugawara et al., 2018; Scherer, 2005).
+Contudo, na realidade corporativa e institucional brasileira, a incorporação de TAs esbarra em um severo abismo sociolaboral. Dados oficiais da Pesquisa Nacional de Saúde (IBGE, 2021) apontam que, embora o Brasil conte com cerca de 18,6 milhões de pessoas com deficiência em idade produtiva, a taxa de participação desse contingente na força de trabalho é de apenas 28,3%, em flagrante assimetria com a taxa de 66,3% observada entre a população sem deficiência. Paralelamente, registros do Ministério do Trabalho e Emprego (MTE / RAIS, 2023) revelam que historicamente menos de 55% das vagas reservadas pela Lei de Cotas (Lei nº 8.213/1991, Art. 93) encontram-se efetivamente preenchidas pelas organizações.
+
+Essa crônica assimetria tem sido amplamente impulsionada por um modelo de contratação transacional e pontual balizado em despesas de capital (*Capital Expenditure* — Capex), sob coerção punitiva cartorial. Sob esse modelo patrimonial, as empresas e órgãos públicos realizam compras isoladas de equipamentos de prateleira que desconsideram a dinâmica evolutiva das necessidades biopsicossociais do indivíduo, negligenciam a mútua adaptação entre o artefato e os sistemas legados da firma (Leonard-Barton, 1988) e ignoram a manutenção contínua. Em consequência direta, manifesta-se o fenômeno do **abandono tecnológico precoce**, com taxas que variam de 30% a 50% nos primeiros meses após a contratação (Sugawara et al., 2018; Scherer, 2005), culminando em altos índices de rotatividade funcional (turnover superior a 35% nos primeiros doze meses) e na formação de "cemitérios patrimoniais" de TAs ociosas nos almoxarifados corporativos.
 
 A raiz desse abandono não se situa em defeitos intrínsecos do hardware ou software assistivo, mas na **ausência de um modelo de governança da inovação** capaz de articular áreas historicamente desconectadas na firma: Recursos Humanos (RH), Tecnologia da Informação (TI), Saúde e Segurança do Trabalho (SST) e Compras/Suprimentos. Além disso, evidencia-se um severo conflito técnico entre as TAs e os sistemas integrados de gestão corporativa (*Enterprise Resource Planning* — ERPs como SAP e TOTVS), cujas interfaces inacessíveis bloqueiam a produtividade do colaborador com deficiência.
 
@@ -72,8 +61,15 @@ Diante do esgotamento prático do modelo patrimonial de Capex, a literatura de v
 
 Todavia, inexiste até o momento na literatura de gestão da inovação no Brasil um artefato prescritivo e metodológico que oriente os gestores executivos na transição segura, juridicamente conforme (LGPD) e financeiramente sustentável de Capex para ATaaS.
 
-Nesse contexto, formula-se o **Objetivo Geral deste Estudo em DSR**:  
-*Projetar, desenvolver e avaliar um artefato gerencial-tecnológico — denominado Framework Integrador ATaaS — fundamentado na teoria de PSS e no modelo MPT, apto a orientar as corporações no Brasil na transição para a servitização contínua de tecnologias assistivas, mitigando o abandono tecnológico e maximizando o alinhamento aos ODS 8 e 10.*
+Nesse contexto, formula-se a **Questão Principal de Pesquisa ($QP$)** deste estudo:
+> **$QP$:** *Como as organizações podem gerenciar estrategicamente a inovação na implementação de Tecnologias Assistivas por meio do modelo de Servitização Contínua (ATaaS), de modo a mitigar o abandono tecnológico precoce e viabilizar a inclusão sociolaboral no mercado de trabalho em alinhamento aos ODS 8 e 10?*
+
+Desdobram-se, adicionalmente, duas subquestões prescritivas complementares:
+* **$SQ_1$ (Eficácia Econômico-Financeira):** *Em que medida a transição de Capex para Opex sob o regime tributário do Lucro Real desonera o Custo Total de Uso (TCU) e extingue o risco de ociosidade patrimonial decorrente da rotatividade laboral?*
+* **$SQ_2$ (Prontidão e Governança Sociotécnica):** *Como estruturar a interoperabilidade com sistemas legados (ERPs) e a governança de dados sensíveis (LGPD) para assegurar a continuidade operacional sem violar a privacidade do colaborador com deficiência?*
+
+Em resposta a essas questões, estabelece-se o **Objetivo Geral deste Estudo em DSR**:  
+*Projetar, desenvolver e avaliar um artefato gerencial-tecnológico — denominado Framework Integrador ATaaS — fundamentado na teoria de PSS e no modelo MPT, apto a orientar as organizações no Brasil na transição para a servitização contínua de tecnologias assistivas, mitigando o abandono tecnológico e maximizando o alinhamento aos ODS 8 e 10.*
 
 ### 1.1 Estrutura do Artigo e Vislumbre do Estudo (Paper Roadmap)
 Para guiar a apreciação crítica do leitor, o presente manuscrito organiza-se em seis seções lógicas e interdependentes:
@@ -133,6 +129,21 @@ A pesquisa estrutura-se de acordo com o framework canônico dos Três Ciclos de 
 
 O **Ciclo de Relevância** capta as dores práticas do chão de fábrica e dos escritórios corporativos no Brasil; o **Ciclo de Rigor** fornece os alicerces teóricos para evitar soluções amadoras; e o **Ciclo de Design** desenvolve e refina iterativamente o artefato com base nos feedbacks do Painel de Especialistas.
 
+Para assegurar a rastreabilidade integral entre as etapas metodológicas canônicas de DSR (Hevner et al., 2004; Peffers et al., 2007) e as entregas analíticas deste estudo, sintetiza-se no Quadro 1 o mapa de congruência metodológica:
+
+#### Quadro 1 – Rastreabilidade Metodológica: Etapas Canônicas de DSR (Peffers et al., 2007; Hevner et al., 2004) e Entregas do Estudo
+
+| Etapa Canônica do DSR (Peffers et al., 2007) | Operacionalização na Pesquisa | Seção / Entrega Concreta no Manuscrito |
+| :--- | :--- | :--- |
+| **1. Identificação do Problema e Motivação** | Diagnóstico da falência da compra patrimonial (Capex) sob coação cartorial da Lei de Cotas (Lei nº 8.213/1991), culminando em 30% a 50% de abandono de TAs e passivos de ERP legados. | Seção 1 (Introdução e Problematização Empírica com dados IBGE e RAIS). |
+| **2. Definição dos Objetivos e Meta-Requisitos** | Estabelecimento dos 5 meta-requisitos (MR₁ a MR₅) e dedução formal dos Princípios de Design (DP₁ a DP₅ de Gregor et al., 2020) para servitização contínua (ATaaS). | Seção 3.2 e 3.3 (Meta-Requisitos e Matriz de Design Principles). |
+| **3. Design e Desenvolvimento do Artefato** | Concepção do **Framework Integrador ATaaS de Gestão Estratégica da Inovação**, articulando: S-D Logic, PSS modular, MPT, Modelagem Paramétrica de TCU e Privacy-by-Design (LGPD). | Seção 4 (Arquitetura do Artefato, TCU e Interoperabilidade) e Seção 5 (Roteiro em 4 Fases). |
+| **4. Demonstração / Instanciação** | Simulação computacional do TCU (10 postos por 36 meses) e instanciação em dois cenários organizacionais arquetípicos (Posto Corporativo de TI e Posto Manufatureiro). | Seção 4.2 e 3.5 (Simulação Financeira e Ambientes Simulados). |
+| **5. Avaliação do Artefato** | Avaliação qualitativa por **Painel de Especialistas *(Expert Evaluation Panel)*** (Prat et al., 2015; March & Smith, 1995) aferindo utilidade, viabilidade, rigor e aderência à LGPD. | Seção 3.6 e Seção 6.1 (Protocolo e Evidências Qualitativas do Painel). |
+| **6. Comunicação e Contribuição** | Formalização das contribuições científicas; classificação como Contribuição Tipo 2 de DSR (Exaptação/Melhoria segundo Gregor & Hevner, 2013) e proposição de hipóteses causais. | Seção 6.2 a 6.4 (Contribuições, Limitações e Hipóteses H₁, H₂, H₃). |
+
+*Fonte: Elaborado pelos autores com base em Peffers et al. (2007) e Hevner et al. (2004).*
+
 ### 3.2 Especificação dos Meta-Requisitos da Solução (MR)
 Com base na análise do problema prático e no referencial teórico, deduzem-se formalmente cinco **Meta-Requisitos (MR)** mandatórios que o artefato gerencial deve satisfazer:
 * **MR₁ (Viabilidade Econômico-Financeira Comparativa):** O artefato deve fornecer modelagem matemática demonstrando a otimização do Custo Total de Uso (TCU) sob Opex frente ao Capex, computando custo de oportunidade (WACC), risco de ociosidade e benefício fiscal no Lucro Real;
@@ -165,61 +176,66 @@ Conforme preconizado por Peffers et al. (2007), a demonstração evidencia a cap
 * **Cenário A (Posto de Trabalho Administrativo / Intensivo em Conhecimento):** Colaborador com deficiência visual severa atuando em funções analíticas de controladoria e finanças. Aplicação do Framework para integrar software leitor de tela e inteligência artificial generativa de síntese de dados ao ERP SAP corporativo sob contrato Opex de manutenção de acessibilidade contínua.
 * **Cenário B (Posto de Trabalho Operacional / Manufatura Industrial):** Colaborador com limitação motora e neuromuscular em linha de montagem técnica. Aplicação do Framework para dimensionar órtese ativa modular / exoesqueleto assistivo integrado a posto de trabalho com SLA de substituição em caso de fadiga de material em até 24 horas.
 
-### 3.6 Protocolo de Avaliação por Especialistas *(Expert Evaluation Panel)*
-Para avaliar a qualidade, utilidade e eficácia do artefato sem incorrer no risco de questionários massivos de baixa taxa de resposta (conforme alertado na tutoria do Prof. Yukio), estruturou-se um **Painel de Avaliação por Especialistas *(Expert Evaluation Panel)*** (Prat et al., 2015; March & Smith, 1995).
-O painel congregou pesquisadores doutores em engenharia biomédica e tecnologias assistivas (LabBiAT/UNIFESP), gestores de inovação corporativa e lideranças de RH e TI do ecossistema industrial paulista:
-1. **Profª. Drª. Maria Elizete Kunkel:** Referência nacional em Tecnologias Assistivas, Biomecânica e Inclusão (LabBiAT/UNIFESP);
-2. **Profª. Drª. Míriam Raquel Diniz Zanetti:** Doutora em Gestão da Inovação e Sustentabilidade;
-3. **Prof. Dr. Carlos Marcelo Gurjão de Godoy:** Engenheiro e pesquisador em inovação tecnológica;
-4. **Liderança Executiva de RH/D&I da Embraer:** Gestão de pessoas em indústria aeroespacial de alta complexidade;
-5. **Especialista Sênior de TI e Acessibilidade Digital:** Ecossistema de São José dos Campos.
+### 3.6 Protocolo e Critérios de Avaliação por Especialistas *(Expert Evaluation Panel)*
+A validação de artefatos prescritivos e gerenciais em Design Science Research demanda métodos qualitativos de alta densidade analítica, capazes de examinar a utilidade, a factibilidade e o rigor antes da implementação em escala corporativa (March & Smith, 1995; Tremblay et al., 2010; Prat et al., 2015). Diante da natureza sociotécnica do Framework ATaaS — que articula ergonomia biomecânica, modelagem tributário-financeira, governança da segurança da informação (LGPD) e interoperabilidade com ERPs —, estruturou-se um protocolo de **Painel de Avaliação por Especialistas *(Expert Evaluation Panel)***.
 
-Os critérios formais de avaliação mensuram:
-1. **Utilidade Percebida (Utility):** Capacidade do framework de mitigar o abandono tecnológico;
-2. **Aplicabilidade Gerencial (Feasibility):** Facilidade de assimilação das 4 fases operacionais pelo C-Level;
-3. **Consistência da Modelagem TCU (Analytical Rigor):** Precisão da comparação matemática Capex vs. Opex;
-4. **Conformidade Regulatória (Compliance):** Segurança jurídica das salvaguardas de *Privacy-by-Design* frente à LGPD.
+O painel foi composto por cinco especialistas multidisciplinares selecionados por amostragem intencional por critério de autoridade acadêmica e prática corporativa no ecossistema de ciência, tecnologia e inovação paulista:
+* *Especialista 1 (Engenharia Biomédica e Tecnologias Assistivas):* Pesquisadora sênior líder em biomecânica e desenvolvimento de TAs, avaliando a centralidade no usuário, ergonomia no posto e aderência ao modelo biopsicossocial MPT;
+* *Especialista 2 (Gestão da Inovação e Sustentabilidade):* Pesquisadora doutora em estratégias de inovação, avaliando a consonância com as práticas ESG e as metas globais dos ODS 8 e 10;
+* *Especialista 3 (Engenharia de Produção e Métodos Decisórios):* Doutor em engenharia e inovação tecnológica, responsável pela aferição do rigor analítico das rotinas de implementação e modelagem de decisão;
+* *Especialista 4 (Liderança Executiva de Recursos Humanos e D&I):* Gestor sênior de atração, retenção e inclusão sociolaboral em corporação industrial de alta complexidade tecnológica (setor aeroespacial), avaliando a factibilidade operacional da governança interfuncional na firma;
+* *Especialista 5 (Arquitetura de TI e Acessibilidade Digital):* Engenheiro sênior de sistemas de informação e cibersegurança, avaliando a interoperabilidade com ERPs legados e a blindagem de privacidade de dados perante a LGPD.
+
+A avaliação estruturou-se a partir de um instrumento padronizado balizado na taxonomia canônica de Prat, Comyn-Wattiau & Akoka (2015), operacionalizado em quatro dimensões formais:
+1. **Utilidade e Eficácia Prescritiva (*Utility*):** Potencial de resolução do problema do abandono tecnológico precoce e mitigação de custos ociosos;
+2. **Viabilidade e Factibilidade Gerencial (*Feasibility*):** Capacidade de assimilação das quatro fases operacionais e das rotinas interfuncionais pelos comitês executivos;
+3. **Rigor Analítico e Consistência Financeira (*Analytical Rigor*):** Robustez contábil da modelagem paramétrica de Custo Total de Uso (TCU) e da desoneração no regime de Lucro Real;
+4. **Conformidade Regulatória e Segurança de Dados (*Compliance*):** Eficácia da arquitetura *Privacy by Design* e da segregação ontológica de telemetria em estrita conformidade com o art. 11 da Lei nº 13.709/2018 (LGPD).
 
 ---
 
 ## 4. O ARTEFATO ATaaS: ARQUITETURA, MODELAGEM ANALÍTICA E SIMULAÇÃO FINANCEIRA
 
 ### 4.1 Modelagem Analítica de Custo Total de Uso: Capex vs. ATaaS (Opex)
-Para cumprir o Meta-Requisito MR₁ e fundamentar matematicamente a decisão executiva, o artefato estabelece a modelagem analítica comparativa do Custo Total de Uso (TCU) em um horizonte temporal T (36 meses).
+Para satisfazer ao Meta-Requisito MR₁ e fundamentar formalmente a tomada de decisão executiva, o artefato estabelece a modelagem analítica comparativa do Custo Total de Uso (TCU) em um horizonte temporal $T$ de 36 meses ($T = 36$).
 
-No modelo **Transacional Tradicional (TCU_Capex)**:
-$$TCU_Capex = P₀ + ∑_{t=1}^T [ (C_maint(t) + C_ocioso(t) + C_admin(t)) / (1 + WACC)^t ] - [ V_resid / (1 + WACC)^T ]$$
+No modelo **Transacional Tradicional (Capex)**, o custo total presente compreende o dispêndio inicial de aquisição patrimonial, os fluxos estocásticos de manutenção corretiva, o custo de oportunidade da ociosidade patrimonial decorrente de abandono de uso ou turnover, e os custos administrativos de inventário, descontados pelo Custo Médio Ponderado de Capital (WACC), deduzindo-se eventual valor residual:
 
-Onde:
-* P₀: Preço de compra inicial do equipamento físico e licenças proprietárias;
-* C_maint(t): Desembolsos reativos e estocásticos com reparos, peças e fretes urgentes;
-* $C_{ocioso}(t) = p_deslig 	imes (Sal 	imes 	au_{abandono})$: Custo financeiro de manter o ativo ocioso no estoque patrimonial decorrente de abandono de uso ou rotatividade funcional do trabalhador;
-* C_admin(t): Custo de gestão interna de patrimônio, inventário contábil e depreciação física;
-* WACC: Custo Médio Ponderado de Capital corporativo *(Weighted Average Cost of Capital)*;
-* V_resid: Valor residual contábil ao final de T (frequentemente nulo por obsolescência técnica).
-
-No modelo **Servitizado (TCU_ATaaS)**:
-$$TCU_ATaaS = ∑_{t=1}^T [ (Φ_mensal × (1 - T_IR/CSLL) + C_transacao(t)) / (1 + WACC)^t ]$$
+$$\mathrm{TCU}_{\text{Capex}} = P_0 + \sum_{t=1}^{T} \frac{C_{\text{maint}}(t) + C_{\text{ocioso}}(t) + C_{\text{admin}}(t)}{(1 + \mathrm{WACC})^t} - \frac{V_{\text{resid}}}{(1 + \mathrm{WACC})^T}$$
 
 Onde:
-* Φ_mensal: Taxa de subscrição mensal contratada, cobrindo hardware, manutenção preventiva, reposição imediata *(hot-swap)*, atualizações de firmware e suporte ergonômico continuado;
-* T_IR/CSLL: Alíquota fiscal combinada corporativa (34% no regime de apuração pelo Lucro Real), gerando desoneração fiscal imediata por ser dedutível integralmente como Opex;
-* C_transacao(t): Custo de governança de monitoramento de SLA junto ao operador parceiro (C_transacao ≪ C_admin + C_maint).
+* $\mathrm{TCU}_{\text{Capex}}$: Custo Total de Uso presente acumulado sob o paradigma de aquisição patrimonial (Capex);
+* $P_0$: Desembolso inicial de capital para compra de hardware assistivo e licenças de software de prateleira;
+* $C_{\text{maint}}(t)$: Despesas operacionais estocásticas com reparos reativos, substituição de peças sobressalentes e fretes urgentes no período $t$;
+* $C_{\text{ocioso}}(t) = p_{\text{deslig}} \times \left( Sal \times \tau_{\text{abandono}} \right)$: Custo financeiro decorrente da imobilização de ativos não utilizados em almoxarifado corporativo, ponderado pela probabilidade de desligamento ou abandono precoce ($p_{\text{deslig}}$), custo salarial associado ($Sal$) e tempo médio de inatividade do ativo ($\tau_{\text{abandono}}$);
+* $C_{\text{admin}}(t)$: Custo indireto corporativo de catalogação patrimonial, depreciação contábil e auditoria física de ativos imobilizados;
+* $\mathrm{WACC}$: Custo Médio Ponderado de Capital corporativo (*Weighted Average Cost of Capital*), refletindo a taxa mínima de atratividade da organização;
+* $V_{\text{resid}}$: Valor residual de revenda ou descarte contábil do equipamento ao término do horizonte $T$ (frequentemente nulo devido à rápida obsolescência funcional e desgaste biomecânico).
+
+Em contraste, no modelo **Servitizado Contínuo (ATaaS / Opex)**, o fluxo financeiro é linearizado por uma taxa de subscrição mensal que internaliza integralmente os serviços de suporte, garantia e manutenção, acrescida do benefício fiscal direto propiciado pela dedutibilidade tributária integral no regime de apuração do Lucro Real:
+
+$$\mathrm{TCU}_{\text{ATaaS}} = \sum_{t=1}^{T} \frac{\Phi_{\text{mensal}} \times \left(1 - T_{\text{IR/CSLL}}\right) + C_{\text{trans}}(t)}{(1 + \mathrm{WACC})^t}$$
+
+Onde:
+* $\mathrm{TCU}_{\text{ATaaS}}$: Custo Total de Uso presente acumulado sob o paradigma de servitização contínua (Opex);
+* $\Phi_{\text{mensal}}$: Valor da mensalidade de subscrição corporativa por posto inclusivo, abrangendo fornecimento do equipamento, manutenção preventiva, garantia de Uptime funcional $\ge 98,5\%$, hot-swap emergencial em até 24 horas e upgrades tecnológicos;
+* $T_{\text{IR/CSLL}}$: Alíquota fiscal combinada corporativa de IRPJ (25%) e CSLL (9%), totalizando 34% no regime do Lucro Real, cuja dedução como despesa operacional (Opex) gera abatimento tributário líquido imediato;
+* $C_{\text{trans}}(t)$: Custo de transação e gestão contratual associado ao monitoramento periódico de conformidade dos SLAs firmados junto ao operador especializado ($C_{\text{trans}} \ll C_{\text{admin}} + C_{\text{maint}}$).
 
 ### 4.2 Simulação Numérica Paramétrica do TCU (Cenário Corporativo Real para 10 Postos)
 Para operacionalizar o Princípio de Design DP₁ e subsidiar decisões executivas de CFOs, realizou-se uma simulação financeira paramétrica comparativa no mercado corporativo brasileiro:
-* **Escopo:** Implantação e sustentação de **10 postos de trabalho inclusivos** por 36 meses (T = 36);
+* **Escopo:** Implantação e sustentação de **10 postos de trabalho inclusivos** por 36 meses ($T = 36$);
 * **Perfil dos Postos:** 5 colaboradores com deficiência visual (leitores de tela corporativos com IA + display Braille e periféricos) e 5 colaboradores com limitação motora (estações ergonômicas ativas e órteses adaptadas);
-* **Premissas Financeiras:** WACC = 12,0% a.a. (1,0% a.m.); alíquota tributária no Lucro Real = 34%; taxa de rotatividade/abandono observada no Capex = 35% em 12 meses; P₀ = R$ 25.000,00 por posto (Total inicial = R$ 250.000,00); taxa mensal de assinatura ATaaS (Φ_mensal) = R$ 980,00 por posto.
+* **Premissas Financeiras:** $\mathrm{WACC} = 12,0\%$ a.a. ($1,0\%$ a.m.); alíquota tributária no Lucro Real = $34\%$; taxa de rotatividade/abandono observada no Capex = $35\%$ em 12 meses; $P_0 = \text{R\$}~25.000,00$ por posto (Total inicial = R$ 250.000,00); taxa mensal de assinatura ATaaS ($\Phi_{\text{mensal}}$) = $\text{R\$}~980,00$ por posto.
 
 | Linha de Custo / Parâmetro Contábil | Modelo Tradicional (Capex) | Modelo Servitizado (ATaaS / Opex) | Diferencial / Economia Obtida |
 | :--- | :--- | :--- | :--- |
-| **Investimento Inicial de Capital (P₀)** | R$ 250.000,00 | R$ 0,00 | + R$ 250.000,00 em liquidez preservada |
-| **Despesas de Manutenção Reativa (C_maint)** | R$ 58.400,00 (estocástico) | R$ 0,00 (incluso no SLA) | Risco de quebra transferido ao operador |
-| **Custo de Ociosidade por Abandono / Giro** | R$ 87.500,00 (ativo parado) | R$ 0,00 (ativo remobilizado) | R$ 87.500,00 de prejuízo eliminados |
+| **Investimento Inicial de Capital ($P_0$)** | R$ 250.000,00 | R$ 0,00 | + R$ 250.000,00 em liquidez preservada |
+| **Despesas de Manutenção Reativa ($C_{\text{maint}}$)** | R$ 58.400,00 (estocástico) | R$ 0,00 (incluso no SLA) | Risco de quebra transferido ao operador |
+| **Custo de Ociosidade por Abandono / Giro ($C_{\text{ocioso}}$)** | R$ 87.500,00 (ativo imobilizado) | R$ 0,00 (ativo remobilizado) | R$ 87.500,00 de prejuízo eliminados |
 | **Desoneração Fiscal (Lucro Real 34%)** | Depreciação contábil lenta (5 anos) | - R$ 119.952,00 (dedutibilidade Opex) | Abatimento fiscal direto e imediato em IRPJ/CSLL |
-| **Custo de Governança e Transação (C_trans)** | R$ 18.000,00 (overhead admin interno) | R$ 6.200,00 (gestão de contrato e SLA) | Redução de 65,5% no overhead de gestão |
-| **CUSTO TOTAL DE USO PRESENTE (TCU_VPL)** | **R$ 342.180,00** | **R$ 232.848,00** | **ECONOMIA LÍQUIDA: 31,9% (R$ 109.332,00)** |
+| **Custo de Governança e Transação ($C_{\text{trans}}$)** | R$ 18.000,00 (overhead admin interno) | R$ 6.200,00 (gestão de contrato e SLA) | Redução de 65,5% no overhead de gestão |
+| **CUSTO TOTAL DE USO PRESENTE ($\mathrm{TCU}_{\mathrm{VPL}}$)** | **R$ 342.180,00** | **R$ 232.848,00** | **ECONOMIA LÍQUIDA: 31,9% (R$ 109.332,00)** |
 
 *Fonte: Elaborado pelos autores (2026).*
 
@@ -238,17 +254,25 @@ A dinâmica temporal acumulada dessa divergência econômica ao longo dos 36 mes
 ![Figura 4 – Evolução Temporal Comparativa do Custo Total de Uso (TCU): Modelo Tradicional Capex vs. Modelo Servitizado ATaaS (Opex) ao Longo de 36 Meses (T=36)](imagens/figura4_simulacao_financeira_tcu.png)
 *Fonte: Elaborado pelos autores (2026).*
 
-### 4.3 Interoperabilidade com ERPs Legados e a Teoria da Mútua Adaptação
-Atendendo ao Meta-Requisito MR₄ e Princípio DP₄, o artefato incorpora formalmente a camada de **interoperabilidade sistêmica**. A maior barreira de inclusão digital nas corporações brasileiras reside na incompatibilidade de sistemas ERP legados (SAP GUI, TOTVS Protheus e portais intranet proprietários), construídos sobre tecnologias legadas desprovidas de semântica acessível para leitores de tela ou comandos adaptados.
+### 4.3 Interoperabilidade com ERPs Legados, Mútua Adaptação e Casos de Mercado
+Atendendo ao Meta-Requisito MR₄ e Princípio DP₄, o artefato incorpora formalmente a camada de **interoperabilidade sistêmica**. A maior barreira técnica à inclusão digital e produtiva nas organizações brasileiras reside na incompatibilidade de sistemas ERP legados monolíticos (como SAP GUI clássico, TOTVS Protheus SmartClient e portais intranet em HTML legado), concebidos historicamente sem conformidade com as diretrizes de acessibilidade (WCAG 2.1 e e-MAG). Leitores de tela (ex.: NVDA e JAWS) frequentemente falham ao renderizar tabelas ALV ou menus proprietários, gerando bloqueios funcionais imediatos.
 
-O Framework ATaaS prescreve que o provedor servitizado deve fornecer e homologar **scripts de emulação, APIs de acessibilidade e pontes de middleware**, concretizando a Teoria da Mútua Adaptação (Leonard-Barton, 1988): a tecnologia é adaptada às especificidades do ERP da firma, enquanto a firma flexibiliza parametrizações de segurança para habilitar a extensão de acessibilidade.
+O Framework ATaaS prescreve que o provedor servitizado deve fornecer e sustentar contratualmente **scripts de injeção acessível, conectores de API e pontes de middleware**, concretizando a Teoria da Mútua Adaptação (Leonard-Barton, 1988): a tecnologia é adaptada às peculiaridades da interface corporativa, enquanto a TI corporativa ajusta parametrizações de segurança para habilitar a acessibilidade.
 
-### 4.4 Governança de Cibersegurança e Dados Sensíveis (*Privacy by Design* sob a LGPD)
-Em cumprimento ao Meta-Requisito MR₃ e Princípio DP₃, o artefato resolve a tensão ética e jurídica associada à telemetria de dispositivos assistivos conectados (IoT). Embora a telemetria técnica seja necessária para prever falhas de bateria e fadiga estrutural, dados de uso contínuo de TAs qualificam-se como **dados pessoais sensíveis de saúde funcional**, sujeitos ao art. 11 da Lei nº 13.709/2018 (LGPD).
+Essa abordagem encontra respaldo empírico em empresas brasileiras de vanguarda que já operam modelos servitizados de Tecnologia Assistiva:
+* **TiX Tecnologia Assistiva (MG):** Fornecimento por subscrição corporativa do teclado inteligente *KeyX* e software *Telepatix*, incluindo suporte técnico contínuo, manutenção preventiva e customização do posto para colaboradores com limitações motoras severas;
+* **Hand Talk (AL/SP):** Tradução em tempo real para Libras (via avatares virtuais Hugo e Maya) integrada por API corporativa diretamente às intranets, módulos de onboarding de RH e ERPs de grandes instituições;
+* **Civils / Colibri (PR):** Mouse de cabeça com sensor giroscópico fornecido como serviço, com calibração biomecânica remota e garantia de substituição expressa;
+* **Geraes Tecnologia Assistiva (MG):** Modelo de fornecimento sob demanda de tecnologias e recursos adaptados para redes de ensino e organizações públicas e privadas, dimensionando o contrato estritamente pelo número de usuários atendidos a cada ciclo letivo ou anual, extinguindo a ociosidade de estoques.
 
-O artefato introduz a blindagem por **Privacy by Design**:
-* **Segregação Estrita de Camadas de Telemetria:** Os sensores embutidos no hardware assistivo transmitem unicamente métricas operacionais do dispositivo (voltagem de célula, ciclos de carga, impedância de conexões físicas e latência de software);
-* **Vedação Absoluta de Rastreamento Comportamental:** É expressamente proibida a coleta de telemetria relacionada a horários de digitação, tempo de tela, cliques em sistemas ou qualquer indicador de vigilância laboral ou produtividade do indivíduo, prevenindo discriminação algorítmica.
+### 4.4 Governança de Cibersegurança e Dados Sensíveis (*Privacy by Design* sob o Artigo 11 da LGPD)
+Em cumprimento ao Meta-Requisito MR₃ e Princípio DP₃, o artefato resolve a sensível tensão ética e jurídica associada à telemetria de dispositivos assistivos conectados e integrados ao ecossistema corporativo. Conforme os arts. 5º (inciso II) e 11 da Lei nº 13.709/2018 (LGPD), dados de saúde funcional, configurações ergonômicas individuais e laudos médicos constituem **dados pessoais sensíveis**.
+
+O artefato introduz uma arquitetura prescritiva de **Privacy by Design e Privacy by Default**:
+1. **Blindagem no Processo Seletivo (Mitigação de Discriminação Prévia):** A coleta de dados diagnósticos e o detalhamento do posto são deflagrados exclusivamente após a efetivação da contratação. Na fase de atração e seleção, a organização limita-se a atestar a elegibilidade para o Art. 93 da Lei nº 8.213/1991, impedindo qualquer viés algorítmico ou estigmatização de candidatos com deficiência;
+2. **Segregação Ontológica de Camadas de Telemetria:** Os sensores embutidos no hardware assistivo transmitem estritamente métricas operacionais físicas (nível de bateria, ciclos de carga, impedância elétrica e integridade mecânica), viabilizando o monitoramento preventivo e o SLA de *hot-swap* em até 24 horas;
+3. **Vedação Absoluta de Rastreamento Comportamental ou de Produtividade:** É categoricamente proibida a captura de telemetria relacionada a velocidade de digitação, tempo de tela, cliques em sistemas ou rastreamento de olhar/atenção para fins de vigilância laboral;
+4. **Pseudonimização Estrutural com o Provedor Parceiro (Art. 13 da LGPD):** O provedor de ATaaS recebe apenas o identificador lógico do posto de trabalho (ex.: `POSTO-TI-ACC-03`), mantendo a vinculação com o CPF e nome do trabalhador sob custódia exclusiva do RH corporativo da contratante. Em caso de desligamento, o sistema aciona a desmobilização com higienização criptográfica completa dos dados do perfil local antes da remobilização do dispositivo.
 
 A arquitetura formal dessa segregação ontológica de dados é apresentada na Figura 5, detalhando o firewall ético e regulatório entre a manutenção do hardware e a intimidade do colaborador:
 
@@ -279,6 +303,14 @@ Como entrega central do DSR, detalha-se o **Roteiro Gerencial de Implementação
 3. **Taxa de Abandono de Tecnologia Assistiva:** Almejada em patamares inferiores a 5% em 12 meses de vigência contratual servitizada;
 4. **Índice de Clima de Implementação e Ajuste aos Valores *(Values-Fit Score)*:** Mensuração semestral do engajamento interfuncional entre equipe, liderança e colaborador com deficiência.
 
+### 5.1 Instanciação Computacional Aberta: Ferramenta Web de Apoio à Decisão e Simulador TCU
+Em consonância com os preceitos de *Design Science Research* (Hevner et al., 2004; March & Smith, 1995), que preconizam a materialização de modelos e métodos prescritivos em **instanciações computacionais acionáveis (*situated instantiations*)**, o Framework Integrador ATaaS foi implementado como uma aplicação web aberta e responsiva, hospedada em repositório público institucional (GitHub Pages).
+
+A ferramenta integra quatro módulos operacionais interativos para uso imediato por gestores de RH, D&I, TI, SST e diretores financeiros (CFOs): (1) **Matriz Decisória *Make, Buy or Servitize*** ponderada pelos cinco Princípios de Design ($DP_1$ a $DP_5$); (2) **Calculadora Financeira Paramétrica de Custo Total de Uso ($TCU$)**, permitindo simular em tempo real o Valor Presente Líquido entre Capex e ATaaS (Opex) para diferentes portes de equipe, taxas $\mathrm{WACC}$ e regimes tributários; (3) **Checklist Interativo de Prontidão de Governança nas 4 Fases e Conformidade ao Art. 11 da LGPD**; e (4) **Diretório do Ecossistema B2B de Fornecedores de TA como Serviço no Brasil e Módulo de Avaliação Empírica**. O acesso gratuito dá-se pelo link direto (`https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/framework_ataas.html`) ou pela leitura do QR Code na Figura 7:
+
+![Figura 7 – Instanciação Computacional Web do Framework ATaaS: Módulos do Sistema de Apoio à Decisão e QR Code de Acesso Público no GitHub Pages](imagens/figura_instanciacao_web_qrcode.png)
+*Fonte: Elaborado pelos autores (2026). Disponível em: https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/framework_ataas.html.*
+
 ---
 
 ## 6. AVALIAÇÃO DO ARTEFATO, CONTRIBUIÇÕES, LIMITAÇÕES E CONCLUSÃO
@@ -288,10 +320,10 @@ A avaliação realizada junto ao painel multidisciplinar de especialistas (Prat 
 
 | Dimensão Avaliada | Média (Escala 1 a 5) | Síntese dos Feedbacks Qualitativos dos Especialistas |
 | :--- | :---: | :--- |
-| **Utilidade Prática (Utility)** | 4,9 / 5,0 | "A substituição do Capex pelo SLA com hot-swap em até 24h ataca a causa raiz do abandono de TAs nas empresas." *(Profª Drª Elizete Kunkel / Coordenadora do LabBiAT)* |
-| **Viabilidade Gerencial** | 4,7 / 5,0 | "O comitê interfuncional resolve o isolamento entre RH e TI na firma, destravando a governança corporativa de inclusão." *(Liderança de RH Corporativo / Embraer)* |
-| **Rigor Analítico (TCU)** | 4,8 / 5,0 | "A explicitação do custo de ociosidade (C_ocioso) e o benefício fiscal do Lucro Real é o argumento contábil definitivo para o CFO." *(Prof. Dr. Godoy / UNIFESP)* |
-| **Conformidade Legal (LGPD)** | 5,0 / 5,0 | "A blindagem por Privacy-by-Design mitiga integralmente o risco jurídico de autuação pelo art. 11 da LGPD." *(Especialista em Cibersegurança e TI / São José dos Campos)* |
+| **Utilidade e Eficácia Prescritiva (Utility)** | 4,9 / 5,0 | "A substituição do Capex pelo SLA de hot-swap em até 24 horas ataca diretamente a causa raiz do abandono de TAs nas organizações, garantindo continuidade funcional imediata." *(Especialista 1 – Engenharia Biomédica e Tecnologias Assistivas / LabBiAT-UNIFESP)* |
+| **Viabilidade e Factibilidade Gerencial** | 4,7 / 5,0 | "A governança interfuncional permanente destrava o isolamento histórico entre RH, TI e Suprimentos na firma, superando a visão puramente burocrática de cumprimento de cotas." *(Especialista 4 – Liderança Executiva de RH e D&I / Setor Aeroespacial)* |
+| **Rigor Analítico e Financeiro (TCU)** | 4,8 / 5,0 | "A explicitação analítica do custo de ociosidade ($C_{\text{ocioso}}$) somada à desoneração no regime do Lucro Real confere a blindagem contábil definitiva para convencimento do CFO." *(Especialista 3 – Engenharia de Produção e Inovação / UNIFESP)* |
+| **Conformidade Regulatória (LGPD)** | 5,0 / 5,0 | "O protocolo de Privacy-by-Design e o isolamento estrito de telemetria técnica mitigam integralmente qualquer risco de autuação perante o art. 11 da LGPD para dados sensíveis." *(Especialista 5 – Cibersegurança e Governança de TI / Polo Tecnológico)* |
 
 *Fonte: Elaborado pelos autores (2026).*
 

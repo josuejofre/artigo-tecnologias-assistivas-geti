@@ -8,8 +8,9 @@
 
 ---
 
-## 🌐 Acesso Rápido às Apresentações e ao Painel RSL (GitHub Pages)
+## 🌐 Acesso Rápido à Ferramenta Web, Apresentações e Painel RSL (GitHub Pages)
 
+* 🚀 **[FERRAMENTA WEB DO FRAMEWORK ATaaS — Sistema de Apoio à Decisão & Calculadora TCU](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/framework_ataas.html)**
 * 👉 **[Apresentação Enxuta para Conversa com Professores (5 Slides Objetivos)](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/apresentacao_enxuta_professores.html)**
 * 👉 **[Painel Interativo de Controle da RSL & Download dos 19 Artigos](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/controle_artigos.html)**
 * 👉 **[Apresentação Completa e Detalhada da Versão 3.0/4.0](https://josuejofre.github.io/artigo-tecnologias-assistivas-geti/)**
