@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Da Aquisição à Servitização Contínua — Apresentação ATaaS (GETI 2026)</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --slide-bg: #ffffff;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #d1d5db;
+      --accent: #047857;
+      --accent-dark: #065f46;
+      --accent-soft: #ecfdf5;
+      --accent-border: #6ee7b7;
+      --danger: #b91c1c;
+      --danger-soft: #fef2f2;
+      --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: var(--ink);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Control Bar */
+    .topbar {
+      height: 48px;
+      background: #111827;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      font-size: 0.88rem;
+      border-bottom: 1px solid #1f2937;
+      z-index: 20;
+      flex-shrink: 0;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+    .badge-geti {
+      background: var(--accent);
+      color: #fff;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+    }
+    .topbar-controls { display: flex; align-items: center; gap: 8px; }
+    .ctrl-btn {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid #374151;
+      padding: 5px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .ctrl-btn:hover { background: #374151; color: #fff; }
+    .ctrl-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .ctrl-btn.primary:hover { background: var(--accent-dark); }
+
+    /* Stage */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      max-height: 675px;
+      background: var(--slide-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 44px 54px 38px;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      position: relative;
+      animation: fadeIn 0.22s ease;
+    }
+    .slide.active { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Typography */
+    h1 {
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+    h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      color: var(--muted);
+      line-height: 1.45;
+      font-weight: 400;
+    }
+    .lead-accent { color: var(--accent); font-weight: 700; }
+
+    /* Layouts */
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+      height: 100%;
+    }
+    .cover-visual {
+      background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 28px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+    .cover-stat {
+      background: #fff;
+      border-left: 5px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .cover-stat strong { display: block; font-size: 1.05rem; color: var(--ink); }
+    .cover-stat span { font-size: 0.9rem; color: var(--muted); }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-top: 12px;
+    }
+    .col-split-wide {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 28px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px 22px;
+      background: #fff;
+    }
+    .card.mint {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      border-width: 1.5px;
+    }
+    .card.dark-green {
+      background: var(--accent);
+      border-color: var(--accent-dark);
+      color: #fff;
+    }
+    .card.dark-green p, .card.dark-green li { color: #ecfdf5; }
+    .card.danger {
+      background: var(--danger-soft);
+      border-color: #fca5a5;
+    }
+
+    .big-num {
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    /* 4-step flow */
+    .flow-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 22px 0;
+    }
+    .flow-box {
+      border: 1.5px solid #9ca3af;
+      border-radius: 6px;
+      padding: 20px 16px;
+      background: #fff;
+      position: relative;
+    }
+    .flow-box h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .flow-box p { font-size: 0.92rem; color: var(--muted); line-height: 1.45; }
+    .flow-box:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Table */
+    table.matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.96rem;
+    }
+    table.matrix th, table.matrix td {
+      border: 1px solid #cbd5e1;
+      padding: 15px 18px;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.matrix th {
+      background: #f8fafc;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    table.matrix th.opex-col { color: var(--accent); background: var(--accent-soft); }
+
+    /* Firewall diagram */
+    .fw-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .fw-shield {
+      border: 2px solid #374151;
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 22px;
+      text-align: center;
+    }
+    .fw-channel {
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    /* Video cards */
+    .video-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .video-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .video-card {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-card video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      display: block;
+    }
+    .video-meta {
+      padding: 11px 14px;
+      font-size: 0.86rem;
+      line-height: 1.38;
+    }
+    .video-meta strong {
+      display: block;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+    .quote-pill {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      border: 1px solid var(--accent-border);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    .slide-footer {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 10px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+    .footer-bar {
+      width: 36px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    ul.clean { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    ul.clean li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.95rem;
+      line-height: 1.42;
+    }
+    ul.clean li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 900;
+    }
+    .card.dark-green ul.clean li::before { color: #a7f3d0; }
+
+    /* Overview Modal */
+    .overview-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.92);
+      z-index: 50;
+      padding: 28px;
+      overflow-y: auto;
+    }
+    .overview-modal.open { display: block; }
+    .overview-header {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+    .overview-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+    }
+    .thumb {
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .thumb:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .thumb.current { border-color: #10b981; background: var(--accent-soft); }
+    .thumb-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .thumb-title { font-size: 0.9rem; font-weight: 700; color: var(--ink); line-height: 1.3; }
+
+    /* Progress bar */
+    .progress-track {
+      height: 3px;
+      background: #1f2937;
+      width: 100%;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #10b981;
+      transition: width 0.25s ease;
+    }
+
+    @media (max-width: 900px) {
+      .slide { padding: 24px 22px; }
+      .cover-grid, .two-col, .col-split-wide, .fw-grid, .video-grid-2, .video-grid-3, .flow-4 {
+        grid-template-columns: 1fr;
+      }
+      .flow-box:not(:last-child)::after { content: "↓"; right: 50%; top: auto; bottom: -18px; transform: translateX(50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="badge-geti">PPG-PIT UNIFESP • GETI 2026</span>
+      <span>ATaaS na Inclusão Corporativa</span>
+    </div>
+    <div class="topbar-controls">
+      <span id="slideCounter" style="color:#9ca3af;margin-right:6px;">1 / 18</span>
+      <button class="ctrl-btn" onclick="prevSlide()" title="Slide Anterior (←)">◀ Anterior</button>
+      <button class="ctrl-btn" onclick="nextSlide()" title="Próximo Slide (→)">Próximo ▶</button>
+      <button class="ctrl-btn" onclick="toggleOverview()" title="Visão Geral (M)">☷ Índice</button>
+      <button class="ctrl-btn" onclick="toggleFullscreen()" title="Tela Cheia (F)">⛶ Tela Cheia</button>
+      <a class="ctrl-btn primary" href="framework_ataas.html" target="_blank">⚙ Abrir Framework Web</a>
+    </div>
+  </header>
+  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:5.5%;"></div></div>
+
+  <main class="stage" id="stage">
+
+    <!-- SLIDE 1: CAPA -->
+    <section class="slide active" data-title="Capa: Da Aquisição à Servitização Contínua">
+      <div class="cover-grid">
+        <div>
+          <span class="quote-pill">Capítulo de Livro • Design Science Research</span>
+          <h1 style="margin-top:10px;">Da Aquisição à Servitização Contínua</h1>
+          <p class="subtitle" style="margin-top:16px;font-size:1.35rem;font-weight:600;color:#1f2937;">
+            Implementando Tecnologias Assistivas como Serviço (ATaaS)
+          </p>
+          <p class="subtitle" style="margin-top:20px;font-size:0.98rem;">
+            Framework Integrador para corporações sob o regime do Lucro Real, fundamentado em Design Science Research e validado com entrevistas reais do mercado brasileiro (**Rybená** e **LoriConecta**).
+          </p>
+        </div>
+        <div class="cover-visual">
+          <div class="cover-stat">
+            <strong>4 Pilares de Decisão Executiva</strong>
+            <span>Financeiro (Capex vs. Opex), LGPD (Privacy by Design), Interoperabilidade TI e Governança ESG.</span>
+          </div>
+          <div class="cover-stat">
+            <strong>Evidência Empírica Brasileira</strong>
+            <span>Recortes em vídeo de lideranças de TA como serviço: Tiago (Rybená) e Geisse Costa (LoriConecta / PIT-SJC).</span>
+          </div>
+          <div class="cover-stat">
+            <strong>Artefato Digital Interativo</strong>
+            <span>Simulador executivo publicado em acesso aberto para gestores de RH, TI, Compras e D&amp;I.</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>PPG-PIT UNIFESP • Gestão Estratégica da Inovação (GETI 2026)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: LACUNA DA INCLUSÃO -->
+    <section class="slide" data-title="A Lacuna da Inclusão: Muito além da contratação">
+      <div>
+        <h2>A Lacuna da Inclusão:<br>Muito além da contratação</h2>
+      </div>
+      <div class="two-col" style="align-items:center;">
+        <div>
+          <div class="big-num">Apenas 53%</div>
+          <p style="font-size:1.3rem;line-height:1.45;color:#1f2937;">
+            das vagas reservadas pela <strong>Lei de Cotas (Art. 93, Lei nº 8.213/1991)</strong> no Brasil estão preenchidas.
+          </p>
+          <p style="margin-top:16px;font-size:0.95rem;color:var(--muted);">
+            Além disso, cerca de <strong>R$ 2,2 bilhões</strong> deixaram de ser capturados no ambiente digital brasileiro por barreiras de acessibilidade (dados citados na entrevista Rybená).
+          </p>
+        </div>
+        <div class="card" style="padding:30px;border-width:1.5px;border-color:#6b7280;">
+          <p style="font-size:1.18rem;line-height:1.55;color:#111827;">
+            O verdadeiro gargalo corporativo não reside apenas na atração de talentos, mas <strong>na incapacidade de criar e manter uma adequação dinâmica entre a pessoa, a tarefa e a tecnologia no ambiente de trabalho</strong>.
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Diagnóstico Estrutural • Dados MTE/RAIS &amp; IBGE</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: ARMADILHA TRANSACIONAL -->
+    <section class="slide" data-title="A Armadilha Transacional (O Problema do Capex)">
+      <div>
+        <h2>A Armadilha Transacional<br>(O Problema do Capex)</h2>
+        <p class="subtitle">Por que a compra tradicional de equipamentos e licenças isoladas gera alto abandono tecnológico.</p>
+      </div>
+      <div class="flow-4">
+        <div class="flow-box">
+          <h3>1. Aquisição Pontual</h3>
+          <p>Compra isolada do equipamento como produto de prateleira (Hardware/Software importado ou desenvolvimento próprio).</p>
+        </div>
+        <div class="flow-box">
+          <h3>2. Falha na Adaptação</h3>
+          <p>Ausência de treinamento contínuo, calibração biopsicossocial e suporte ergonômico no posto de trabalho.</p>
+        </div>
+        <div class="flow-box">
+          <h3>3. Obsolescência &amp; Atrito</h3>
+          <p>Desgaste biomecânico rápido e incompatibilidade com atualizações dos sistemas de TI corporativa.</p>
+        </div>
+        <div class="flow-box">
+          <h3>4. Ociosidade Patrimonial</h3>
+          <p>Em caso de turnover ou abandono, a tecnologia vira um passivo ocioso no almoxarifado.</p>
+        </div>
+      </div>
+      <div class="card mint" style="text-align:center;">
+        <p style="font-size:1.05rem;font-weight:600;color:#065f46;">
+          O modelo focado estritamente na posse do produto falha na sustentação do uso e encarece a operação a longo prazo.
+        </p>
+      </div>
+      <div class="slide-footer">
+        <span>Problema de Pesquisa • Abandono e Ociosidade (Scherer, 2005; Sugawara et al., 2018)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: METODOLOGIA DSR (NOVO SLIDE INTEGRADOR) -->
+    <section class="slide" data-title="Metodologia: Design Science Research (DSR)">
+      <div>
+        <h2>Metodologia: Design Science Research (3 Ciclos de Hevner)</h2>
+        <p class="subtitle">Rigor científico conectado à validação empírica no mercado brasileiro de Tecnologia Assistiva.</p>
+      </div>
+      <div class="video-grid-3" style="margin-top:16px;">
+        <div class="card mint">
+          <span class="quote-pill">1. Ciclo de Relevância</span>
+          <h3 style="margin:6px 0 8px;">Dor Real &amp; Campo</h3>
+          <ul class="clean">
+            <li>Diagnóstico de dados públicos (IBGE / RAIS / MTE).</li>
+            <li>Entrevista B2B/B2G com <strong>Tiago (Rybená)</strong> — 53 min.</li>
+            <li>Entrevista de ecossistema com <strong>Geisse Costa (LoriConecta)</strong> — 38 min.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="quote-pill">2. Ciclo de Rigor</span>
+          <h3 style="margin:6px 0 8px;">Base Teórica</h3>
+          <ul class="clean">
+            <li><strong>Servitização &amp; S-D Logic:</strong> Vandermerwe &amp; Rada; Tukker; Vargo &amp; Lusch.</li>
+            <li><strong>Adoção &amp; Clima:</strong> Scherer (MPT), Klein &amp; Sorra, Leonard-Barton.</li>
+            <li><strong>Privacidade &amp; Estratégia:</strong> Privacy by Design (LGPD Art. 11) e Persuasão Bayesiana.</li>
+          </ul>
+        </div>
+        <div class="card dark-green">
+          <span class="quote-pill" style="background:#065f46;color:#ecfdf5;border-color:#34d399;">3. Ciclo de Design</span>
+          <h3 style="margin:6px 0 8px;color:#fff;">Artefato Gerencial</h3>
+          <ul class="clean">
+            <li>5 Meta-Requisitos (MR1–MR5) e Princípios de Design.</li>
+            <li>Modelagem Financeira Capex vs. Opex (Lucro Real).</li>
+            <li><strong>Ferramenta Web Interativa:</strong> Simulador executivo de decisão ATaaS publicado em acesso aberto.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Método • Hevner (2007) &amp; Peffers et al. (2007)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: MUDANÇA DE PARADIGMA -->
+    <section class="slide" data-title="A Mudança de Paradigma: Lógica Dominante de Serviço">
+      <div>
+        <h2>A Mudança de Paradigma:<br>Lógica Dominante de Serviço</h2>
+      </div>
+      <div class="two-col" style="margin-top:20px;">
+        <div class="card" style="padding:30px;">
+          <h3 style="font-size:1.35rem;color:#374151;margin-bottom:14px;">Do "Ter" (Produto / Capex)</h3>
+          <p style="font-size:1.05rem;line-height:1.55;color:#374151;">
+            Foco na transação comercial. A empresa adquire a propriedade de cadeiras motorizadas, teclados adaptados, códigos próprios ou licenças isoladas, assumindo todo o risco de manutenção, depreciação e atualização.
+          </p>
+        </div>
+        <div class="card mint" style="padding:30px;">
+          <h3 style="font-size:1.35rem;color:var(--accent-dark);margin-bottom:14px;">Para o "Garantir" (PSS / ATaaS)</h3>
+          <p style="font-size:1.05rem;line-height:1.55;color:#064e3b;">
+            <strong>Foco no valor em uso.</strong> A empresa assina a disponibilidade, manutenção, customização e atualização contínua da tecnologia assistiva ao trabalhador, transferindo o risco operacional para o provedor especializado.
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Base Teórica • Vargo &amp; Lusch (2016) &amp; Tukker (2004)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: PILAR 1 MATRIZ FINANCEIRA -->
+    <section class="slide" data-title="Pilar 1: Custo Total de Uso (Capex vs. Opex)">
+      <div>
+        <h2>Pilar 1: Custo Total de Uso<br>(Matriz de Diagnóstico Financeiro)</h2>
+      </div>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th style="width:24%;">Dimensão</th>
+            <th style="width:38%;">Capex (Tradicional / Compra)</th>
+            <th class="opex-col" style="width:38%;">Opex (ATaaS / Assinatura)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Natureza do Desembolso</strong></td>
+            <td>Desembolso inicial alto (Imobilização de capital — <em>P₀</em> ou squad de dev próprio).</td>
+            <td>Linearizado (Mensalidade previsível — <em>Φ mensal</em>).</td>
+          </tr>
+          <tr>
+            <td><strong>Gestão de Manutenção</strong></td>
+            <td>Custos estocásticos e imprevisíveis com reparos reativos, fretes urgentes e refatoração.</td>
+            <td>Risco transferido (Manutenção, suporte e upgrades contínuos internalizados no contrato).</td>
+          </tr>
+          <tr>
+            <td><strong>Risco de Ociosidade (Turnover)</strong></td>
+            <td>Alto. O custo da tecnologia multiplica-se pelo tempo inativo no almoxarifado corporativo.</td>
+            <td>Mitigado. Desmobilização ou realocação ágil sem imobilização de ativos inúteis.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="slide-footer">
+        <span>Pilar 1 • Modelagem Analítica de Custo Total de Uso</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: ALAVANCA FISCAL -->
+    <section class="slide" data-title="A Alavanca Fiscal: Vantagem no Lucro Real">
+      <div>
+        <h2>A Alavanca Fiscal: Vantagem Estratégica no Lucro Real</h2>
+        <p class="subtitle">A falsa percepção de que a servitização é mais cara desaparece ao analisar a dedutibilidade tributária.</p>
+      </div>
+      <div class="col-split-wide" style="margin-top:20px;">
+        <div>
+          <div style="font-size:1.55rem;font-weight:800;color:#111827;line-height:1.3;">
+            Alíquota Combinada Corporativa:<br>
+            <span style="color:var(--accent);font-size:2.1rem;">34% (25% IRPJ + 9% CSLL)</span>
+          </div>
+          <p style="margin-top:14px;font-size:0.98rem;color:var(--muted);">
+            Na compra tradicional (Capex), o ativo sofre depreciação fiscal lenta ao longo de anos. Na assinatura (Opex), a despesa reduz a base de cálculo tributária imediatamente no mesmo exercício.
+          </p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div class="card dark-green" style="padding:22px;">
+            <strong style="font-size:1.12rem;">A mensalidade do ATaaS é contabilizada 100% como despesa operacional (Opex)</strong>
+            <p style="margin-top:6px;font-size:0.94rem;">→ Dedução imediata de 34% sobre o valor pago.</p>
+          </div>
+          <div class="card mint">
+            <p style="font-size:0.96rem;color:#065f46;">
+              <strong>Resultado:</strong> O abatimento tributário líquido neutraliza o Custo Médio Ponderado de Capital (WACC), tornando o modelo ATaaS financeiramente superior à posse.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Eficiência Tributária • Regime de Lucro Real (Brasil)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: EVIDÊNCIA EMPÍRICA 1 — RYBENÁ (VIDEOS!) -->
+    <section class="slide" data-title="Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)">
+      <div>
+        <h2>Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)</h2>
+        <p class="subtitle">Recortes da entrevista com <strong>Tiago (Rybená)</strong> comprovam na prática a economia do Opex e o codesign com pessoas surdas.</p>
+      </div>
+      <div class="video-grid-2">
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/rybena_capex_vs_saas.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">Trecho 27:38 – 28:38 • Capex vs. SaaS</span>
+            <strong>R$ 6–10 Mi internos vs. R$ 715/mês por domínio</strong>
+            Tiago compara o custo milionário de desenvolver acessibilidade internamente (7–8 anos de squad) com o licenciamento SaaS contínuo e o princípio da economicidade.
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/rybena_codesign_surdos.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">Trecho 15:10 – 16:00 • Coprodução &amp; S-D Logic</span>
+            <strong>5 de 6 no time de Libras são surdos (+25 mil sinais)</strong>
+            "Não precisamos de homologação externa: o produto já nasce consumido por quem precisa." Atualização linguística viva e colaborativa (ex.: Cacau Show).
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Entrevista de Campo • Rybená (12/11/2026) — Citação autorizada</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: PILAR 2 TELEMETRIA VS LGPD -->
+    <section class="slide" data-title="Pilar 2: O Paradoxo da Telemetria vs. LGPD">
+      <div>
+        <h2>Pilar 2: O Paradoxo da Telemetria vs. LGPD</h2>
+      </div>
+      <div class="two-col" style="margin-top:16px;">
+        <div class="card">
+          <h3 style="color:var(--accent-dark);margin-bottom:10px;">A Exigência Operacional (Eficiência)</h3>
+          <p style="font-size:1.02rem;line-height:1.5;color:var(--muted);">
+            Para garantir SLA de 98,5% de disponibilidade, substituição (<em>hot-swap</em>) em 24h e comprovação de uso para relatórios ESG/D&amp;I, a Tecnologia Assistiva precisa de telemetria contínua.
+          </p>
+        </div>
+        <div class="card danger">
+          <h3 style="color:var(--danger);margin-bottom:10px;">A Barreira Regulatória (Art. 11 da LGPD)</h3>
+          <p style="font-size:1.02rem;line-height:1.5;color:#7f1d1d;">
+            Dados de saúde, laudos, biometria e padrões ergonômicos individuais são classificados como <strong>dados pessoais sensíveis</strong>, com risco de passivo trabalhista por vigilância abusiva.
+          </p>
+        </div>
+      </div>
+      <div class="card mint" style="text-align:center;margin-top:14px;">
+        <p style="font-size:1.12rem;font-weight:700;color:#065f46;">
+          Como manter a telemetria preditiva e métricas de uso sem configurar vigilância laboral ilegal?
+        </p>
+      </div>
+      <div class="slide-footer">
+        <span>Pilar 2 • Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: FIREWALL ONTOLÓGICO -->
+    <section class="slide" data-title="O Firewall Ontológico (Privacy by Design)">
+      <div>
+        <h2>O Firewall Ontológico (Privacy by Design)</h2>
+        <p class="subtitle">Segregação estrita entre a telemetria do equipamento/módulo e o comportamento humano.</p>
+      </div>
+      <div class="fw-grid">
+        <div class="fw-shield">
+          <div style="font-size:2.4rem;margin-bottom:8px;">🛡️</div>
+          <h3 style="font-size:1.2rem;margin-bottom:8px;">Firewall Ético e Regulatório</h3>
+          <p style="font-size:0.9rem;color:var(--muted);">
+            Na prática (como observado no painel de estatísticas da <strong>Rybená</strong>), o provedor mede quantos acionamentos ocorreram em Libras, voz ou contraste — nunca o CPF do colaborador.
+          </p>
+        </div>
+        <div>
+          <div class="fw-channel card mint">
+            <h3 style="color:var(--accent-dark);margin-bottom:6px;">Canal Verde: Telemetria Técnica (Permitida &amp; Criptografada)</h3>
+            <p style="font-size:0.94rem;color:#064e3b;">
+              Voltagem, ciclos de bateria, logs de integridade mecânica e contadores agregados de uso de módulos. <em>(Flui para o Provedor ATaaS para SLA e manutenção).</em>
+            </p>
+          </div>
+          <div class="fw-channel card danger" style="margin-bottom:0;">
+            <h3 style="color:var(--danger);margin-bottom:6px;">Canal Vermelho: Dados Sensíveis (Bloqueio Absoluto)</h3>
+            <p style="font-size:0.94rem;color:#7f1d1d;">
+              Velocidade de digitação, tempo de tela individual, navegação em intranets, dados biométricos. <em>(Processamento estritamente local; vedação total de vigilância).</em>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Arquitetura Privacy by Design • Cavoukian et al. (2010)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: ANONIMIZAÇÃO E BLINDAGEM LABORAL -->
+    <section class="slide" data-title="Anonimização e Blindagem Laboral">
+      <div>
+        <h2>Anonimização e Blindagem Laboral</h2>
+      </div>
+      <div class="two-col" style="margin-top:20px;">
+        <div class="card" style="padding:28px;">
+          <span class="quote-pill">Etapa 1 • Pré-Contratação</span>
+          <h3 style="font-size:1.3rem;margin:8px 0 12px;">1. Blindagem no Processo Seletivo</h3>
+          <p style="font-size:1rem;line-height:1.55;color:var(--muted);">
+            A coleta de diagnósticos detalhados e mapeamento biomecânico ocorre <strong>exclusivamente após a contratação</strong>. Evita vieses algorítmicos discriminatórios prévios. O RH apenas atesta a elegibilidade documental para a cota (Lei nº 8.213).
+          </p>
+        </div>
+        <div class="card mint" style="padding:28px;">
+          <span class="quote-pill">Etapa 2 • Operação Contínua</span>
+          <h3 style="font-size:1.3rem;margin:8px 0 12px;color:var(--accent-dark);">2. Pseudonimização Estrutural (Arts. 13 e 18 LGPD)</h3>
+          <p style="font-size:1rem;line-height:1.55;color:#064e3b;">
+            O provedor de ATaaS monitora o equipamento apenas por identificadores lógicos (ex: <strong>POSTO-SJC-TI-04</strong>). O CPF, laudos médicos e identidade do colaborador ficam confinados exclusivamente sob custódia do RH contratante.
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Conformidade Trabalhista &amp; Proteção de Dados</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: PILAR 3 SISTEMAS LEGADOS + INTEROPERABILIDADE -->
+    <section class="slide" data-title="Pilar 3: Sistemas Legados & Mútua Adaptação">
+      <div>
+        <h2>Pilar 3: Superando Sistemas Legados via Mútua Adaptação</h2>
+        <p class="subtitle">Refazer o núcleo de ERPs (SAP, TOTVS) ou intranets antigas é inviável; a camada de serviço absorve a integração.</p>
+      </div>
+      <div class="video-grid-3" style="margin-top:18px;align-items:stretch;">
+        <div class="card">
+          <span class="quote-pill">Zona 1</span>
+          <h3 style="margin:6px 0 10px;">Sistema Legado Intocável</h3>
+          <p style="font-size:0.92rem;color:var(--muted);">
+            ERPs e portais antigos sem conformidade nativa WCAG 2.2. A TI interna apenas parametriza regras de segurança e permissões.
+          </p>
+        </div>
+        <div class="card dark-green">
+          <span class="quote-pill" style="background:#065f46;color:#ecfdf5;border-color:#34d399;">Zona 2 • Ponte ATaaS</span>
+          <h3 style="margin:6px 0 10px;color:#fff;">Camada de Interoperabilidade</h3>
+          <p style="font-size:0.92rem;">
+            O provedor ATaaS injeta scripts acessíveis em nuvem, conectores de API e middleware — mantendo o núcleo do ERP seguro e intacto.
+          </p>
+        </div>
+        <div class="card mint">
+          <span class="quote-pill">Zona 3</span>
+          <h3 style="margin:6px 0 10px;color:var(--accent-dark);">Tecnologia Assistiva Viva</h3>
+          <p style="font-size:0.92rem;color:#064e3b;">
+            Leitores de tela, tradução para Libras, síntese de voz (<em>Curb-Cut Effect</em> para EAD/treinamentos) e controle facial entregues ao usuário final.
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Pilar 3 • Teoria da Mútua Adaptação (Leonard-Barton, 1988)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 13: EVIDÊNCIA EMPÍRICA 2 — VIDEOS RYBENA + LORICONECTA -->
+    <section class="slide" data-title="Evidência Empírica 2: Implantação & Clima Organizacional">
+      <div>
+        <h2>Evidência Empírica 2: Implantação Ágil &amp; Clima Organizacional</h2>
+        <p class="subtitle">Contrastes reais de campo: interoperabilidade instantânea (Rybená) vs. fricção operacional e IA frugal (LoriConecta).</p>
+      </div>
+      <div class="video-grid-3">
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/rybena_implantacao_15min.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">Rybená • 49:20 – 50:02</span>
+            <strong>No ar em 10 a 15 minutos</strong>
+            Implantação via 2 linhas de script em nuvem, sem alterar o código ou conteúdo do portal do cliente.
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/lori_ia_facial.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">LoriConecta • 15:18 – 15:55</span>
+            <strong>IA Facial no Celular (BYOD)</strong>
+            Visão computacional converte piscar e sorrir em cliques calibráveis, substituindo hardware importado caro.
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/lori_implementacao_uti.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">LoriConecta • 19:08 – 20:02</span>
+            <strong>Clima de Implementação (UTI)</strong>
+            PoC na Santa Casa mostrou resistência por sobrecarga da equipe (2 min/leito), provando Klein &amp; Sorra (1996).
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Recortes Empíricos • Rybená (B2B/B2G) &amp; LoriConecta (Nexus / PIT-SJC)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: PILAR 4 FASES 1 E 2 -->
+    <section class="slide" data-title="Pilar 4: Diretrizes Gerenciais (Fases 1 e 2)">
+      <div>
+        <h2>Pilar 4: Diretrizes Gerenciais para Inclusão (Fases 1 e 2)</h2>
+      </div>
+      <div class="two-col" style="margin-top:20px;">
+        <div class="card" style="padding:28px;">
+          <h3 style="font-size:1.3rem;margin-bottom:14px;">FASE 1: Prospecção &amp; Decisão</h3>
+          <ul class="clean">
+            <li>Diagnóstico participativo centrado no colaborador (modelo MPT de Scherer).</li>
+            <li>Modelagem financeira e análise comparativa de Custo Total de Uso (Capex vs. Opex).</li>
+            <li>Alinhamento estratégico entre C-Level, TI, Compras e comitês de Diversidade &amp; Inclusão (D&amp;I).</li>
+          </ul>
+        </div>
+        <div class="card mint" style="padding:28px;">
+          <h3 style="font-size:1.3rem;color:var(--accent-dark);margin-bottom:14px;">FASE 2: Mútua Adaptação</h3>
+          <ul class="clean">
+            <li>Homologação técnica não invasiva junto a ERPs e portais legados pela TI.</li>
+            <li>Co-design e calibração contínua no posto de trabalho real.</li>
+            <li>Isolamento legal da telemetria técnica e conformidade estrita com o Art. 11 da LGPD.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Roteiro Gerencial ATaaS • Fases Iniciais</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 15: PILAR 4 FASES 3 E 4 -->
+    <section class="slide" data-title="Diretrizes Gerenciais (Fases 3 e 4)">
+      <div>
+        <h2>Diretrizes Gerenciais para Inclusão (Fases 3 e 4)</h2>
+      </div>
+      <div class="two-col" style="margin-top:20px;">
+        <div class="card" style="padding:28px;">
+          <h3 style="font-size:1.3rem;margin-bottom:14px;">FASE 3: Clima de Implementação</h3>
+          <ul class="clean">
+            <li>Engajamento interfuncional entre D&amp;I, TI, RH e Saúde e Segurança do Trabalho (SST).</li>
+            <li>Treinamento contínuo em serviço para remover fricções de uso (lição empírica da PoC hospitalar).</li>
+            <li>Sensibilização da equipe direta para evitar estigmatização da tecnologia.</li>
+          </ul>
+        </div>
+        <div class="card dark-green" style="padding:28px;">
+          <h3 style="font-size:1.3rem;color:#fff;margin-bottom:14px;">FASE 4: Governança &amp; Economia Circular</h3>
+          <ul class="clean">
+            <li>Monitoramento de SLA rigoroso: <em>hot-swap</em> emergencial garantido em até 24 horas.</li>
+            <li>Garantia de uptime funcional superior a 98,5% para o posto de trabalho.</li>
+            <li>Geração de métricas auditáveis (anonimizadas) para relatórios ESG corporativos (ODS 8 e 10).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Roteiro Gerencial ATaaS • Sustentação e Captura de Valor</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 16: SÍNTESE DECISION DASHBOARD -->
+    <section class="slide" data-title="Síntese: O Sistema de Apoio à Decisão ATaaS">
+      <div>
+        <h2>Síntese: O Sistema de Apoio à Decisão ATaaS</h2>
+        <p class="subtitle">A convergência analítica provando a superioridade da Servitização Contínua em 4 eixos estruturais.</p>
+      </div>
+      <div class="col-split-wide" style="margin-top:14px;">
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <div class="card" style="border-left:5px solid var(--accent);padding:14px 18px;">
+            <strong>Finanças &amp; Impostos:</strong> Dedutibilidade total de 34% (Lucro Real) neutralizando altos custos de capital e desenvolvimento interno.
+          </div>
+          <div class="card" style="border-left:5px solid var(--accent);padding:14px 18px;">
+            <strong>Escala &amp; Estoque:</strong> Mitigação absoluta do risco de ativos imobilizados ociosos por turnover de colaboradores.
+          </div>
+          <div class="card" style="border-left:5px solid var(--accent);padding:14px 18px;">
+            <strong>Continuidade (SLA):</strong> Garantia contratual de <em>hot-swap</em> &lt;24h e evolução linguística/técnica contínua.
+          </div>
+          <div class="card" style="border-left:5px solid var(--accent);padding:14px 18px;">
+            <strong>Integração TI &amp; LGPD:</strong> Scripts em nuvem para sistemas legados + arquitetura <em>Privacy by Design</em>.
+          </div>
+        </div>
+        <div class="card dark-green" style="border-radius:50%;aspect-ratio:1/1;max-width:320px;margin:auto;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;">
+          <div>
+            <h3 style="font-size:1.15rem;color:#fff;margin-bottom:10px;">Recomendação Estratégica Forte</h3>
+            <p style="font-size:0.95rem;line-height:1.45;">
+              Adoção do modelo <strong>ATaaS (Opex)</strong> preserva liquidez, blinda juridicamente a operação e escala a inclusão de forma sustentável.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Artefato Final • Sistema Executivo de Apoio à Decisão</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 17: DEMONSTRAÇÃO DO ARTEFATO WEB -->
+    <section class="slide" data-title="Instanciação Web: Simulador Executivo ATaaS">
+      <div>
+        <h2>Instanciação Web: Simulador Executivo ATaaS</h2>
+        <p class="subtitle">O framework do capítulo foi materializado em uma aplicação web interativa e responsiva em acesso aberto.</p>
+      </div>
+      <div class="two-col" style="margin-top:16px;align-items:center;">
+        <div class="card mint" style="padding:26px;">
+          <h3 style="color:var(--accent-dark);margin-bottom:12px;">O que o gestor executa na ferramenta:</h3>
+          <ul class="clean">
+            <li><strong>Diagnóstico de Prontidão (5 Dimensões):</strong> Avalia maturidade financeira, TI legada, clima organizacional, LGPD e perfil biopsicossocial.</li>
+            <li><strong>Simulador Financeiro Capex vs. Opex:</strong> Calcula VPL, economia fiscal (34% Lucro Real) e ponto de equilíbrio em tempo real.</li>
+            <li><strong>Roteiro de Implementação Gerado:</strong> Entrega plano de ação personalizado nas 4 fases do ATaaS.</li>
+          </ul>
+          <div style="margin-top:18px;">
+            <a class="ctrl-btn primary" href="framework_ataas.html" target="_blank" style="padding:10px 18px;font-size:0.95rem;">
+              🚀 Testar Framework ATaaS Agora
+            </a>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <img src="Artigo_DSR/imagens/qrcode_framework_ataas.png" alt="QR Code Framework ATaaS" style="width:210px;height:210px;border:1px solid #cbd5e1;border-radius:8px;padding:10px;background:#fff;" />
+          <p style="margin-top:10px;font-size:0.86rem;color:var(--muted);">
+            <strong>josuejofre.github.io/artigo-tecnologias-assistivas-geti/framework_ataas.html</strong>
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Entrega Tecnológica • Produto Técnico-Tecnológico (PTT)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 18: ENCERRAMENTO -->
+    <section class="slide" data-title="O Fim do Abandono Tecnológico">
+      <div class="cover-grid">
+        <div>
+          <h1>O Fim do<br>Abandono<br>Tecnológico</h1>
+          <p style="margin-top:18px;font-size:1.12rem;line-height:1.5;color:#1f2937;">
+            O Framework ATaaS não terceiriza a inclusão. Ele remove sumariamente as fricções financeiras, técnicas e burocráticas que hoje paralisam os programas de diversidade.
+          </p>
+          <p style="margin-top:14px;font-size:1.05rem;line-height:1.5;color:var(--muted);border-top:1px solid #e5e7eb;padding-top:14px;">
+            A servitização contínua permite que a corporação desloque sua energia da exaustiva <strong>"gestão de ativos"</strong> para o verdadeiro <strong>"desenvolvimento de talentos"</strong>.
+          </p>
+        </div>
+        <div class="cover-visual" style="align-items:center;text-align:center;">
+          <img src="Artigo_DSR/imagens/qrcode_framework_ataas.png" alt="QR Code Framework ATaaS" style="width:190px;height:190px;background:#fff;padding:10px;border-radius:8px;border:1px solid #cbd5e1;" />
+          <div>
+            <strong style="display:block;font-size:1.02rem;">Acesse o Framework Digital Integrador ATaaS</strong>
+            <span style="font-size:0.85rem;color:var(--muted);">Escaneie o QR Code ou clique abaixo</span>
+          </div>
+          <a class="ctrl-btn primary" href="framework_ataas.html" target="_blank" style="padding:10px 20px;">
+            Abrir Simulador ATaaS
+          </a>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Obrigado! • PPG-PIT UNIFESP — Gestão Estratégica da Inovação (GETI 2026)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Índice -->
+  <div class="overview-modal" id="overviewModal">
+    <div class="overview-header">
+      <h2 style="color:#fff;">Índice da Apresentação (18 Slides)</h2>
+      <button class="ctrl-btn" onclick="toggleOverview()">✕ Fechar</button>
+    </div>
+    <div class="overview-grid" id="overviewGrid"></div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counterEl = document.getElementById('slideCounter');
+    const progressEl = document.getElementById('progressFill');
+    const overviewModal = document.getElementById('overviewModal');
+    const overviewGrid = document.getElementById('overviewGrid');
+    let current = 0;
+
+    function pauseAllVideos() {
+      document.querySelectorAll('video').forEach(v => {
+        if (!v.paused) v.pause();
+      });
+    }
+
+    function showSlide(index) {
+      pauseAllVideos();
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      counterEl.textContent = `${current + 1} / ${slides.length}`;
+      progressEl.style.width = `${((current + 1) / slides.length) * 100}%`;
+      if (window.location.hash !== `#${current + 1}`) {
+        history.replaceState(null, '', `#${current + 1}`);
+      }
+      renderOverview();
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    function toggleOverview() {
+      overviewModal.classList.toggle('open');
+      renderOverview();
+    }
+
+    function renderOverview() {
+      overviewGrid.innerHTML = slides.map((s, i) => `
+        <div class="thumb ${i === current ? 'current' : ''}" onclick="showSlide(${i}); toggleOverview();">
+          <div class="thumb-num">SLIDE ${i + 1}</div>
+          <div class="thumb-title">${s.dataset.title || 'Slide ' + (i + 1)}</div>
+        </div>
+      `).join('');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'VIDEO') return;
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key.toLowerCase() === 'm') {
+        toggleOverview();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key === 'Escape' && overviewModal.classList.contains('open')) {
+        toggleOverview();
+      }
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    document.getElementById('stage').addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    document.getElementById('stage').addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(dx) > 60) {
+        if (dx < 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
+
+    // Load hash slide if present
+    const hashNum = parseInt(window.location.hash.replace('#', ''), 10);
+    if (!isNaN(hashNum) && hashNum >= 1 && hashNum <= slides.length) {
+      showSlide(hashNum - 1);
+    } else {
+      showSlide(0);
+    }
+  </script>
+</body>
+</html>
