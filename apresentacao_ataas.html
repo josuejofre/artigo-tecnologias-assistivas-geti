@@ -78,11 +78,12 @@
     .stage {
       flex: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
+      align-items: stretch;
+      justify-content: stretch;
+      padding: 0;
       position: relative;
       overflow: hidden;
+      background: var(--slide-bg);
     }
 
     .slide {
@@ -90,14 +91,14 @@
       width: 100%;
       height: 100%;
       background: var(--slide-bg);
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      padding: clamp(24px, 3.2vh, 48px) clamp(28px, 4vw, 68px) clamp(20px, 2.5vh, 36px);
+      border-radius: 0;
+      box-shadow: none;
+      padding: clamp(20px, 3vh, 44px) clamp(24px, 3.8vw, 64px) clamp(16px, 2.2vh, 32px);
       flex-direction: column;
       justify-content: space-between;
       overflow-y: auto;
       position: relative;
-      animation: fadeIn 0.22s ease;
+      animation: fadeIn 0.2s ease;
     }
     .slide.active { display: flex; }
 
@@ -428,7 +429,7 @@
       <span>ATaaS na Inclusão Corporativa</span>
     </div>
     <div class="topbar-controls">
-      <span id="slideCounter" style="color:#9ca3af;margin-right:6px;">1 / 18</span>
+      <span id="slideCounter" style="color:#9ca3af;margin-right:6px;">1 / 19</span>
       <button class="ctrl-btn" onclick="prevSlide()" title="Slide Anterior (←)">◀ Anterior</button>
       <button class="ctrl-btn" onclick="nextSlide()" title="Próximo Slide (→)">Próximo ▶</button>
       <button class="ctrl-btn" onclick="toggleOverview()" title="Visão Geral (M)">☷ Índice</button>
@@ -445,31 +446,39 @@
       <div class="cover-grid">
         <div>
           <span class="quote-pill">Capítulo de Livro • Design Science Research</span>
-          <h1 style="margin-top:10px;">Da Aquisição à Servitização Contínua</h1>
-          <p class="subtitle" style="margin-top:16px;font-size:1.35rem;font-weight:600;color:#1f2937;">
-            Implementando Tecnologias Assistivas como Serviço (ATaaS)
+          <h1 style="margin-top:10px;font-size:clamp(2rem, 3.4vw, 3.2rem);">Da Aquisição à Servitização Contínua</h1>
+          <p class="subtitle" style="margin-top:14px;font-size:1.24rem;font-weight:700;color:#065f46;">
+            Framework Integrador de Gestão da Inovação para Implementação de Tecnologias Assistivas como Serviço (ATaaS)
           </p>
-          <p class="subtitle" style="margin-top:20px;font-size:1.08rem;">
-            Framework Integrador para corporações sob o regime do Lucro Real, fundamentado em Design Science Research e validado com entrevistas reais do mercado brasileiro (<strong>Rybená</strong> e <strong>LoriConecta</strong>).
-          </p>
+          <div style="margin-top:18px;padding:14px 18px;background:#f8fafc;border-left:4px solid var(--accent);border-radius:6px;font-size:0.95rem;line-height:1.5;">
+            <div><strong>Disciplina:</strong> Gestão Estratégica da Inovação (GETI 2026)</div>
+            <div><strong>Programa:</strong> Pós-Graduação em Inovação Tecnológica (PPGPIT / UNIFESP – ICT)</div>
+            <div style="margin-top:6px;color:#374151;"><strong>Artigo Base:</strong> <em>Da Aquisição Transacional à Servitização Contínua: Framework Integrador ATaaS</em></div>
+          </div>
         </div>
         <div class="cover-visual">
-          <div class="cover-stat">
-            <strong>4 Pilares de Decisão Executiva</strong>
-            <span>Financeiro (Capex vs. Opex), LGPD (Privacy by Design), Interoperabilidade TI e Governança ESG.</span>
+          <div class="card mint" style="padding:18px 20px;">
+            <strong style="display:block;font-size:1.02rem;color:var(--accent-dark);margin-bottom:8px;">👥 Discentes / Autores (Grupo A • Turma Quarta-feira):</strong>
+            <ul class="clean" style="font-size:0.92rem;gap:6px;">
+              <li><strong>Alexandre Pedroso Fernandes</strong></li>
+              <li><strong>Diana Cortez</strong></li>
+              <li><strong>Emilie Modolo</strong></li>
+              <li><strong>Josué Jofre Tomaz de Almeida</strong></li>
+              <li><strong>Manuela Lima</strong></li>
+            </ul>
           </div>
           <div class="cover-stat">
-            <strong>Evidência Empírica Brasileira</strong>
-            <span>Recortes em vídeo de lideranças de TA como serviço: Tiago (Rybená) e Geisse Costa (LoriConecta / PIT-SJC).</span>
+            <strong>Evidências Empíricas Reais de Campo</strong>
+            <span>Entrevistas com lideranças de TA como serviço: <strong>Tiago Reis (Rybená)</strong> e <strong>Geisse Costa (LoriConecta / PIT-SJC)</strong>.</span>
           </div>
           <div class="cover-stat">
-            <strong>Artefato Digital Interativo</strong>
-            <span>Simulador executivo publicado em acesso aberto para gestores de RH, TI, Compras e D&amp;I.</span>
+            <strong>Artefato Digital Interativo em Acesso Aberto</strong>
+            <span>Simulador executivo de apoio à decisão financeira, técnica e regulatória.</span>
           </div>
         </div>
       </div>
       <div class="slide-footer">
-        <span>PPG-PIT UNIFESP • Gestão Estratégica da Inovação (GETI 2026)</span>
+        <span>UNIFESP • PPGPIT • Gestão Estratégica da Inovação (GETI 2026)</span>
         <div class="footer-bar"></div>
       </div>
     </section>
@@ -674,10 +683,10 @@
     </section>
 
     <!-- SLIDE 8: EVIDÊNCIA EMPÍRICA 1 — RYBENÁ (VIDEOS!) -->
-    <section class="slide" data-title="Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)">
+    <section class="slide" data-title="Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS & Flexibilidade Multissetorial)">
       <div>
-        <h2>Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)</h2>
-        <p class="subtitle">Recortes da entrevista com <strong>Tiago Reis (Rybená — +190 clientes, 33 recursos)</strong> comprovam a economia do Opex (R$ 715/mês ou R$ 7.722/ano) e o codesign com pessoas surdas.</p>
+        <h2>Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS &amp; Flexibilidade Multissetorial)</h2>
+        <p class="subtitle">Recortes com <strong>Tiago Reis (Rybená — +190 clientes, 33 recursos)</strong> comprovam a economia do Opex (R$ 715/mês) e a elasticidade do SaaS nos setores Privado, Público e Educação.</p>
       </div>
       <div class="video-grid-2">
         <div class="video-card">
@@ -692,12 +701,12 @@
         </div>
         <div class="video-card">
           <video controls preload="metadata">
-            <source src="clips/rybena_codesign_surdos.mp4" type="video/mp4" />
+            <source src="clips/rybena_flexibilidade_saas.mp4" type="video/mp4" />
           </video>
           <div class="video-meta">
-            <span class="quote-pill">Trecho 15:10 – 16:00 • Coprodução &amp; S-D Logic</span>
-            <strong>5 de 6 no time de Libras são surdos (+25 mil sinais)</strong>
-            "Não precisamos de homologação externa: o produto já nasce consumido por quem precisa." Atualização linguística viva e colaborativa (ex.: Cacau Show).
+            <span class="quote-pill">Trecho 05:45 – 06:55 • Elasticidade Multissetorial</span>
+            <strong>Privado (Finanças/Varejo), Judiciário e Educação</strong>
+            "Sou tudo-tech": atende simultaneamente o mercado corporativo (Bradesco, Sicoob, TIM), prestador do Estado (TSE, CNJ, TCU, OAB) e grandes Universidades (UnB, Católica, CEUB, IDP).
           </div>
         </div>
       </div>
@@ -834,31 +843,65 @@
       </div>
     </section>
 
-    <!-- SLIDE 13: EVIDÊNCIA EMPÍRICA 2 — VIDEOS RYBENA + LORICONECTA -->
-    <section class="slide" data-title="Evidência Empírica 2: Implantação & Clima Organizacional">
+    <!-- SLIDE 13: EVIDÊNCIA EMPÍRICA 2 — RYBENÁ (AVATAR CUSTOMIZADO & IMPLANTAÇÃO) -->
+    <section class="slide" data-title="Evidência Empírica 2: Rybená — Customização de Avatares & Implantação Ágil">
       <div>
-        <h2>Evidência Empírica 2: Implantação Ágil &amp; Clima Organizacional</h2>
-        <p class="subtitle">Contrastes reais de campo: interoperabilidade instantânea (Rybená) vs. fricção operacional e IA frugal (LoriConecta).</p>
+        <h2>Evidência Empírica 2: Rybená — Customização de Avatares &amp; Implantação Ágil</h2>
+        <p class="subtitle">Demonstração da solução em operação: identidade visual exclusiva (SEBRAE Play), implantação em 15 minutos e time com 5 surdos.</p>
       </div>
       <div class="video-grid-3">
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/rybena_avatar_customizado.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">Rybená • 42:15 – 43:15 • Demonstração ao Vivo</span>
+            <strong>Avatar Bento (SEBRAE Play) e Menu</strong>
+            Tiago compartilha tela e mostra o avatar customizado (robô Bento) e o menu flutuante em operação real, superando avatares genéricos de prateleira.
+          </div>
+        </div>
         <div class="video-card">
           <video controls preload="metadata">
             <source src="clips/rybena_implantacao_15min.mp4" type="video/mp4" />
           </video>
           <div class="video-meta">
-            <span class="quote-pill">Rybená • 49:20 – 50:02</span>
+            <span class="quote-pill">Rybená • 49:20 – 50:02 • Interoperabilidade</span>
             <strong>No ar em 10 a 15 minutos</strong>
-            Implantação via 2 linhas de script em nuvem, sem alterar o código ou conteúdo do portal do cliente.
+            Implantação via 2 linhas de script em nuvem, sem alterar o código-fonte ou o banco de dados do portal corporativo legado.
           </div>
         </div>
+        <div class="video-card">
+          <video controls preload="metadata">
+            <source src="clips/rybena_codesign_surdos.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span class="quote-pill">Rybená • 15:10 – 16:00 • Coprodução S-D Logic</span>
+            <strong>5 de 6 no time de Libras são surdos</strong>
+            Banco de >25 mil sinais digitalizados via Smartsuit Pro; cocriação de novos sinais corporativos junto à comunidade surda (ex.: Cacau Show).
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Demonstração de Produto • Rybená Tecnologias Assistivas (12/11/2026)</span>
+        <div class="footer-bar"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: EVIDÊNCIA EMPÍRICA 3 — LORICONECTA (IA FRUGAL & CLIMA NA UTI) -->
+    <section class="slide" data-title="Evidência Empírica 3: LoriConecta — IA Frugal & Clima Organizacional">
+      <div>
+        <h2>Evidência Empírica 3: LoriConecta — IA Frugal &amp; Clima Organizacional</h2>
+        <p class="subtitle">O ecossistema de startups (Nexus / PIT-SJC): substituição de hardware importado por IA móvel e os atritos de implementação em UTI.</p>
+      </div>
+      <div class="video-grid-2">
         <div class="video-card">
           <video controls preload="metadata">
             <source src="clips/lori_ia_facial.mp4" type="video/mp4" />
           </video>
           <div class="video-meta">
-            <span class="quote-pill">LoriConecta • 15:18 – 15:55</span>
-            <strong>IA Facial no Celular (BYOD)</strong>
-            Visão computacional converte piscar e sorrir em cliques calibráveis, substituindo hardware importado caro.
+            <span class="quote-pill">LoriConecta • 15:18 – 15:55 • IA Mobile (BYOD)</span>
+            <strong>Visão Computacional no Smartphone Comum</strong>
+            Converte piscadas e sorrisos em cliques calibrados na tela, eliminando hardwares importados de R$ 25k–80k e pranchas físicas estáticas (MPT Scherer).
           </div>
         </div>
         <div class="video-card">
@@ -866,14 +909,14 @@
             <source src="clips/lori_implementacao_uti.mp4" type="video/mp4" />
           </video>
           <div class="video-meta">
-            <span class="quote-pill">LoriConecta • 19:08 – 20:02</span>
-            <strong>Clima de Implementação (UTI)</strong>
-            PoC na Santa Casa mostrou resistência por sobrecarga da equipe (2 min/leito), provando Klein &amp; Sorra (1996).
+            <span class="quote-pill">LoriConecta • 19:08 – 20:02 • Clima de Implementação</span>
+            <strong>Atrito Organizacional na UTI da Santa Casa</strong>
+            Enfermeiros sobrecarregados (2 min/leito) viam a tecnologia como atrito; em clínicas e escolas a adoção foi orgânica (prova Klein &amp; Sorra, 1996).
           </div>
         </div>
       </div>
       <div class="slide-footer">
-        <span>Recortes Empíricos • Rybená (B2B/B2G) &amp; LoriConecta (Nexus / PIT-SJC)</span>
+        <span>Estudo de Caso • LoriConecta / PIT-SJC (Geisse Costa &amp; Joyce Querubino)</span>
         <div class="footer-bar"></div>
       </div>
     </section>
