@@ -1007,10 +1007,13 @@
               <span class="dp-tag">LGPD &amp; ESG</span>
             </label>
             <select id="q6" class="q-select" onchange="evaluateDecision()">
-              <option value="10" selected>Alta exigência: requer Privacy-by-Design (segregação de telemetria) e métricas auditáveis para relatório ESG</option>
+              <option value="10" selected>Alta exigência: requer Privacy-by-Design, telemetria anônima técnica em RAM (sem capturar CPF/biometria) e métricas ESG auditáveis</option>
               <option value="6">Exigência moderada: conformidade padrão à Lei de Cotas e termos básicos de confidencialidade</option>
-              <option value="2">Hardware desconectado sem coleta de telemetria ou relatórios formais de sustentabilidade</option>
+              <option value="2">Hardware desconectado sem telemetria ou relatórios formais de sustentabilidade</option>
             </select>
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; line-height: 1.35;">
+              💡 <em>Diretriz Rybená:</em> Processamento estritamente volátil em memória RAM de métricas técnicas agregadas de uso (Libras, voz, contraste), sem persistência de dados biométricos, CPF ou navegação do trabalhador, blindando a corporação contra passivos por vigilância patronal ilegal.
+            </div>
           </div>
         </div>
 
@@ -1285,10 +1288,10 @@
           </div>
           <div style="text-align: right;">
             <span style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Prontidão de Governança</span>
-            <div id="readiness-pct" style="font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; color: var(--success);">75% (9/12)</div>
+            <div id="readiness-pct" style="font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; color: var(--success);">77% (10/13)</div>
           </div>
         </div>
-        <div class="progress-track"><div id="readiness-bar" class="progress-fill" style="width: 75%;"></div></div>
+        <div class="progress-track"><div id="readiness-bar" class="progress-fill" style="width: 77%;"></div></div>
       </div>
 
       <div class="phase-grid">
@@ -1318,11 +1321,11 @@
           </label>
           <label class="check-item">
             <input type="checkbox" class="gov-check" checked onchange="updateReadiness()">
-            <span><strong>Scripts de Injeção Acessível e APIs:</strong> Contrato prevê engenharia de software do provedor para contornar interfaces gráficas legadas não conformes à WCAG 2.1.</span>
+            <span><strong>Deploy Rápido Não Invasivo (&lt; 15 dias):</strong> Homologação de scripts leves em nuvem (ex.: injeção de 2 linhas em JS ou extensões nativas) capazes de operar sobre ERPs e portais corporativos sem necessidade de refatorar código-fonte ou bancos de dados legados.</span>
           </label>
           <label class="check-item">
             <input type="checkbox" class="gov-check" onchange="updateReadiness()">
-            <span><strong>Customização Paramétrica / Manufatura Aditiva:</strong> Ajustes ergonômicos físicos do posto (suportes, chaves, órteses) sob demanda sem perda de garantia.</span>
+            <span><strong>Customização Paramétrica / Manufatura Aditiva:</strong> Ajustes ergonômicos físicos do posto (suportes, chaves, órteses) ou avatares digitais corporativos sob demanda sem perda de garantia.</span>
           </label>
         </div>
 
@@ -1335,7 +1338,11 @@
           </label>
           <label class="check-item">
             <input type="checkbox" class="gov-check" checked onchange="updateReadiness()">
-            <span><strong>Segregação Ontológica de Telemetria (Art. 11 LGPD):</strong> Sensores monitoram apenas saúde física/elétrica do equipamento (bateria, latência), vedando qualquer rastreamento de produtividade ou digitação.</span>
+            <span><strong>Capacitação Prática no Fluxo &amp; Combate ao Estigma:</strong> Treinamento da liderança e da equipe direta integrado à jornada de trabalho, evitando sobrecarga cognitiva (lição de atrito em UTI) e criando um clima organizacional acolhedor (Klein &amp; Sorra, 1996).</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" class="gov-check" checked onchange="updateReadiness()">
+            <span><strong>Segregação Ontológica de Telemetria (Art. 11 LGPD):</strong> Sensores monitoram apenas métricas técnicas agregadas em memória RAM (bateria, acionamentos de recursos), vedando qualquer rastreamento comportamental, digitação ou biometria.</span>
           </label>
           <label class="check-item">
             <input type="checkbox" class="gov-check" onchange="updateReadiness()">
@@ -1377,6 +1384,30 @@
           </div>
 
           <div class="provider-grid">
+            <div class="provider-card" style="border: 1.5px solid var(--accent); background: #f0fdf4;">
+              <div>
+                <div class="provider-cat" style="background: var(--accent); color: #fff;">Acessibilidade Digital &amp; Libras 3D • SaaS B2B/B2G</div>
+                <h4>Rybená Tecnologias Assistivas</h4>
+                <p>Suíte completa com 33 recursos assistivos em player único (Libras 3D capturada com sensores inerciais por time de surdos, sintetizador de voz neural, máscara para TDAH, fonte disléxica). Suporta avatares corporativos exclusivos (ex.: mascote Bento do Sebrae Play). Planos a partir de R$ 715/mês por domínio corporativo (R$ 7.722/ano), deploy não invasivo em 10 a 15 minutos via 2 linhas de script JS sem tocar em bancos de dados de ERPs legados. Atende Telecom (TIM), Finanças (Bradesco), Judiciário (TSE, CNJ, TCU) e Universidades (UnB).</p>
+              </div>
+              <div class="provider-meta">
+                <span>📍 Brasília / DF • Atuação Nacional</span>
+                <a class="btn-sm" href="https://www.rybena.com.br" target="_blank" rel="noopener">rybena.com.br ↗</a>
+              </div>
+            </div>
+
+            <div class="provider-card" style="border: 1.5px solid #0284c7; background: #f0f9ff;">
+              <div>
+                <div class="provider-cat" style="background: #0284c7; color: #fff;">Comunicação Alternativa (CAA) • IA Mobile (BYOD) &amp; Saúde</div>
+                <h4>LoriConecta / LoriComunica (Nexus PIT-SJC)</h4>
+                <p>Plataforma de Comunicação Aumentativa e Alternativa (CAA) operada por visão computacional e IA diretamente na câmera frontal de smartphones ou tablets comuns (Android/iOS), convertendo piscadas e sorrisos em cliques calibrados e voz sintetizada. Substitui hardwares importados caros (R$ 25k a 80k) por assinaturas mensais acessíveis (R$ 120/mês individual e planos B2B para clínicas, escolas e hospitais).</p>
+              </div>
+              <div class="provider-meta">
+                <span>📍 São José dos Campos / SP (PIT-SJC)</span>
+                <a class="btn-sm" href="https://loriconecta.com.br" target="_blank" rel="noopener">loriconecta.com.br ↗</a>
+              </div>
+            </div>
+
             <div class="provider-card">
               <div>
                 <div class="provider-cat">Hardware Assistivo • HaaS / Locação</div>
