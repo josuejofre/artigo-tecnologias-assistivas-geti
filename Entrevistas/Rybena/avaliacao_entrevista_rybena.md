@@ -1,7 +1,8 @@
 # Avaliação Crítica da Entrevista: Rybená (Tiago)
 
 **Data da Entrevista:** 12 de novembro de 2026 (Arquivo: `Gravando 2026-11-12 095353.mp4`, 53min 23s)  
-**Entrevistado:** **Tiago** (Liderança / Diretoria Comercial e Produto da **Rybená**)  
+**Entrevistado:** **Tiago Reis** (Diretoria Comercial — **Rybená Tecnologias Assistivas Ltda.**)  
+**Materiais Institucionais Recebidos:** [`Apresentação Solução Rybená Web PDF 2026.pdf`](file:///c:/Users/jj/OneDrive/Estudos/Edital%20unifesp%20PIT%202026/Disciplinas%2002%202026/Gest%C3%A3o%20estrat%C3%A9gica%20da%20inova%C3%A7%C3%A3o/03%20-%20Artigo%20e%20Cap%C3%ADtulo%20de%20Livro/Entrevistas/Rybena/materiais_institucionais/Apresenta%C3%A7%C3%A3o%20Solu%C3%A7%C3%A3o%20Ryben%C3%A1%20Web%20PDF%202026.pdf) e [`PROPOSTA COMERCIAL - RYBENÁ Tecnologias Assistivas 1126.pdf`](file:///c:/Users/jj/OneDrive/Estudos/Edital%20unifesp%20PIT%202026/Disciplinas%2002%202026/Gest%C3%A3o%20estrat%C3%A9gica%20da%20inova%C3%A7%C3%A3o/03%20-%20Artigo%20e%20Cap%C3%ADtulo%20de%20Livro/Entrevistas/Rybena/materiais_institucionais/PROPOSTA%20COMERCIAL%20-%20RYBEN%C3%81%20Tecnologias%20Assistivas%201126.pdf)  
 **Entrevistadores:** Josué Jofre e Alexandre (Mestrandos PPG-PIT / UNIFESP)  
 **Transcrição Integral:** [`transcricao_entrevista_rybena_tiago.md`](file:///c:/Users/jj/OneDrive/Estudos/Edital%20unifesp%20PIT%202026/Disciplinas%2002%202026/Gest%C3%A3o%20estrat%C3%A9gica%20da%20inova%C3%A7%C3%A3o/03%20-%20Artigo%20e%20Cap%C3%ADtulo%20de%20Livro/Entrevistas/Rybena/transcricao_entrevista_rybena_tiago.md)
 
@@ -11,9 +12,12 @@
 
 A **Rybená** é uma das empresas pioneiras na América Latina em acessibilidade digital (*born* em projetos de P&D na Universidade de Brasília – UnB com Banco do Brasil e IBM no início dos anos 2000; formalizada como empresa em 2019). Diferentemente de ferramentas gratuitas básicas de "vitrine" (como o VLibras em sua configuração padrão), a Rybená opera como uma **suíte SaaS (*Cloud*) de Tecnologia Assistiva como Serviço (ATaaS)** voltada a organizações B2B, B2G (governo/judiciário) e instituições de ensino (EAD):
 
-- **Carteira Corporativa e Pública:** Bradesco, Sicoob, Caixa Econômica Federal, Banco do Brasil, CNJ, TSE, TCU, OAB, CFM, CFC, Sabesp, SEBRAE Play, Cacau Show, UnB, Universidade Católica de Brasília e IDP.
-- **Modelo Comercial (SaaS / Opex):** Licenciamento por domínio web (`R\$ 715,00/mês` ou `~R\$ 7.200,00/ano` por domínio) ou por *token* em aplicativos/softwares, sem limite de cliques ou acessos.
-- **Multimodalidade (Além de Libras):** Tradução contextual para Libras (banco próprio com **> 25.000 sinais digitalizados**), síntese de voz proprietária (customizável para siglas corporativas como "CEF" $\rightarrow$ "Caixa Econômica Federal"), leitor de imagem por IA, navegação facial/por voz, ajuste para dislexia, TDAH, TEA e baixa visão.
+- **Carteira Corporativa e Pública (> 190 clientes):** Bradesco, Sicoob, Caixa Econômica Federal, Banco do Brasil, CNJ, TSE, TCU, OAB, CFM, CFC, Sabesp, SEBRAE Play, Cacau Show, UnB, Universidade Católica de Brasília e IDP.
+- **Modelo Comercial Oficial (Proposta Comercial 1126 — SaaS / Opex):**
+  - *Avatar Padrão:* **R\$ 715,00/mês** ou **R\$ 7.722,00/ano** (parcela única anual com customização inclusa de camisa do avatar e *player* institucional).
+  - *Avatar Exclusivo:* **R\$ 790,00/mês** ou **R\$ 8.532,00/ano**.
+  - *Escala & Prazo:* Descontos progressivos por volume (de 4% para 5–9 licenças até **44% para 100+ licenças**) e por fidelidade (**5% em 24 meses**; **10% em 36 meses**), em modelo *all-inclusive*.
+- **Multimodalidade (33 Recursos Acessíveis):** Tradução contextual para Libras (banco próprio com **> 25.000 sinais digitalizados** + captura de movimento 3D via *Smartsuit Pro*), síntese de voz proprietária (customizável para siglas corporativas como "CEF" $\rightarrow$ "Caixa Econômica Federal"), leitor de imagem por IA, navegação facial/por voz, ajuste para dislexia, TDAH, TEA e baixa visão.
 
 ---
 
@@ -54,3 +58,4 @@ A entrevista fornece validação empírica de primeira ordem para os **quatro pi
 > Por fim, a entrevista evidenciou empiricamente o papel da coprodução contínua (MR5) e do clima de implementação. Em uma equipe enxuta de 16 colaboradores, cinco dos seis especialistas do núcleo de Libras são pessoas surdas, permitindo atualização contínua de um léxico superior a 25 mil sinais digitalizados e criação colaborativa de novos termos corporativos junto à comunidade surda nacional (como em lançamentos de produtos de clientes do varejo). Observou-se ainda um efeito de desenho universal (*curb-cut effect*): em plataformas corporativas e acadêmicas de ensino a distância, colaboradores e estudantes sem deficiência passaram a utilizar o módulo de síntese de voz para consumir materiais técnicos em deslocamentos, convertendo a tecnologia assistiva em ativo transversal de produtividade organizacional.
 
 *(Nota: Tiago autorizou expressamente a citação nominal da Rybená aos 51min 20s da gravação).*
+

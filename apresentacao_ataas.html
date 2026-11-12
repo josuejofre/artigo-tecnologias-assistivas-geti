@@ -80,7 +80,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 18px 24px;
+      padding: 10px 14px;
       position: relative;
       overflow: hidden;
     }
@@ -88,13 +88,11 @@
     .slide {
       display: none;
       width: 100%;
-      max-width: 1200px;
       height: 100%;
-      max-height: 675px;
       background: var(--slide-bg);
       border-radius: 10px;
       box-shadow: var(--shadow);
-      padding: 44px 54px 38px;
+      padding: clamp(24px, 3.2vh, 48px) clamp(28px, 4vw, 68px) clamp(20px, 2.5vh, 36px);
       flex-direction: column;
       justify-content: space-between;
       overflow-y: auto;
@@ -110,14 +108,14 @@
 
     /* Typography */
     h1 {
-      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      font-size: clamp(2.3rem, 4.2vw, 3.8rem);
       line-height: 1.08;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #0f172a;
     }
     h2 {
-      font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+      font-size: clamp(1.7rem, 2.9vw, 2.6rem);
       line-height: 1.15;
       font-weight: 800;
       letter-spacing: -0.015em;
@@ -125,7 +123,7 @@
       margin-bottom: 10px;
     }
     .subtitle {
-      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      font-size: clamp(1.05rem, 1.45vw, 1.38rem);
       color: var(--muted);
       line-height: 1.45;
       font-weight: 400;
@@ -451,8 +449,8 @@
           <p class="subtitle" style="margin-top:16px;font-size:1.35rem;font-weight:600;color:#1f2937;">
             Implementando Tecnologias Assistivas como Serviço (ATaaS)
           </p>
-          <p class="subtitle" style="margin-top:20px;font-size:0.98rem;">
-            Framework Integrador para corporações sob o regime do Lucro Real, fundamentado em Design Science Research e validado com entrevistas reais do mercado brasileiro (**Rybená** e **LoriConecta**).
+          <p class="subtitle" style="margin-top:20px;font-size:1.08rem;">
+            Framework Integrador para corporações sob o regime do Lucro Real, fundamentado em Design Science Research e validado com entrevistas reais do mercado brasileiro (<strong>Rybená</strong> e <strong>LoriConecta</strong>).
           </p>
         </div>
         <div class="cover-visual">
@@ -679,7 +677,7 @@
     <section class="slide" data-title="Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)">
       <div>
         <h2>Evidência Empírica 1: O Caso Rybená (Capex vs. SaaS)</h2>
-        <p class="subtitle">Recortes da entrevista com <strong>Tiago (Rybená)</strong> comprovam na prática a economia do Opex e o codesign com pessoas surdas.</p>
+        <p class="subtitle">Recortes da entrevista com <strong>Tiago Reis (Rybená — +190 clientes, 33 recursos)</strong> comprovam a economia do Opex (R$ 715/mês ou R$ 7.722/ano) e o codesign com pessoas surdas.</p>
       </div>
       <div class="video-grid-2">
         <div class="video-card">
@@ -1138,3 +1136,4 @@
   </script>
 </body>
 </html>
+
